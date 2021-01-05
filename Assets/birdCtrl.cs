@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class birdCtrl : MonoBehaviour
 {
+
+    //TEST
     // Start is called before the first frame update
     Rigidbody2D rg;
     public float speed;
