@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveTileCtrl : MonoBehaviour
 {
+    //test
     public float speed;
     public bool isMove;
     public float[] num;
