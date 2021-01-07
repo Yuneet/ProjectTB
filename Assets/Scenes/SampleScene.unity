@@ -815,7 +815,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 78cd46fe69b31f449979232e98618c0e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79883edda72e8644eb33c229ca70f1e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -823,7 +823,7 @@ SpriteRenderer:
   m_Size: {x: 12.8, y: 15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1541473882
@@ -1029,9 +1029,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   istag: 0
-  audioJump: {fileID: 8300000, guid: 762ae4dbdb096b24580df55412923efd, type: 3}
-  audioRun: {fileID: 8300000, guid: 144c6b892b0f7744181581a35edf7919, type: 3}
-  audioDamaged: {fileID: 8300000, guid: e4d6e98e2f485d94c8d877625778a1b5, type: 3}
+  audioJump: {fileID: 8300000, guid: 49d95ab327c15d54e8dc1d11ad197343, type: 3}
+  audioRun: {fileID: 8300000, guid: 1d97f4318e8a78741af3c74b8b0ba9a3, type: 3}
+  audioDamaged: {fileID: 8300000, guid: daed964e86c9b62498fa99dfc5c57d65, type: 3}
   sfx: {fileID: 1843893483}
 --- !u!95 &1843893482
 Animator:
