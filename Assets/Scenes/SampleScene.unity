@@ -1029,9 +1029,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   istag: 0
-  audioJump: {fileID: 8300000, guid: 49d95ab327c15d54e8dc1d11ad197343, type: 3}
-  audioRun: {fileID: 8300000, guid: 1d97f4318e8a78741af3c74b8b0ba9a3, type: 3}
-  audioDamaged: {fileID: 8300000, guid: daed964e86c9b62498fa99dfc5c57d65, type: 3}
+  audioJump: {fileID: 8300000, guid: cee1cf1f1bf91e141824eaa538f52830, type: 3}
+  audioRun: {fileID: 8300000, guid: 14ca3ceeb7ed5c64cada69b0d3fb820a, type: 3}
+  audioDamaged: {fileID: 8300000, guid: f1437075aeeaecd4f8de89f824facbc9, type: 3}
   sfx: {fileID: 1843893483}
 --- !u!95 &1843893482
 Animator:
