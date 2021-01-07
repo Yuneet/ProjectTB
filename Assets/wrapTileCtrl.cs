@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class wrapTileCtrl : MonoBehaviour
 {
-    public playerctrl playerctrl;
+    public playerc playerctrl;
     public bool iswarp;
     public LayerMask layer;
     public Vector3 targetPos = new Vector3(12, 12.54f, -2);
@@ -17,7 +17,7 @@ public class wrapTileCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        iswarp = Physics2D.OverlapCircle(playerctrl.tf.position, playerctrl.checkRadius, layer);
+        iswarp = Physics2D.OverlapCircle(playerctrl.feetPos.position, playerctrl.checkRadius, layer);
 
         if (iswarp == true)
         {

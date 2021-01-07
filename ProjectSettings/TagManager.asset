@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Saw
   layers:
   - Default
   - TransparentFX
@@ -15,10 +16,10 @@ TagManager:
   - 
   - Ground
   - Trap
+  - Player
+  - PlayerDamaged
   - Wrap
-  - 
-  - 
-  - 
+  - boxTrap
   - 
   - 
   - 

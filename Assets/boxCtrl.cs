@@ -10,7 +10,7 @@ public class boxCtrl : MonoBehaviour
     public float time;
 
     //public Rigidbody2D rigidbody2D;
-    public playerctrl playerctrl;
+    public playerc playerctrl;
     public LayerMask layer;
     public Transform boxtransfrom;
 
@@ -21,7 +21,6 @@ public class boxCtrl : MonoBehaviour
         time = 3;
         //rigidbody2D = GetComponent<Rigidbody2D>();
         boxtransfrom = GetComponent<Transform>();
-        playerctrl = GameObject.Find("Player").GetComponent<playerctrl>();
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
     }
@@ -36,7 +35,7 @@ public class boxCtrl : MonoBehaviour
     void Update()
     {
         //Debug.Log(Time.time);
-        istrap = Physics2D.OverlapCircle(playerctrl.tf.position, playerctrl.checkRadius, layer);
+        istrap = Physics2D.OverlapCircle(playerctrl.feetPos.position, playerctrl.checkRadius,layer);
 
         if (istrap == true && time < 0) // 트랩에 걸려있고 time이 0이라면 떨어지게
         {
