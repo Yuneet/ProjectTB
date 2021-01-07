@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Resources/Assets/Sound/Damage.mp3.meta
 guid: f1437075aeeaecd4f8de89f824facbc9
+=======
+guid: daed964e86c9b62498fa99dfc5c57d65
+>>>>>>> a4d384ada49a823e7fa67c91a4ec9b90bdabec9a:Assets/Resources/Assets/Sound/Damage.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

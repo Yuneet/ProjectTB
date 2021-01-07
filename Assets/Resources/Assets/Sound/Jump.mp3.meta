@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Resources/Assets/Sound/Jump.mp3.meta
 guid: cee1cf1f1bf91e141824eaa538f52830
+=======
+guid: 49d95ab327c15d54e8dc1d11ad197343
+>>>>>>> a4d384ada49a823e7fa67c91a4ec9b90bdabec9a:Assets/Resources/Assets/Sound/Jump.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

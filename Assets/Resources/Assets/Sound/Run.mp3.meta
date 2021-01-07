@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Resources/Assets/Sound/Run.mp3.meta
 guid: 14ca3ceeb7ed5c64cada69b0d3fb820a
+=======
+guid: 1d97f4318e8a78741af3c74b8b0ba9a3
+>>>>>>> a4d384ada49a823e7fa67c91a4ec9b90bdabec9a:Assets/Resources/Assets/Sound/Run.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
