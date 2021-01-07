@@ -7,18 +7,17 @@ public class MoveTileCtrl : MonoBehaviour
     
     public float speed;
     public bool isMove;
-    public float[] num;
+    public float[] num = new float[2];
 
     // Start is called before the first frame update
     void Start()
     {
-        num = new float[2];
-        num[0] = 0.56f;
-        num[1] = 7.4f;
+        num[0] = -4.45f;
+        num[1] = 6.83f;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(transform.position.x <= num[0])
         {
@@ -27,7 +26,6 @@ public class MoveTileCtrl : MonoBehaviour
         {
             isMove = false;
         }
-
         if (isMove == true)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
