@@ -33,9 +33,19 @@ public class cameracc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y,-10);
-        
-        if(playerc.istag == true)
+        //transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y,-10);
+
+        if (m_Player.transform.position.y >= 1.44f)
+        {
+
+            transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
+        }
+        else
+        {
+            transform.position = new Vector3(m_Player.transform.position.x, 1.44f, -10);
+        }
+
+        if (playerc.istag == true)
         {
             OnShakeCamera(0.1f);
         }
