@@ -665,7 +665,7 @@ PrefabInstance:
     - target: {fileID: 5511204241427968604, guid: e2521e0075b9dd14882f0198f1c3abb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.94
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 5511204241427968604, guid: e2521e0075b9dd14882f0198f1c3abb4,
         type: 3}
@@ -1493,6 +1493,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   boxtransfrom: {fileID: 1462332594}
+  x: -4.08
+  y: 5.84
+  taget: 3.93
 --- !u!61 &1462332592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1548,7 +1551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462332589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.08, y: 5.84, z: 0}
+  m_LocalPosition: {x: -4.08, y: 3.93, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1564,7 +1567,7 @@ PrefabInstance:
     - target: {fileID: 5511204241427968604, guid: e2521e0075b9dd14882f0198f1c3abb4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.82
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 5511204241427968604, guid: e2521e0075b9dd14882f0198f1c3abb4,
         type: 3}
@@ -1974,7 +1977,7 @@ MonoBehaviour:
   checkRadius: 0.3
   layer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 8448
   istag: 0
   audioJump: {fileID: 8300000, guid: cee1cf1f1bf91e141824eaa538f52830, type: 3}
   audioRun: {fileID: 8300000, guid: 14ca3ceeb7ed5c64cada69b0d3fb820a, type: 3}
