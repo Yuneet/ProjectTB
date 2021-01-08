@@ -15,7 +15,11 @@ public class Chang : MonoBehaviour
     public bool check1;
     public bool check2;
     public bool check3;
-
+    bool CanAttack = true;
+    public void setCanAtk(bool b)
+    {
+        CanAttack = b;
+    }
     void Start()
     {
 
@@ -24,13 +28,22 @@ public class Chang : MonoBehaviour
 
     void Update()
     {
-        if(check1 && !check2 && !check3)
+        if (check1 && !check2 && !check3)
         {
+            if (!CanAttack)
+                CanAttack = true;
             GetComponent<BoxCollider2D>().enabled = false;
         }
         else
         {
-            GetComponent<BoxCollider2D>().enabled = true;
+            if (CanAttack)
+            {
+                GetComponent<BoxCollider2D>().enabled = true;
+            }
+            else
+            {
+                GetComponent<BoxCollider2D>().enabled = false;
+            }
         }
         if (transform.position.y > start && transform.position.y < middle && timer < 0 && check1 == false && check3 == false)
         {
