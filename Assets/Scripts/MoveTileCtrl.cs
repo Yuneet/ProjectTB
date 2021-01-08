@@ -7,22 +7,23 @@ public class MoveTileCtrl : MonoBehaviour
     
     public float speed;
     public bool isMove;
-    public float[] num = new float[2];
+    public float startx;
+    public float lastx;
 
     // Start is called before the first frame update
     void Start()
     {
-        num[0] = -4.45f;
-        num[1] = 6.83f;
+        //startx = -4.45f;
+        //lastx = 6.83f;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(transform.position.x <= num[0])
+        if(transform.position.x <= startx)
         {
             isMove = true;
-        }else if (transform.position.x >= num[1])
+        }else if (transform.position.x >= lastx)
         {
             isMove = false;
         }
