@@ -25,7 +25,7 @@ public class cameracc : MonoBehaviour
     
     void Awake()
     {
-        playerc = GameObject.Find("New Sprite").GetComponent<playerc>();
+        playerc = GameObject.Find("Player").GetComponent<playerc>();
     }
 
 

@@ -765,7 +765,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000078231096, y: -0.020080805}
+  m_Offset: {x: -0.005557947, y: -0.020080805}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -776,7 +776,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1164519, y: 0.5798384}
+  m_Size: {x: 0.30541915, y: 0.5798384}
   m_EdgeRadius: 0
 --- !u!1 &296982897 stripped
 GameObject:
@@ -924,9 +924,10 @@ GameObject:
   - component: {fileID: 452023771}
   - component: {fileID: 452023769}
   - component: {fileID: 452023768}
-  m_Layer: 8
+  - component: {fileID: 452023770}
+  m_Layer: 9
   m_Name: Trap (1)
-  m_TagString: Untagged
+  m_TagString: Saw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -970,6 +971,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &452023770
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452023767}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.86, y: 0.73}
+  m_Direction: 0
 --- !u!212 &452023771
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1272,6 +1289,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1287,6 +1305,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0178bb13548fcf548bd769f9a9bcc506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Player: {fileID: 1362196937}
+  mainCamera: {fileID: 519420031}
+  shakeTime: 0
+  shakeIntensity: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -3464,7 +3498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362196937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.18, y: -2.05, z: -5}
+  m_LocalPosition: {x: 9.67, y: 2.93, z: -5}
   m_LocalScale: {x: 1.8, y: 1.7, z: 1}
   m_Children:
   - {fileID: 1154319064}
@@ -5552,7 +5586,7 @@ PrefabInstance:
     - target: {fileID: 2897436930563071813, guid: da3cbf68ec542864295602435a124c9c,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7411182342795351310, guid: da3cbf68ec542864295602435a124c9c,
         type: 3}
@@ -5860,6 +5894,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trap Chang
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798084644724875112, guid: 87531906c9a65b8458486925b4afaf8b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Saw
+      objectReference: {fileID: 0}
+    - target: {fileID: 3798084644724875112, guid: 87531906c9a65b8458486925b4afaf8b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87531906c9a65b8458486925b4afaf8b, type: 3}
