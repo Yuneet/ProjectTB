@@ -13,6 +13,9 @@ public class boxCtrl : MonoBehaviour
     public playerc playerctrl;
     public LayerMask layer;
     public Transform boxtransfrom;
+    public float x;
+    public float y;
+    public float taget;
 
 
     // Start is called before the first frame update
@@ -50,10 +53,10 @@ public class boxCtrl : MonoBehaviour
             time -= Time.deltaTime * 1.5f; // time 변수가 0이 아니고 트랩에 걸려있으면 프레임 * 1.5초 만큼 time을 빼줌
         }
 
-        if (istraptrg == true && /*istrap == false &&*/ transform.position.y <= 1.85)
+        if (istraptrg == true && /*istrap == false &&*/ transform.position.y <= taget) //1.85
         {
             GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
-            gameObject.transform.position = new Vector2(-6, 6.32f);
+            gameObject.transform.position = new Vector2(x, y);
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             istraptrg = false;
             time = 3; // time이 0이하로 되어있을거니 초기화시켜줌 
