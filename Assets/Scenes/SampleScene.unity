@@ -888,8 +888,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   isMove: 0
-  startx: -6.57
-  lastx: 1.86
+  leftx: -6.43
+  rightx: 1.86
 --- !u!61 &681274849
 BoxCollider2D:
   m_ObjectHideFlags: 0
