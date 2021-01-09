@@ -5,24 +5,24 @@ using UnityEngine;
 public class boxCtrl : MonoBehaviour
 {
 
-    public bool istrap;
+    /*public bool istrap;
     public bool istraptrg;
     public float time;
 
-    //public Rigidbody2D rigidbody2D;
+    public Rigidbody2D rigidbody2D;
     public playerc playerctrl;
     public LayerMask layer;
     public Transform boxtransfrom;
     public float x;
     public float y;
     public float taget;
-    public GameObject tagetbox;
+    public GameObject tagetbox;*/
 
     // Start is called before the first frame update
     void Awake()
     {
         //rigidbody2D = GetComponent<Rigidbody2D>();
-        boxtransfrom = GetComponent<Transform>();
+        //boxtransfrom = GetComponent<Transform>();
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
     }
@@ -33,13 +33,13 @@ public class boxCtrl : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log(0);
+        //Debug.Log(0);
         if (coll.gameObject.tag == "Player")
         {
-            Debug.Log(1);
+            //Debug.Log(1);
             if (GetComponent<BoxCollider2D>().enabled != false)
             {
-                Debug.Log(2);
+               //Debug.Log(2);
                 StopCoroutine(HideBlock());
                 StartCoroutine(HideBlock());
             }
