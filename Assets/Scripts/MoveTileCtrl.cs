@@ -7,8 +7,8 @@ public class MoveTileCtrl : MonoBehaviour
     
     public float speed;
     public bool isMove;
-    public float startx;
-    public float lastx;
+    public float leftx;
+    public float rightx;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +20,10 @@ public class MoveTileCtrl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(transform.position.x <= startx)
+        if(transform.position.x <= leftx)
         {
             isMove = true;
-        }else if (transform.position.x >= lastx)
+        }else if (transform.position.x >= rightx)
         {
             isMove = false;
         }
