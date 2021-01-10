@@ -72,7 +72,7 @@ public class Trap : MonoBehaviour
         }
         if (Check == true)
         {
-            if (transform.position.x < StartPoint && Ham == false && timerx < 0)
+            if (transform.position.x > StartPoint && Ham == false && timerx < 0)
             {
                 gameObject.transform.position = new Vector2(transform.position.x - 0.02f, transform.position.y);
                 // X는 -축이 왼쪽 , +축이 오른쪽인데, 현재 StartPoint가 5라고 가정을 해보자
@@ -82,7 +82,7 @@ public class Trap : MonoBehaviour
                 Dir = false;
                 timerx = timerxx;
             }
-            else if (transform.position.x > EndPoint && Ham == false && timerx < 0)
+            else if (transform.position.x < EndPoint && Ham == false && timerx < 0)
             {
                 gameObject.transform.position = new Vector2(transform.position.x + 0.02f, transform.position.y);
                 // Dir = true가 되었을 때는 왼쪽으로 이동을 할 것이다
