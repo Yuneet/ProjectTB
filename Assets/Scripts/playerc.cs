@@ -70,14 +70,16 @@ public class playerc : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipX = false;
+            //GetComponent<SpriteRenderer>().flipX = false;
+            GetComponent<SpriteRenderer>().flipX = true;
             at.SetBool("isRun", true);
             RunSound();
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Vector2.left * speed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipX = true;
+            //GetComponent<SpriteRenderer>().flipX = true;
+            GetComponent<SpriteRenderer>().flipX = false;
             at.SetBool("isRun", true);
             RunSound();
         }
