@@ -19,18 +19,18 @@ public class CameraCtrl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    /*void FixedUpdate()
     {
-        if(m_Player.transform.position.y >= 1.44f)
+        if(m_Player.transform.position.y >= -10f)
         {
 
             transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
         }
         else
         { 
-            transform.position = new Vector3(m_Player.transform.position.x, 1.44f, -10);
+            transform.position = new Vector3(m_Player.transform.position.x, -23.95f, -10);
         }
 
 
-    }
+    }*/
 }
