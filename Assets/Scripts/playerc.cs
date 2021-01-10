@@ -136,8 +136,8 @@ public class playerc : MonoBehaviour
 
         //dirc == 피격데미지를 입고 뒤로 밀려나는 범위
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc , 1) * 10, ForceMode2D.Impulse);
-        Invoke("OffDamaged", 1);
+        rigid.AddForce(new Vector2(dirc , 1) * 5.5f, ForceMode2D.Impulse);
+        Invoke("OffDamaged", 1.5f);
         DamagedSound();
     }
 
