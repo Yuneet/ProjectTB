@@ -95,29 +95,21 @@ public class playerc : MonoBehaviour
 
         if(leftBtn == true && rightBtn == false)
         {
-            Debug.Log("왼쪽왼쪽");
+            //Debug.Log("왼쪽왼쪽");
             transform.Translate(Vector2.left * speed * Time.deltaTime);
-            //GetComponent<SpriteRenderer>().flipX = true;
             GetComponent<SpriteRenderer>().flipX = false;
             at.SetBool("isRun", true);
             RunSound();
         }
+        
         if (rightBtn == true && leftBtn == false)
         {
-            Debug.Log("오른쪽오른쪽");
+            //Debug.Log("오른쪽오른쪽");
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-            //GetComponent<SpriteRenderer>().flipX = false;
             GetComponent<SpriteRenderer>().flipX = true;
             at.SetBool("isRun", true);
             RunSound();
         }
-        if(jumpBtn == true)
-        {
-            Debug.Log("점프점프");
-            GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
-            JumpSound();
-        }
-
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -179,6 +171,7 @@ public class playerc : MonoBehaviour
     public void leftOnPointerUp()
     {
         leftBtn = false;
+        StopSound();
     }
 
     public void rightOnPointerDown()
@@ -189,16 +182,19 @@ public class playerc : MonoBehaviour
     public void rightOnPointerUp()
     {
         rightBtn = false;
+        StopSound();
     }
 
-    public void jumpOnPointerDown()
+    public void jumps()
     {
-        jumpBtn = true;
+        if (isJump == true)
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
+            JumpSound();
+        }
+        else if (isJump == false)
+        {
+            StopSound();
+        }
     }
-
-    public void jumpOnPointerUp()
-    {
-        jumpBtn = false;
-    }
-
 }
