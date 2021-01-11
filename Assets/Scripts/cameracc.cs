@@ -28,6 +28,13 @@ public class cameracc : MonoBehaviour
         playerc = GameObject.Find("Player").GetComponent<playerc>();
     }
 
+    public void Start()
+    {
+        if (playerc.istag == true)
+        {
+            OnShakeCamera(1f);
+        }
+    }
 
 
     // Update is called once per frame
