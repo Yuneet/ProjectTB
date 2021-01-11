@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5142520313671228599}
   - component: {fileID: 5142520313671228598}
   - component: {fileID: 5142520313671228597}
+  - component: {fileID: 4627789677291956013}
   - component: {fileID: 5142520313671228596}
   m_Layer: 8
   m_Name: MoveTile
@@ -110,6 +111,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0488124, y: 0.6490307}
   m_EdgeRadius: 0
+--- !u!114 &4627789677291956013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5142520313671228595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc310ed982fda7f40adccba7ec703e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feet: {fileID: 0}
+  box: {fileID: 0}
+  isUnder: 1
+  isNormal: 1
 --- !u!114 &5142520313671228596
 MonoBehaviour:
   m_ObjectHideFlags: 0

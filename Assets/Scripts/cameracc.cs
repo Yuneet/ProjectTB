@@ -25,6 +25,7 @@ public class cameracc : MonoBehaviour
     
     void Awake()
     {
+       
         playerc = GameObject.Find("Player").GetComponent<playerc>();
     }
 
@@ -35,12 +36,23 @@ public class cameracc : MonoBehaviour
             OnShakeCamera(1f);
         }
     }
+    
 
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y,-10);
+        
+        if (playerc.transform.position.x < -4.8f)
+        {
+            transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+        }
+        else if (playerc.transform.position.x > 4.8f) {
+            transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+        }
+        else {
+            transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
+        }
 
         /*if (m_Player.transform.position.y >= 1.44f)
         {

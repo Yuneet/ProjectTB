@@ -5,7 +5,13 @@ using UnityEngine.UI;
 
 public class CanvasCtrl : MonoBehaviour
 {
-    //aaaa
+    public Canvas canvas;
+    public Button leftbutton;
+    public Button rightbutton;
+    public Button jumpsbutton;
+
+    int w;
+    int h;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +21,6 @@ public class CanvasCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 }

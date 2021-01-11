@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8365199134020142207}
   - component: {fileID: 8365199134020142206}
   - component: {fileID: 8365199134020142193}
+  - component: {fileID: 2612605196214771992}
   m_Layer: 13
   m_Name: Dynamic box
   m_TagString: Untagged
@@ -144,3 +145,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2612605196214771992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8365199134020142192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc310ed982fda7f40adccba7ec703e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feet: {fileID: 0}
+  box: {fileID: 0}
+  isUnder: 1

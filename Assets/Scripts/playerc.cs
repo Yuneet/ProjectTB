@@ -26,7 +26,6 @@ public class playerc : MonoBehaviour
     // Start is called before the first frame update
     private bool leftBtn = false;
     private bool rightBtn = false;
-    private bool jumpBtn = false;
 
     void Awake()
     {
