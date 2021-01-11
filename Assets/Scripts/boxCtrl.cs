@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class boxCtrl : MonoBehaviour
 {
-
+    ColCtrl CheckUnder = null;
+    BoxCollider2D box =null;
+    bool isRunning = false;
     /*public bool istrap;
     public bool istraptrg;
     public float time;
@@ -24,6 +26,8 @@ public class boxCtrl : MonoBehaviour
         //rigidbody2D = GetComponent<Rigidbody2D>();
         //boxtransfrom = GetComponent<Transform>();
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        CheckUnder = GetComponent<ColCtrl>();
+        box = GetComponent<BoxCollider2D>();
 
     }
 
@@ -31,13 +35,14 @@ public class boxCtrl : MonoBehaviour
     {
 
     }
+    
     void OnCollisionEnter2D(Collision2D coll)
     {
         //Debug.Log(0);
         if (coll.gameObject.tag == "Player")
         {
             //Debug.Log(1);
-            if (GetComponent<BoxCollider2D>().enabled != false)
+            if (box.enabled != false && !CheckUnder.isUnder)
             {
                //Debug.Log(2);
                 StopCoroutine(HideBlock());
@@ -47,18 +52,23 @@ public class boxCtrl : MonoBehaviour
     }
     IEnumerator HideBlock()
     {
+        isRunning = true;
         yield return new WaitForSeconds(1);
-        GetComponent<BoxCollider2D>().enabled = false;
+        box.enabled = false;
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(1);
-        GetComponent<BoxCollider2D>().enabled = true;
+        box.enabled = true;
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-
+        isRunning = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        if(box.enabled == CheckUnder.isUnder && !isRunning)
+        {
+            box.enabled = !CheckUnder.isUnder;
+        }
         /*
         Debug.Log(this.name);
         //Debug.Log(Time.time);
