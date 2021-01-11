@@ -30,10 +30,10 @@ public class cameracc : MonoBehaviour
 
     public void Start()
     {
-        if (playerc.istag == true)
+        /*if (playerc.istag == true)
         {
-            OnShakeCamera(1f);
-        }
+            OnShakeCamera(1.0f,1.0f);
+        }*/
     }
 
 
@@ -52,13 +52,9 @@ public class cameracc : MonoBehaviour
             transform.position = new Vector3(m_Player.transform.position.x, 1.44f, -10);
         }*/
 
-        if (playerc.istag == true)
-        {
-            OnShakeCamera(0.1f);
-        }
     }
 
-    public void OnShakeCamera(float shakeTime=1.0f,float shakeIntensity = 0.1f)
+    public void OnShakeCamera(float shakeTime=1.0f,float shakeIntensity = 0.05f)
     {
         this.shakeTime = shakeTime;
         this.shakeIntensity = shakeIntensity;
@@ -83,14 +79,14 @@ public class cameracc : MonoBehaviour
         transform.position = startPosition;
     }
 
-    public IEnumerator ShakeByRotation()
+    /*public IEnumerator ShakeByRotation()
     {
         Vector3 startRotation = transform.eulerAngles;
 
         while (shakeTime > 0.0f)
         {
             float x = Random.Range(-1, 1f);
-            float y = Random.Range(-1, 1f);
+            float y = 0;
             float z = 0;
             transform.rotation = Quaternion.Euler(startRotation + new Vector3(x, y, z) * shakeIntensity);
 
@@ -100,5 +96,5 @@ public class cameracc : MonoBehaviour
         }
 
         transform.rotation = Quaternion.Euler(startRotation);
-    }
+    }*/
 }

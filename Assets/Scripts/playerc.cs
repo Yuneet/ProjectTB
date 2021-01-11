@@ -26,14 +26,15 @@ public class playerc : MonoBehaviour
     // Start is called before the first frame update
     private bool leftBtn = false;
     private bool rightBtn = false;
-    private bool jumpBtn = false;
-
+    cameracc cameracc;
+    //ghygh
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         at = GetComponent<Animator>();
         sfx = GetComponent<AudioSource>();
+        cameracc = GameObject.Find("Main Camera").GetComponent<cameracc>();
     }
 
     // Update is called once per frame
@@ -118,6 +119,7 @@ public class playerc : MonoBehaviour
         {
             OnDamaged(collision.transform.position);
             istag = true;
+            cameracc.OnShakeCamera();
         }
     }
     public void OnDamaged(Vector2 targetPos)
@@ -125,7 +127,7 @@ public class playerc : MonoBehaviour
         gameObject.layer = 11;
 
         sprite.color = new Color(1, 1, 1, 0.4f);
-
+        rigid.velocity = new Vector2(0, 0);
         //dirc == 피격데미지를 입고 뒤로 밀려나는 범위
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
         rigid.AddForce(new Vector2(dirc , 1) * 5.5f, ForceMode2D.Impulse);
