@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class playerc : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class playerc : MonoBehaviour
     public AudioClip audioDamaged;
     public AudioSource sfx;
     // Start is called before the first frame update
+    private bool leftBtn = false;
+    private bool rightBtn = false;
+    private bool jumpBtn = false;
 
     void Awake()
     {
@@ -70,14 +74,16 @@ public class playerc : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipX = false;
+            //GetComponent<SpriteRenderer>().flipX = false;
+            GetComponent<SpriteRenderer>().flipX = true;
             at.SetBool("isRun", true);
             RunSound();
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Vector2.left * speed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipX = true;
+            //GetComponent<SpriteRenderer>().flipX = true;
+            GetComponent<SpriteRenderer>().flipX = false;
             at.SetBool("isRun", true);
             RunSound();
         }
@@ -87,6 +93,23 @@ public class playerc : MonoBehaviour
             JumpSound();
         }
 
+        if(leftBtn == true && rightBtn == false)
+        {
+            //Debug.Log("왼쪽왼쪽");
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
+            GetComponent<SpriteRenderer>().flipX = false;
+            at.SetBool("isRun", true);
+            RunSound();
+        }
+        
+        if (rightBtn == true && leftBtn == false)
+        {
+            //Debug.Log("오른쪽오른쪽");
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+            GetComponent<SpriteRenderer>().flipX = true;
+            at.SetBool("isRun", true);
+            RunSound();
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -105,8 +128,8 @@ public class playerc : MonoBehaviour
 
         //dirc == 피격데미지를 입고 뒤로 밀려나는 범위
         int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc , 1) * 10, ForceMode2D.Impulse);
-        Invoke("OffDamaged", 1);
+        rigid.AddForce(new Vector2(dirc , 1) * 5.5f, ForceMode2D.Impulse);
+        Invoke("OffDamaged", 1.5f);
         DamagedSound();
     }
 
@@ -138,5 +161,40 @@ public class playerc : MonoBehaviour
     public void StopSound()
     {
         sfx.Stop();
+    }
+
+    public void leftOnPointerDown()
+    {
+        leftBtn = true;
+    }
+
+    public void leftOnPointerUp()
+    {
+        leftBtn = false;
+        StopSound();
+    }
+
+    public void rightOnPointerDown()
+    {
+        rightBtn = true;
+    }
+
+    public void rightOnPointerUp()
+    {
+        rightBtn = false;
+        StopSound();
+    }
+
+    public void jumps()
+    {
+        if (isJump == true)
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
+            JumpSound();
+        }
+        else if (isJump == false)
+        {
+            StopSound();
+        }
     }
 }
