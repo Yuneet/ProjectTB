@@ -12,6 +12,8 @@ public class cameracc : MonoBehaviour
 
     public float shakeTime;
     public float shakeIntensity;
+    public float leftx;
+    public float rightx;
     playerc playerc;
 
     public cameracc()
@@ -43,11 +45,11 @@ public class cameracc : MonoBehaviour
     void Update()
     {
         
-        if (playerc.transform.position.x < -4.8f)
+        if (playerc.transform.position.x < leftx) //-4.8
         {
             transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
         }
-        else if (playerc.transform.position.x > 4.8f) {
+        else if (playerc.transform.position.x > rightx) { //4.8
             transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
         }
         else {
