@@ -7,6 +7,7 @@ public class boxCtrl : MonoBehaviour
     ColCtrl CheckUnder = null;
     BoxCollider2D box =null;
     bool isRunning = false;
+    public float timer = 1;
     /*public bool istrap;
     public bool istraptrg;
     public float time;
@@ -53,9 +54,11 @@ public class boxCtrl : MonoBehaviour
     IEnumerator HideBlock()
     {
         isRunning = true;
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(timer);
         box.enabled = false;
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+        //yield return new WaitForSeconds(1);
         yield return new WaitForSeconds(1);
         box.enabled = true;
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
