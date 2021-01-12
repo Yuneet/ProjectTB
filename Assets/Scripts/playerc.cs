@@ -27,6 +27,9 @@ public class playerc : MonoBehaviour
     private bool leftBtn = false;
     private bool rightBtn = false;
 
+    GameObject scanObject;
+    public GameManager manager;
+
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -38,162 +41,168 @@ public class playerc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
-
-        //input.GetKeyDown == 키를 한번 눌렸을때
-        //input.GetKeyUp == 누른 키를 땟을때
-        //input.GetKey == 키를 계속 누르고 있을때
-
-        if(GetComponent<Rigidbody2D>().velocity.normalized.y > 0)
+        if (manager.isAction == false)
         {
-            at.SetBool("isJump", true);
+            isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
+
+            //input.GetKeyDown == 키를 한번 눌렸을때
+            //input.GetKeyUp == 누른 키를 땟을때
+            //input.GetKey == 키를 계속 누르고 있을때
+
+            if (GetComponent<Rigidbody2D>().velocity.normalized.y > 0)
+            {
+                at.SetBool("isJump", true);
+            }
+
+            if (GetComponent<Rigidbody2D>().velocity.normalized.y < 0)
+            {
+                at.SetBool("isJump", false);
+                at.SetBool("isFall", true);
+            }
+
+            if (GetComponent<Rigidbody2D>().velocity.normalized.y == 0)
+            {
+                at.SetBool("isFall", false);
+            }
+
+            //Debug.Log("velocity : " + GetComponent<Rigidbody2D>().velocity.normalized);
+
+            if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+            {
+
+                at.SetBool("isRun", false);
+                StopSound();
+            }
+
+
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                //GetComponent<SpriteRenderer>().flipX = false;
+                GetComponent<SpriteRenderer>().flipX = true;
+                at.SetBool("isRun", true);
+                RunSound();
+            }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+                //GetComponent<SpriteRenderer>().flipX = true;
+                GetComponent<SpriteRenderer>().flipX = false;
+                at.SetBool("isRun", true);
+                RunSound();
+            }
+            if (Input.GetKeyDown(KeyCode.Space) && isJump == true)
+            {
+                GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
+                JumpSound();
+                manager.Action(scanObject);
+            }
+
+            if (leftBtn == true && rightBtn == false)
+            {
+                //Debug.Log("왼쪽왼쪽");
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+                GetComponent<SpriteRenderer>().flipX = false;
+                at.SetBool("isRun", true);
+                RunSound();
+            }
+
+            if (rightBtn == true && leftBtn == false)
+            {
+                //Debug.Log("오른쪽오른쪽");
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                GetComponent<SpriteRenderer>().flipX = true;
+                at.SetBool("isRun", true);
+                RunSound();
+            }
+        }
+    }
+
+        public void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == "Saw")
+            {
+                OnDamaged(collision.transform.position);
+                istag = true;
+            }
+        }
+        public void OnDamaged(Vector2 targetPos)
+        {
+            gameObject.layer = 11;
+
+            sprite.color = new Color(1, 1, 1, 0.4f);
+
+            //dirc == 피격데미지를 입고 뒤로 밀려나는 범위
+            int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
+            rigid.AddForce(new Vector2(dirc, 1) * 5.5f, ForceMode2D.Impulse);
+            Invoke("OffDamaged", 1.5f);
+            DamagedSound();
         }
 
-        if(GetComponent<Rigidbody2D>().velocity.normalized.y < 0)
+        public void OffDamaged()
         {
-            at.SetBool("isJump", false);
-            at.SetBool("isFall", true);
+            gameObject.layer = 10;
+            sprite.color = new Color(1, 1, 1, 1);
+            istag = false;
         }
 
-        if(GetComponent<Rigidbody2D>().velocity.normalized.y == 0)
+        public void DamagedSound()
         {
-            at.SetBool("isFall", false);
+
+            sfx.PlayOneShot(audioDamaged);
+        }
+        public void JumpSound()
+        {
+            sfx.PlayOneShot(audioJump);
+        }
+        public void RunSound()
+        {
+            if (sfx.isPlaying == false)
+            {
+                sfx.loop = false;
+                sfx.PlayOneShot(audioRun);
+            }
+
+        }
+        public void StopSound()
+        {
+            sfx.Stop();
         }
 
-        //Debug.Log("velocity : " + GetComponent<Rigidbody2D>().velocity.normalized);
-
-        if (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
+        public void leftOnPointerDown()
         {
-           
-            at.SetBool("isRun", false);
+            leftBtn = true;
+        }
+
+        public void leftOnPointerUp()
+        {
+            leftBtn = false;
             StopSound();
         }
 
-
-        if (Input.GetKey(KeyCode.RightArrow))
+        public void rightOnPointerDown()
         {
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-            //GetComponent<SpriteRenderer>().flipX = false;
-            GetComponent<SpriteRenderer>().flipX = true;
-            at.SetBool("isRun", true);
-            RunSound();
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-            //GetComponent<SpriteRenderer>().flipX = true;
-            GetComponent<SpriteRenderer>().flipX = false;
-            at.SetBool("isRun", true);
-            RunSound();
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && isJump == true)
-        {
-            GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
-            JumpSound();
+            rightBtn = true;
         }
 
-        if(leftBtn == true && rightBtn == false)
+        public void rightOnPointerUp()
         {
-            //Debug.Log("왼쪽왼쪽");
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipX = false;
-            at.SetBool("isRun", true);
-            RunSound();
-        }
-        
-        if (rightBtn == true && leftBtn == false)
-        {
-            //Debug.Log("오른쪽오른쪽");
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-            GetComponent<SpriteRenderer>().flipX = true;
-            at.SetBool("isRun", true);
-            RunSound();
-        }
-    }
-
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Saw")
-        {
-            OnDamaged(collision.transform.position);
-            istag = true;
-        }
-    }
-    public void OnDamaged(Vector2 targetPos)
-    {
-        gameObject.layer = 11;
-
-        sprite.color = new Color(1, 1, 1, 0.4f);
-
-        //dirc == 피격데미지를 입고 뒤로 밀려나는 범위
-        int dirc = transform.position.x - targetPos.x > 0 ? 1 : -1;
-        rigid.AddForce(new Vector2(dirc , 1) * 5.5f, ForceMode2D.Impulse);
-        Invoke("OffDamaged", 1.5f);
-        DamagedSound();
-    }
-
-    public void OffDamaged()
-    {
-        gameObject.layer = 10;
-        sprite.color = new Color(1, 1, 1, 1);
-        istag = false;
-    }
-
-    public void DamagedSound()
-    {
-
-        sfx.PlayOneShot(audioDamaged);
-    }
-    public void JumpSound()
-    {
-        sfx.PlayOneShot(audioJump);
-    }
-    public void RunSound()
-    {
-        if (sfx.isPlaying == false)
-        {
-            sfx.loop = false;
-            sfx.PlayOneShot(audioRun);
-        }
-        
-    }
-    public void StopSound()
-    {
-        sfx.Stop();
-    }
-
-    public void leftOnPointerDown()
-    {
-        leftBtn = true;
-    }
-
-    public void leftOnPointerUp()
-    {
-        leftBtn = false;
-        StopSound();
-    }
-
-    public void rightOnPointerDown()
-    {
-        rightBtn = true;
-    }
-
-    public void rightOnPointerUp()
-    {
-        rightBtn = false;
-        StopSound();
-    }
-
-    public void jumps()
-    {
-        if (isJump == true)
-        {
-            GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
-            JumpSound();
-        }
-        else if (isJump == false)
-        {
+            rightBtn = false;
             StopSound();
         }
-    }
+
+        public void jumps()
+        {
+            if (isJump == true)
+            {
+                GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
+                JumpSound();
+                manager.Action(scanObject);
+            }
+            else if (isJump == false)
+            {
+                StopSound();
+            }
+        }
+    
 }
