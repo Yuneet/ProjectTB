@@ -11,6 +11,7 @@ public class potal : MonoBehaviour
     public LayerMask layer;
     public bool isPortal = false;
     public Rigidbody2D rigid;
+    public int potalnumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class potal : MonoBehaviour
         isPortal = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
         if(isPortal == true)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(potalnumber);
             
         }
 
