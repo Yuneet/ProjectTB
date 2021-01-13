@@ -35,10 +35,10 @@ public class cameracc : MonoBehaviour
 
     public void Start()
     {
-        /*if (playerc.istag == true)
+        if (playerc.istag == true)
         {
             OnShakeCamera(1.0f,1.0f);
-        }*/
+        }
     }
     
 
@@ -105,10 +105,13 @@ public class cameracc : MonoBehaviour
         {
             transform.position = new Vector3(m_Player.transform.position.x, 1.44f, -10);
         }*/
-
+        if (playerc.istag == true)
+        {
+            OnShakeCamera(0.5f, 0.05f);
+        }
     }
 
-    public void OnShakeCamera(float shakeTime=1.0f,float shakeIntensity = 0.05f)
+    public void OnShakeCamera(float shakeTime=0.5f,float shakeIntensity = 0.05f)
     {
         this.shakeTime = shakeTime;
         this.shakeIntensity = shakeIntensity;
