@@ -26,7 +26,7 @@ public class playerc : MonoBehaviour
     // Start is called before the first frame update
     private bool leftBtn = false;
     private bool rightBtn = false;
-    public bool Damage;
+    //public bool Damage;
 
     /*GameObject scanObject;
     public GameManager manager;*/
@@ -102,35 +102,35 @@ public class playerc : MonoBehaviour
             if (leftBtn == true && rightBtn == false)
             {
                 //Debug.Log("왼쪽왼쪽");
-                if (Damage == false)
-                {
+               /* if (Damage == false)
+                {*/
                     transform.Translate(Vector2.left * speed * Time.deltaTime);
                     GetComponent<SpriteRenderer>().flipX = false;
                     at.SetBool("isRun", true);
                     RunSound();
-                }
+                /*}
                 else
                 {
                     transform.Translate(Vector2.left * speed * 0);
                     at.SetBool("isRun", false);
-                }
+                }*/
             }
 
             if (rightBtn == true && leftBtn == false)
             {
                 //Debug.Log("오른쪽오른쪽");
-                if (Damage == false)
-                {
+                /*if (Damage == false)
+                {*/
                     transform.Translate(Vector2.right * speed * Time.deltaTime);
                     GetComponent<SpriteRenderer>().flipX = true;
                     at.SetBool("isRun", true);
                     RunSound();
-                }
+                /*}
                 else
                 {
                     transform.Translate(Vector2.right * speed * 0);
                     at.SetBool("isRun", false);
-                }
+                }*/
             }
         //}
     }
@@ -145,7 +145,7 @@ public class playerc : MonoBehaviour
         }
         public void OnDamaged(Vector2 targetPos)
         {
-            Damage = true;
+            //Damage = true;
             gameObject.layer = 11;
 
             sprite.color = new Color(1, 1, 1, 0.4f);
@@ -159,7 +159,7 @@ public class playerc : MonoBehaviour
 
         public void OffDamaged()
         {
-            Damage = false;
+            //Damage = false;
             gameObject.layer = 10;
             sprite.color = new Color(1, 1, 1, 1);
             istag = false;
@@ -212,15 +212,15 @@ public class playerc : MonoBehaviour
 
         public void jumps()
         {
-            if (isJump == true && Damage == false)
+            if (isJump == true /* && Damage == false*/)
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
                // manager.Action(scanObject);
             }
-            else if (isJump == false && Damage == true)
+            else if (isJump == false /*&& Damage == true*/)
             {
-                GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * 0;
+               //GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * 0;
                 StopSound();
             }
         }
