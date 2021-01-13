@@ -18,7 +18,7 @@ public class cameracc : MonoBehaviour
 
     public cameracc()
     {
-        instance = this;
+       instance = this;
     }
 
 
@@ -33,10 +33,7 @@ public class cameracc : MonoBehaviour
 
     public void Start()
     {
-        /*if (playerc.istag == true)
-        {
-            OnShakeCamera(1.0f,1.0f);
-        }*/
+       
     }
     
 
@@ -45,6 +42,7 @@ public class cameracc : MonoBehaviour
     void Update()
     {
         
+
         if (playerc.transform.position.x < leftx) //-4.8
         {
             transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
@@ -56,19 +54,14 @@ public class cameracc : MonoBehaviour
             transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
         }
 
-        /*if (m_Player.transform.position.y >= 1.44f)
+        if (playerc.istag == true)
         {
-
-            transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
+            OnShakeCamera(0.05f, 0.05f);
         }
-        else
-        {
-            transform.position = new Vector3(m_Player.transform.position.x, 1.44f, -10);
-        }*/
 
     }
 
-    public void OnShakeCamera(float shakeTime=1.0f,float shakeIntensity = 0.05f)
+    public void OnShakeCamera(float shakeTime=0.05f,float shakeIntensity = 0.05f)
     {
         this.shakeTime = shakeTime;
         this.shakeIntensity = shakeIntensity;
@@ -93,22 +86,5 @@ public class cameracc : MonoBehaviour
         transform.position = startPosition;
     }
 
-    /*public IEnumerator ShakeByRotation()
-    {
-        Vector3 startRotation = transform.eulerAngles;
-
-        while (shakeTime > 0.0f)
-        {
-            float x = Random.Range(-1, 1f);
-            float y = 0;
-            float z = 0;
-            transform.rotation = Quaternion.Euler(startRotation + new Vector3(x, y, z) * shakeIntensity);
-
-            shakeTime -= Time.deltaTime;
-
-            yield return null;
-        }
-
-        transform.rotation = Quaternion.Euler(startRotation);
-    }*/
+  
 }
