@@ -8065,7 +8065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1407519836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11258,7 +11258,6 @@ MonoBehaviour:
   audioDamaged: {fileID: 8300000, guid: f1437075aeeaecd4f8de89f824facbc9, type: 3}
   sfx: {fileID: 1843893483}
   Damage: 0
-  manager: {fileID: 1407519836}
 --- !u!95 &1843893482
 Animator:
   serializedVersion: 3

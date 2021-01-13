@@ -28,8 +28,8 @@ public class playerc : MonoBehaviour
     private bool rightBtn = false;
     public bool Damage;
 
-    GameObject scanObject;
-    public GameManager manager;
+    /*GameObject scanObject;
+    public GameManager manager;*/
 
     void Awake()
     {
@@ -42,8 +42,8 @@ public class playerc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (manager.isAction == false)
-        {
+        /*if (manager.isAction == false)
+        {*/
             isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
 
             //input.GetKeyDown == 키를 한번 눌렸을때
@@ -96,7 +96,7 @@ public class playerc : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
-                manager.Action(scanObject);
+                //manager.Action(scanObject);
             }
 
             if (leftBtn == true && rightBtn == false)
@@ -132,7 +132,7 @@ public class playerc : MonoBehaviour
                     at.SetBool("isRun", false);
                 }
             }
-        }
+        //}
     }
 
         public void OnCollisionEnter2D(Collision2D collision)
@@ -216,7 +216,7 @@ public class playerc : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
-                manager.Action(scanObject);
+               // manager.Action(scanObject);
             }
             else if (isJump == false && Damage == true)
             {
