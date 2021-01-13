@@ -14,6 +14,8 @@ public class cameracc : MonoBehaviour
     public float shakeIntensity;
     public float leftx;
     public float rightx;
+    public float downy;
+    public float topy;
     playerc playerc;
 
     public cameracc()
@@ -45,15 +47,53 @@ public class cameracc : MonoBehaviour
     void Update()
     {
         
-        if (playerc.transform.position.x < leftx) //-4.8
+        if (playerc.transform.position.x < leftx) 
         {
-            transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+            if (playerc.transform.position.y < downy) //1.44f
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            }else if (playerc.transform.position.y > topy) //51f
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+            }
+            //transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
         }
-        else if (playerc.transform.position.x > rightx) { //4.8
-            transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+        else if (playerc.transform.position.x > rightx) { 
+            if (playerc.transform.position.y < downy)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            }
+            else if (playerc.transform.position.y > topy)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+            }
+            //transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
         }
         else {
-            transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
+            if (playerc.transform.position.y < downy)
+            {
+                transform.position = new Vector3(m_Player.transform.position.x, transform.position.y, -10);
+            }
+            else if (playerc.transform.position.y > topy)
+            {
+                transform.position = new Vector3(m_Player.transform.position.x, transform.position.y, -10);
+            }
+            else
+            {
+                transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
+            }
+
+
+
+            //transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
         }
 
         /*if (m_Player.transform.position.y >= 1.44f)
