@@ -12,10 +12,12 @@ public class potal : MonoBehaviour
     public bool isPortal = false;
     public Rigidbody2D rigid;
     public int potalnumber;
+    public cameracc maincamera;
+
     // Start is called before the first frame update
     void Start()
     {
-   
+        
     }
 
     // Update is called once per frame
@@ -24,23 +26,31 @@ public class potal : MonoBehaviour
         isPortal = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
         if(isPortal == true)
         {
-            SceneManager.LoadScene(potalnumber);
-            
+            //SceneManager.LoadScene(potalnumber);
+            StopCoroutine(LodeScenes());
+            StartCoroutine(LodeScenes());
+            Debug.Log(1);
         }
-
     }
-    void OnEnable()
+
+    IEnumerator LodeScenes()
+    {
+        Debug.Log("로딩화면 보여주기");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(potalnumber);
+    }
+
+
+    /*void OnEnable()
     {
         SceneManager.sceneLoaded += OnsceneLoaded;
     }
     void OnsceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //Debug.Log("OnSceneLoaded:" + scene.name);
-        //Debug.Log(mode);
         Debug.Log(1);
     }
     void OnDisable()
     {
         SceneManager.sceneLoaded -= OnsceneLoaded;
-    }
+    }*/
 }
