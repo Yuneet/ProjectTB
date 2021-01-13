@@ -42,8 +42,6 @@ public class playerc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (manager.isAction == false)
-        {
             isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
 
             //input.GetKeyDown == 키를 한번 눌렸을때
@@ -92,14 +90,20 @@ public class playerc : MonoBehaviour
                 at.SetBool("isRun", true);
                 RunSound();
             }
-            if (Input.GetKeyDown(KeyCode.Space) && isJump == true)
+            if (Input.GetKeyDown(KeyCode.Space) && isJump == true && transform.position.x != -6.88 && transform.position.y != -22.07)
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
-                manager.Action(scanObject);
             }
 
-            if (leftBtn == true && rightBtn == false)
+        if (Input.GetKeyDown(KeyCode.Space) && isJump == true && transform.position.x <= -6 && transform.position.x >= -6.88f && transform.position.y <= -22 && transform.position.y >= -22.5f)
+        {
+            Debug.Log(scanObject.name);
+        }
+
+
+
+        if (leftBtn == true && rightBtn == false)
             {
                 //Debug.Log("왼쪽왼쪽");
                 if (Damage == false)
@@ -132,7 +136,7 @@ public class playerc : MonoBehaviour
                     at.SetBool("isRun", false);
                 }
             }
-        }
+        
     }
 
         public void OnCollisionEnter2D(Collision2D collision)
