@@ -29,4 +29,18 @@ public class potal : MonoBehaviour
         }
 
     }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnsceneLoaded;
+    }
+    void OnsceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //Debug.Log("OnSceneLoaded:" + scene.name);
+        //Debug.Log(mode);
+        Debug.Log(1);
+    }
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnsceneLoaded;
+    }
 }
