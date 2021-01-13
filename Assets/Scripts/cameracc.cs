@@ -12,6 +12,10 @@ public class cameracc : MonoBehaviour
 
     public float shakeTime;
     public float shakeIntensity;
+    public float leftx;
+    public float rightx;
+    public float downy;
+    public float topy;
     playerc playerc;
 
     public cameracc()
@@ -25,15 +29,72 @@ public class cameracc : MonoBehaviour
     
     void Awake()
     {
+       
         playerc = GameObject.Find("Player").GetComponent<playerc>();
     }
 
+    public void Start()
+    {
+        if (playerc.istag == true)
+        {
+            OnShakeCamera(1.0f,1.0f);
+        }
+    }
+    
 
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y,-10);
+        
+        if (playerc.transform.position.x < leftx) 
+        {
+            if (playerc.transform.position.y < downy) //1.44f
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            }else if (playerc.transform.position.y > topy) //51f
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+            }
+            //transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+        }
+        else if (playerc.transform.position.x > rightx) { 
+            if (playerc.transform.position.y < downy)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            }
+            else if (playerc.transform.position.y > topy)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+            }
+            //transform.position = new Vector3(transform.position.x, m_Player.transform.position.y, -10);
+        }
+        else {
+            if (playerc.transform.position.y < downy)
+            {
+                transform.position = new Vector3(m_Player.transform.position.x, transform.position.y, -10);
+            }
+            else if (playerc.transform.position.y > topy)
+            {
+                transform.position = new Vector3(m_Player.transform.position.x, transform.position.y, -10);
+            }
+            else
+            {
+                transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
+            }
+
+
+
+            //transform.position = new Vector3(m_Player.transform.position.x, m_Player.transform.position.y, -10);
+        }
 
         /*if (m_Player.transform.position.y >= 1.44f)
         {
@@ -44,14 +105,13 @@ public class cameracc : MonoBehaviour
         {
             transform.position = new Vector3(m_Player.transform.position.x, 1.44f, -10);
         }*/
-
         if (playerc.istag == true)
         {
-            OnShakeCamera(0.1f);
+            OnShakeCamera(0.5f, 0.05f);
         }
     }
 
-    public void OnShakeCamera(float shakeTime=1.0f,float shakeIntensity = 0.1f)
+    public void OnShakeCamera(float shakeTime=0.5f,float shakeIntensity = 0.05f)
     {
         this.shakeTime = shakeTime;
         this.shakeIntensity = shakeIntensity;
@@ -76,14 +136,14 @@ public class cameracc : MonoBehaviour
         transform.position = startPosition;
     }
 
-    public IEnumerator ShakeByRotation()
+    /*public IEnumerator ShakeByRotation()
     {
         Vector3 startRotation = transform.eulerAngles;
 
         while (shakeTime > 0.0f)
         {
             float x = Random.Range(-1, 1f);
-            float y = Random.Range(-1, 1f);
+            float y = 0;
             float z = 0;
             transform.rotation = Quaternion.Euler(startRotation + new Vector3(x, y, z) * shakeIntensity);
 
@@ -93,5 +153,5 @@ public class cameracc : MonoBehaviour
         }
 
         transform.rotation = Quaternion.Euler(startRotation);
-    }
+    }*/
 }
