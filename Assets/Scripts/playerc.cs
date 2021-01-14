@@ -273,14 +273,14 @@ public class playerc : MonoBehaviour
 
         public void jumps()
         {
-            if (isJump == true /* && Damage == false*/)
+            if (isJump == true)
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
             at.SetBool("isRun", false);
                // manager.Action(scanObject);
             }
-            else if (isJump == false /*&& Damage == true*/)
+            else if (isJump == false)
             {
                //GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * 0;
                 StopSound();
