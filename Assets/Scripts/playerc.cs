@@ -129,7 +129,11 @@ public class playerc : MonoBehaviour
                     GetComponent<SpriteRenderer>().flipX = true;
                     at.SetBool("isRun", true);
                     RunSound();
+<<<<<<< HEAD
                 }
+=======
+                /*}
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                 else
                 {
                     transform.Translate(Vector2.right * speed * 0);
@@ -228,7 +232,11 @@ public class playerc : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
+<<<<<<< HEAD
                 manager.Action(scanObject);
+=======
+               // manager.Action(scanObject);
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
             }
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -31,23 +31,13 @@ public class potal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*isPortal = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
+        isPortal = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
         if(isPortal == true)
         {
             //SceneManager.LoadScene(potalnumber);
             StopCoroutine(LodeScenes());
             StartCoroutine(LodeScenes());
             Debug.Log(1);
-        }*/
-    }
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        
-        if (coll.gameObject.tag == "Player")
-        {
-            StopCoroutine(LodeScenes());
-            StartCoroutine(LodeScenes());
-                        
         }
     }
 
