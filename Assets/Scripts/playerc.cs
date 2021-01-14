@@ -217,7 +217,11 @@ public class playerc : MonoBehaviour
         public void jumps()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (isJump == true && Damage == false)
+=======
+            if (isJump == true /* && Damage == false*/)
+>>>>>>> parent of eea8834... fist
 =======
             if (isJump == true /* && Damage == false*/)
 >>>>>>> parent of eea8834... fist
@@ -227,7 +231,11 @@ public class playerc : MonoBehaviour
                 manager.Action(scanObject);
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
             else if (isJump == false && Damage == true)
+=======
+            else if (isJump == false /*&& Damage == true*/)
+>>>>>>> parent of eea8834... fist
 =======
             else if (isJump == false /*&& Damage == true*/)
 >>>>>>> parent of eea8834... fist
