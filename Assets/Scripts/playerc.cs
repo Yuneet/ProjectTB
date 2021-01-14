@@ -81,6 +81,7 @@ public class playerc : MonoBehaviour
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
                 //GetComponent<SpriteRenderer>().flipX = false;
                 GetComponent<SpriteRenderer>().flipX = true;
+            if(!at.GetBool("isJump"))
                 at.SetBool("isRun", true);
                 RunSound();
             }
@@ -89,12 +90,14 @@ public class playerc : MonoBehaviour
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
                 //GetComponent<SpriteRenderer>().flipX = true;
                 GetComponent<SpriteRenderer>().flipX = false;
-                at.SetBool("isRun", true);
+                if(!at.GetBool("isJump"))    
+                    at.SetBool("isRun", true);
                 RunSound();
             }
             if (Input.GetKeyDown(KeyCode.Space) && isJump == true)
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
+                at.SetBool("isRun", false);
                 JumpSound();
                 //manager.Action(scanObject);
             }
@@ -106,7 +109,8 @@ public class playerc : MonoBehaviour
                 {*/
                     transform.Translate(Vector2.left * speed * Time.deltaTime);
                     GetComponent<SpriteRenderer>().flipX = false;
-                    at.SetBool("isRun", true);
+                    if (!at.GetBool("isJump"))
+                        at.SetBool("isRun", true);
                     RunSound();
                 /*}
                 else
@@ -123,8 +127,9 @@ public class playerc : MonoBehaviour
                 {*/
                     transform.Translate(Vector2.right * speed * Time.deltaTime);
                     GetComponent<SpriteRenderer>().flipX = true;
-                    at.SetBool("isRun", true);
-                    RunSound();
+                     if (!at.GetBool("isJump"))
+                        at.SetBool("isRun", true);
+                         RunSound();
                 /*}
                 else
                 {
@@ -191,23 +196,33 @@ public class playerc : MonoBehaviour
         public void leftOnPointerDown()
         {
             leftBtn = true;
-        }
+        if (!at.GetBool("isJump"))
+            at.SetBool("isRun", true);
+    }
 
         public void leftOnPointerUp()
         {
             leftBtn = false;
-            StopSound();
+        at.SetBool("isRun", false);
+         /* if (!at.GetBool("isJump"))
+            at.SetBool("isRun", true);*/
+        StopSound();
         }
 
         public void rightOnPointerDown()
         {
             rightBtn = true;
-        }
+        if (!at.GetBool("isJump"))
+            at.SetBool("isRun", true);
+    }
 
         public void rightOnPointerUp()
         {
             rightBtn = false;
-            StopSound();
+        at.SetBool("isRun", false);
+             /*if (!at.GetBool("isJump"))
+            at.SetBool("isRun", true);*/
+        StopSound();
         }
 
         public void jumps()
@@ -216,6 +231,7 @@ public class playerc : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
+            at.SetBool("isRun", false);
                // manager.Action(scanObject);
             }
             else if (isJump == false /*&& Damage == true*/)
