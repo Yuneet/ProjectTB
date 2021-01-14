@@ -10,6 +10,7 @@ public class TalkManager : MonoBehaviour
     void Awake()
     {
         talkData = new Dictionary<int, string[]>();
+        portraitData = new Dictionary<int, Sprite>();
         GenerateData();
     }
 
@@ -23,7 +24,6 @@ public class TalkManager : MonoBehaviour
     {
         //id = 1000 : Mira
         talkData.Add(1000, new string[] { "여기서 너가 탈출한다면, 내 보물을 주지:1","그게 정말이겠지?:0","난 거짓말은 안친단다^^:1"} );
-
         portraitData.Add(1000 + 0, portraitArr[0]);
         portraitData.Add(1000 + 1, portraitArr[1]);
     }
