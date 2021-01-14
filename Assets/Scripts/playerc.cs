@@ -216,13 +216,21 @@ public class playerc : MonoBehaviour
 
         public void jumps()
         {
+<<<<<<< HEAD
             if (isJump == true && Damage == false)
+=======
+            if (isJump == true /* && Damage == false*/)
+>>>>>>> parent of eea8834... fist
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
                 manager.Action(scanObject);
             }
+<<<<<<< HEAD
             else if (isJump == false && Damage == true)
+=======
+            else if (isJump == false /*&& Damage == true*/)
+>>>>>>> parent of eea8834... fist
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * 0;
                 StopSound();
