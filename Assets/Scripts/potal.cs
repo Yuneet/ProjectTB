@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class potal : MonoBehaviour
 {
@@ -18,6 +19,13 @@ public class potal : MonoBehaviour
     void Start()
     {
         
+    }
+
+    public void Click()
+    {
+        //SceneManager.LoadScene(1);
+        StopCoroutine(LodeScenes());
+        StartCoroutine(LodeScenes());
     }
 
     // Update is called once per frame
