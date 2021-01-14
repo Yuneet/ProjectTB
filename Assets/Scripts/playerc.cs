@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class playerc : MonoBehaviour
@@ -26,10 +27,15 @@ public class playerc : MonoBehaviour
     // Start is called before the first frame update
     private bool leftBtn = false;
     private bool rightBtn = false;
-    //public bool Damage;
 
-    /*GameObject scanObject;
-    public GameManager manager;*/
+    float detect_range = 1.5f;
+    public int direction;
+
+    public GameObject scanObject;
+
+    public bool tagK;
+    //public bool Damage;
+    public GameManager manager;
 
     void Awake()
     {
@@ -37,14 +43,53 @@ public class playerc : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         at = GetComponent<Animator>();
         sfx = GetComponent<AudioSource>();
+        scanObject = null;
+        //gameManager = GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
+    public void FixedUpdate()
+    {
+        
+        RaycastHit2D rayHit_detect = Physics2D.Raycast(rigid.position, new Vector3(direction, 0, 0), detect_range, LayerMask.GetMask("Object"));
+        Debug.DrawRay(rigid.position, new Vector3(direction * detect_range, 0, 0), Color.red);
+        if (rayHit_detect.collider != null)
+        {
+            if (rayHit_detect.collider.gameObject.tag == "NPC")
+            {
+                scanObject = rayHit_detect.collider.gameObject;
+            }
+        }
+        else
+        {
+            //scanObject = null;
+        }
+    }
+
+
     void Update()
     {
-        /*if (manager.isAction == false)
-        {*/
-            isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
+        if (Input.GetButton("Horizontal"))
+        {
+            if(Input.GetAxisRaw("Horizontal") == -1)
+            {
+                sprite.flipX = true;
+                direction = -1;
+                Debug.Log("d");
+            }
+            else
+            {
+                sprite.flipX = false;
+                direction = 1;
+                Debug.Log("a");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) && scanObject != null)
+        {
+            manager.Action(scanObject);
+        }
+
+        isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
 
             //input.GetKeyDown == 키를 한번 눌렸을때
             //input.GetKeyUp == 누른 키를 땟을때
@@ -83,7 +128,7 @@ public class playerc : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = true;
                 at.SetBool("isRun", true);
                 RunSound();
-            }
+        }
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -91,7 +136,7 @@ public class playerc : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = false;
                 at.SetBool("isRun", true);
                 RunSound();
-            }
+        }
             if (Input.GetKeyDown(KeyCode.Space) && isJump == true)
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
@@ -142,6 +187,7 @@ public class playerc : MonoBehaviour
                 OnDamaged(collision.transform.position);
                 istag = true;
             }
+
         }
         public void OnDamaged(Vector2 targetPos)
         {
@@ -224,5 +270,7 @@ public class playerc : MonoBehaviour
                 StopSound();
             }
         }
-    
+
+
+
 }
