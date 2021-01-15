@@ -7,6 +7,7 @@ public class StoryCtrl : MonoBehaviour
 {
     // Start is called before the first frame update
     private float SeenNumners;
+    
     public GameObject gameObject1;
     public GameObject gameObject2;
     public GameObject gameObject3;
@@ -18,32 +19,49 @@ public class StoryCtrl : MonoBehaviour
     public GameObject gameObject9;
     public GameObject gameObject10;
     public Text text;
+    private string[] talk = {"나는야","준수","바보다"};
+
 
 
     void Awaek()
     {
-        SeenNumners = 0; 
+        SeenNumners = 0;
+        //Image = gameObject1.GetComponent<Image>();
+        //Image.GetComponent<Image>().sprite = sprite;
+    }
+
+    void Start()
+    {
+        //gameObject1.GetComponent<SpriteRenderer>().sprite = sprite;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
+        }
+
         if (SeenNumners == 0)
         {
             gameObject1.SetActive(true);
             gameObject10.SetActive(false);
-            text.text = "1";
+            text.text = talk[0];
         }else if (SeenNumners == 1)
         {
             gameObject1.SetActive(false);
             gameObject2.SetActive(true);
-            text.text = "2";
+            text.text = talk[1];
         }
         else if (SeenNumners == 2)
         {
             gameObject2.SetActive(false);
             gameObject3.SetActive(true);
-            text.text = "3";
+            text.text = talk[2];
         }
         else if (SeenNumners == 3)
         {
