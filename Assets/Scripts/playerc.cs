@@ -231,7 +231,7 @@ public class playerc : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
-            at.SetBool("isRun", false);
+                at.SetBool("isRun", false);
                // manager.Action(scanObject);
             }
             else if (isJump == false /*&& Damage == true*/)
