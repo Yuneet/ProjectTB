@@ -26,10 +26,17 @@ public class playerc : MonoBehaviour
     // Start is called before the first frame update
     private bool leftBtn = false;
     private bool rightBtn = false;
+<<<<<<< HEAD
+    public bool Damage;
+
+    GameObject scanObject;
+    public GameManager manager;
+=======
     //public bool Damage;
 
     /*GameObject scanObject;
     public GameManager manager;*/
+>>>>>>> parent of 18b99c4... 14432
 
     void Awake()
     {
@@ -42,8 +49,11 @@ public class playerc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+=======
         /*if (manager.isAction == false)
         {*/
+>>>>>>> parent of 18b99c4... 14432
             isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
 
             //input.GetKeyDown == 키를 한번 눌렸을때
@@ -81,7 +91,6 @@ public class playerc : MonoBehaviour
                 transform.Translate(Vector2.right * speed * Time.deltaTime);
                 //GetComponent<SpriteRenderer>().flipX = false;
                 GetComponent<SpriteRenderer>().flipX = true;
-            if(!at.GetBool("isJump"))
                 at.SetBool("isRun", true);
                 RunSound();
             }
@@ -90,54 +99,70 @@ public class playerc : MonoBehaviour
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
                 //GetComponent<SpriteRenderer>().flipX = true;
                 GetComponent<SpriteRenderer>().flipX = false;
-                if(!at.GetBool("isJump"))    
-                    at.SetBool("isRun", true);
+                at.SetBool("isRun", true);
                 RunSound();
             }
+<<<<<<< HEAD
+            if (Input.GetKeyDown(KeyCode.Space) && isJump == true && transform.position.x != -6.88 && transform.position.y != -22.07)
+=======
             if (Input.GetKeyDown(KeyCode.Space) && isJump == true)
+>>>>>>> parent of 18b99c4... 14432
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
-                at.SetBool("isRun", false);
                 JumpSound();
-                //manager.Action(scanObject);
             }
 
-            if (leftBtn == true && rightBtn == false)
+        if (Input.GetKeyDown(KeyCode.Space) && isJump == true && transform.position.x <= -6 && transform.position.x >= -6.88f && transform.position.y <= -22 && transform.position.y >= -22.5f)
+        {
+            Debug.Log(scanObject.name);
+        }
+
+
+
+        if (leftBtn == true && rightBtn == false)
             {
                 //Debug.Log("왼쪽왼쪽");
-               /* if (Damage == false)
-                {*/
+                if (Damage == false)
+                {
                     transform.Translate(Vector2.left * speed * Time.deltaTime);
                     GetComponent<SpriteRenderer>().flipX = false;
-                    if (!at.GetBool("isJump"))
-                        at.SetBool("isRun", true);
+                    at.SetBool("isRun", true);
                     RunSound();
-                /*}
+                }
                 else
                 {
                     transform.Translate(Vector2.left * speed * 0);
                     at.SetBool("isRun", false);
-                }*/
+                }
             }
 
             if (rightBtn == true && leftBtn == false)
             {
                 //Debug.Log("오른쪽오른쪽");
-                /*if (Damage == false)
-                {*/
+                if (Damage == false)
+                {
                     transform.Translate(Vector2.right * speed * Time.deltaTime);
                     GetComponent<SpriteRenderer>().flipX = true;
-                     if (!at.GetBool("isJump"))
-                        at.SetBool("isRun", true);
-                         RunSound();
+                    at.SetBool("isRun", true);
+                    RunSound();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                }
+=======
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                 /*}
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                 else
                 {
                     transform.Translate(Vector2.right * speed * 0);
                     at.SetBool("isRun", false);
-                }*/
+                }
             }
-        //}
+        
     }
 
         public void OnCollisionEnter2D(Collision2D collision)
@@ -150,7 +175,7 @@ public class playerc : MonoBehaviour
         }
         public void OnDamaged(Vector2 targetPos)
         {
-            //Damage = true;
+            Damage = true;
             gameObject.layer = 11;
 
             sprite.color = new Color(1, 1, 1, 0.4f);
@@ -164,7 +189,7 @@ public class playerc : MonoBehaviour
 
         public void OffDamaged()
         {
-            //Damage = false;
+            Damage = false;
             gameObject.layer = 10;
             sprite.color = new Color(1, 1, 1, 1);
             istag = false;
@@ -196,47 +221,54 @@ public class playerc : MonoBehaviour
         public void leftOnPointerDown()
         {
             leftBtn = true;
-        if (!at.GetBool("isJump"))
-            at.SetBool("isRun", true);
-    }
+        }
 
         public void leftOnPointerUp()
         {
             leftBtn = false;
-        at.SetBool("isRun", false);
-         /* if (!at.GetBool("isJump"))
-            at.SetBool("isRun", true);*/
-        StopSound();
+            StopSound();
         }
 
         public void rightOnPointerDown()
         {
             rightBtn = true;
-        if (!at.GetBool("isJump"))
-            at.SetBool("isRun", true);
-    }
+        }
 
         public void rightOnPointerUp()
         {
             rightBtn = false;
-        at.SetBool("isRun", false);
-             /*if (!at.GetBool("isJump"))
-            at.SetBool("isRun", true);*/
-        StopSound();
+            StopSound();
         }
 
         public void jumps()
         {
+<<<<<<< HEAD
+            if (isJump == true && Damage == false)
+=======
             if (isJump == true /* && Damage == false*/)
+>>>>>>> parent of eea8834... fist
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
-            at.SetBool("isRun", false);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                manager.Action(scanObject);
+=======
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                // manager.Action(scanObject);
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
             }
+<<<<<<< HEAD
+            else if (isJump == false && Damage == true)
+=======
             else if (isJump == false /*&& Damage == true*/)
+>>>>>>> parent of eea8834... fist
             {
-               //GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * 0;
+                GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * 0;
                 StopSound();
             }
         }

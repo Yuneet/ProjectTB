@@ -17,25 +17,12 @@ public class wrapTileCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //iswarp = Physics2D.OverlapCircle(playerctrl.feetPos.position, playerctrl.checkRadius, layer);
+        iswarp = Physics2D.OverlapCircle(playerctrl.feetPos.position, playerctrl.checkRadius, layer);
 
-        /*if (iswarp == true)
+        if (iswarp == true)
         {
             playerctrl.transform.position = targetPos;
             Debug.Log("다았다!");
-        }*/
-    }
-
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        Debug.Log(0);
-        if (coll.gameObject.tag == "Player")
-        {
-            //if (iswarp == true)
-            //{
-                playerctrl.transform.position = targetPos;
-            //}            
         }
     }
-
 }
