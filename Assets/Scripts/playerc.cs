@@ -146,8 +146,11 @@ public class playerc : MonoBehaviour
                     at.SetBool("isRun", true);
                     RunSound();
 <<<<<<< HEAD
+<<<<<<< HEAD
                 }
 =======
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                 /*}
 >>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                 else
@@ -249,8 +252,11 @@ public class playerc : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
 <<<<<<< HEAD
+<<<<<<< HEAD
                 manager.Action(scanObject);
 =======
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                // manager.Action(scanObject);
 >>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
             }
