@@ -21,7 +21,7 @@ public class StoryCtrl : MonoBehaviour
     public Text text;
     public bool iscaech;
     public bool isbutten;
-    private string[] talk = {"세계에는 아직 밝혀지지 않은 이야기가 있다.","그것은 바로 준수에 관한 이야기이다.","바보다"};
+    public string[] talk = { "세계에는 아직 밝혀지지 않은 이야기가 있다.", "그것은 바로 준수에 관한 이야기이다.", "바보다" };
 
 
 
@@ -30,6 +30,7 @@ public class StoryCtrl : MonoBehaviour
         SeenNumners = 0;
         //Image = gameObject1.GetComponent<Image>();
         //Image.GetComponent<Image>().sprite = sprite;
+        
     }
 
     void Start()
