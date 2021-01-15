@@ -1086,6 +1086,7 @@ MonoBehaviour:
   gameObject8: {fileID: 985259887}
   gameObject9: {fileID: 2095358933}
   gameObject10: {fileID: 2007808638}
+  sprite: {fileID: 21300000, guid: 091eb27ba2a650f4d93602658b278aab, type: 3}
   text: {fileID: 472157791}
 --- !u!1 &1371201604
 GameObject:
@@ -1097,6 +1098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371201605}
   - component: {fileID: 1371201606}
+  - component: {fileID: 1371201607}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -1168,6 +1170,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1371201607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371201604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c162f70b291754090d387f25fff6a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject1: {fileID: 1371201604}
+  gameObject2: {fileID: 1755087577}
+  gameObject3: {fileID: 849426481}
+  gameObject4: {fileID: 1109247640}
+  gameObject5: {fileID: 24448448}
+  gameObject6: {fileID: 1207665419}
+  gameObject7: {fileID: 1022148113}
+  gameObject8: {fileID: 985259887}
+  gameObject9: {fileID: 2095358933}
+  gameObject10: {fileID: 2007808638}
+  sprite: {fileID: 21300000, guid: 091eb27ba2a650f4d93602658b278aab, type: 3}
+  text: {fileID: 472157791}
 --- !u!1 &1755087577
 GameObject:
   m_ObjectHideFlags: 0
