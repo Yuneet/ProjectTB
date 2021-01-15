@@ -38,7 +38,10 @@ public class playerc : MonoBehaviour
         at = GetComponent<Animator>();
         sfx = GetComponent<AudioSource>();
     }
-
+    void Start()
+    {
+        sfx.volume = PlayerPrefs.GetFloat("sfx");
+    }
     // Update is called once per frame
     void Update()
     {
