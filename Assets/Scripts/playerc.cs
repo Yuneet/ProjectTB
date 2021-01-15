@@ -147,8 +147,11 @@ public class playerc : MonoBehaviour
                     RunSound();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 }
 =======
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
 =======
 >>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                 /*}
@@ -253,8 +256,11 @@ public class playerc : MonoBehaviour
                 JumpSound();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 manager.Action(scanObject);
 =======
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
 =======
 >>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                // manager.Action(scanObject);
