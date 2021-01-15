@@ -986,7 +986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1087,8 +1087,6 @@ MonoBehaviour:
   gameObject9: {fileID: 2095358933}
   gameObject10: {fileID: 2007808638}
   text: {fileID: 472157791}
-  iscaech: 0
-  isbutten: 0
 --- !u!1 &1371201604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,8 +1192,6 @@ MonoBehaviour:
   gameObject9: {fileID: 2095358933}
   gameObject10: {fileID: 2007808638}
   text: {fileID: 472157791}
-  iscaech: 0
-  isbutten: 0
 --- !u!1 &1755087577
 GameObject:
   m_ObjectHideFlags: 0
