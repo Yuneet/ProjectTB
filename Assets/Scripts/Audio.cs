@@ -14,7 +14,7 @@ public class Audio : MonoBehaviour
 
         audioSource.clip = bgm;
 
-        audioSource.volume = 1.0f;
+        //audioSource.volume = 1.0f; 주석처리 해주십시당~ 당연히 여기서 
         audioSource.loop = true;
 
         audioSource.playOnAwake = true;

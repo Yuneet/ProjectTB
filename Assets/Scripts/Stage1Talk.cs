@@ -7,10 +7,13 @@ public class Stage1Talk : MonoBehaviour
 {
     public Text text;
     public Text name;
+    public BoxCollider2D box;
+    public GameObject gameObject1;
+    public GameObject gameObject2;
     private bool iscaech;
     private bool isbutten;
     private float btnnumber;
-    private string[] talk = { "테스트 임다~~~", "대사를 내놔라아아"};
+    private string[] talk = { "테스트 임다~~~", "대사를 내놔라아아","떨어져."};
     private string[] names = {"{ 스핑크스 }","{ 고오고 }"};
 
     // Start is called before the first frame update
@@ -41,7 +44,19 @@ public class Stage1Talk : MonoBehaviour
             }
         }else if (btnnumber == 2)
         {
-            btnnumber = 0;
+            if (iscaech == false)
+            {
+                StartCoroutine(massage(names[0], talk[2], name.color = new Color32(255, 73, 73, 255)));
+            }
+        }else if (btnnumber == 3)
+        {
+            if (iscaech == false)
+            {
+                gameObject1.SetActive(false);
+                StopCoroutine(Down());
+                StartCoroutine(Down());
+                btnnumber = 0;
+            }
         }
     }
 
@@ -74,4 +89,31 @@ public class Stage1Talk : MonoBehaviour
         }
 
     }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        //Debug.Log(0);
+        if (coll.gameObject.tag == "Player")
+        {
+            //Debug.Log(1);
+            /*if (box.enabled != false && !CheckUnder.isUnder)
+            {
+                //Debug.Log(2);
+                StopCoroutine(HideBlock());
+                StartCoroutine(HideBlock());
+            }*/
+            Debug.Log("다았다");
+            box.enabled = false;
+            gameObject1.SetActive(true);        
+        }
+    }
+
+    IEnumerator Down()
+    {
+        gameObject2.SetActive(false);
+        yield return new WaitForSeconds(2);
+        gameObject2.SetActive(true);
+        yield return null;
+    }
+
 }
