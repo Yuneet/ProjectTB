@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+<<<<<<< HEAD
     public TalkManager talkManager;
     public int talkIndex;
     public bool isAction;
@@ -57,4 +58,27 @@ public class GameManager : MonoBehaviour
     }
     
 
+=======
+    public GameObject talkPanel;
+    public Text talkText;
+    public GameObject scanObject;
+    public bool isAction;
+
+    public void Action(GameObject scanObj)
+    {
+        if(isAction)
+        {
+            isAction = false;
+        }
+        else
+        {
+            isAction = true;
+            talkPanel.SetActive(true);
+            scanObject = scanObj;
+            talkText.text = "난 '" + scanObject.name + "' 라고 해";
+        }
+        talkPanel.SetActive(isAction);
+
+    }
+>>>>>>> parent of 18b99c4... 14432
 }
