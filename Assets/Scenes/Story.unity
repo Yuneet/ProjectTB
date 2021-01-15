@@ -269,9 +269,9 @@ Canvas:
   m_GameObject: {fileID: 37765628}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 751074751}
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -395,7 +395,7 @@ RectTransform:
   m_GameObject: {fileID: 472157789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 4.3118033}
+  m_LocalScale: {x: 1, y: 1, z: 4.3118033}
   m_Children: []
   m_Father: {fileID: 37765632}
   m_RootOrder: 0
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.25, b: 0.2944728, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -426,18 +426,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3025fcdaeb1554a4681eabdd133b95af, type: 3}
-    m_FontSize: 20
+    m_FontSize: 57
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 40
+    m_MaxSize: 72
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uD14C\uC2A4\uD2B8"
+  m_Text: "\uC138\uACC4\uC5D0\uB294 \uC544\uC9C1 \uBC1D\uD600\uC9C0\uC9C0\uC54A\uC740"
 --- !u!222 &472157792
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1087,6 +1087,8 @@ MonoBehaviour:
   gameObject9: {fileID: 2095358933}
   gameObject10: {fileID: 2007808638}
   text: {fileID: 472157791}
+  iscaech: 0
+  isbutten: 0
 --- !u!1 &1371201604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371201605}
   - component: {fileID: 1371201606}
+  - component: {fileID: 1371201607}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -1168,6 +1171,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1371201607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371201604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85c162f70b291754090d387f25fff6a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObject1: {fileID: 1371201604}
+  gameObject2: {fileID: 1755087577}
+  gameObject3: {fileID: 849426481}
+  gameObject4: {fileID: 1109247640}
+  gameObject5: {fileID: 24448448}
+  gameObject6: {fileID: 1207665419}
+  gameObject7: {fileID: 1022148113}
+  gameObject8: {fileID: 985259887}
+  gameObject9: {fileID: 2095358933}
+  gameObject10: {fileID: 2007808638}
+  text: {fileID: 472157791}
+  iscaech: 0
+  isbutten: 0
 --- !u!1 &1755087577
 GameObject:
   m_ObjectHideFlags: 0

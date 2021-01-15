@@ -38,7 +38,10 @@ public class playerc : MonoBehaviour
         at = GetComponent<Animator>();
         sfx = GetComponent<AudioSource>();
     }
-
+    void Start()
+    {
+        sfx.volume = PlayerPrefs.GetFloat("sfx");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -231,7 +234,7 @@ public class playerc : MonoBehaviour
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
-            at.SetBool("isRun", false);
+                at.SetBool("isRun", false);
                // manager.Action(scanObject);
             }
             else if (isJump == false /*&& Damage == true*/)
