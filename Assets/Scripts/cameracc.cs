@@ -6,6 +6,7 @@ public class cameracc : MonoBehaviour
 {
     public GameObject m_Player;
     public Camera mainCamera;
+    public AudioSource audioSource;
 
     public static cameracc instance;
     public static cameracc Instance => instance;
@@ -29,7 +30,6 @@ public class cameracc : MonoBehaviour
     
     void Awake()
     {
-       
         playerc = GameObject.Find("Player").GetComponent<playerc>();
     }
 
@@ -39,6 +39,8 @@ public class cameracc : MonoBehaviour
         {
             OnShakeCamera(1.0f,1.0f);
         }
+
+        audioSource.volume = PlayerPrefs.GetFloat("bgm");
     }
     
 
