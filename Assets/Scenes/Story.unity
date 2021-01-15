@@ -1086,6 +1086,7 @@ MonoBehaviour:
   gameObject8: {fileID: 985259887}
   gameObject9: {fileID: 2095358933}
   gameObject10: {fileID: 2007808638}
+  text: {fileID: 472157791}
 --- !u!1 &1371201604
 GameObject:
   m_ObjectHideFlags: 0

@@ -95,6 +95,7 @@ public class StoryCtrl : MonoBehaviour
 
     public void OnCrick()
     {
+        //
         SeenNumners += 1;
     }
 }
