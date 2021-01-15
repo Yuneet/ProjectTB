@@ -19,7 +19,9 @@ public class StoryCtrl : MonoBehaviour
     public GameObject gameObject9;
     public GameObject gameObject10;
     public Text text;
-    private string[] talk = {"나는야","준수","바보다"};
+    public bool iscaech;
+    public bool isbutten;
+    private string[] talk = {"세계에는 아직 밝혀지지 않은 이야기가 있다.","그것은 바로 준수에 관한 이야기이다.","바보다"};
 
 
 
@@ -50,12 +52,19 @@ public class StoryCtrl : MonoBehaviour
         {
             gameObject1.SetActive(true);
             gameObject10.SetActive(false);
-            text.text = talk[0];
+            //text.text = talk[0];
+            if (iscaech == false) {
+                StartCoroutine(cat(talk[0]));
+            }
         }else if (SeenNumners == 1)
         {
             gameObject1.SetActive(false);
             gameObject2.SetActive(true);
-            text.text = talk[1];
+            //text.text = talk[1];
+            if (iscaech == false)
+            {
+                StartCoroutine(cat(talk[1]));
+            }
         }
         else if (SeenNumners == 2)
         {
@@ -111,8 +120,30 @@ public class StoryCtrl : MonoBehaviour
 
     }
 
+    IEnumerator cat(string ct)
+    {     
+            int a = 0;
+            string wittext = "";
+            isbutten = true;
+            iscaech = true;
+            for (a = 0; a < ct.Length; a++)
+            {
+
+                wittext += ct[a];
+                text.text = wittext;
+                yield return new WaitForSeconds(0.1f);
+
+            }
+            isbutten = false;
+             
+    }
+
     public void OnCrick()
     {
-        SeenNumners += 1;
+        if (isbutten == false) {
+            SeenNumners += 1;
+            iscaech = false;
+        }
+        
     }
 }
