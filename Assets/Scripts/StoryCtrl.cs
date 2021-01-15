@@ -19,9 +19,9 @@ public class StoryCtrl : MonoBehaviour
     public GameObject gameObject9;
     public GameObject gameObject10;
     public Text text;
-    public bool iscaech;
-    public bool isbutten;
-    public string[] talk = { "세계에는 아직 밝혀지지 않은 이야기가 있다.", "그것은 바로 준수에 관한 이야기이다.", "바보다" };
+    private bool iscaech;
+    private bool isbutten;
+    private string[] talk = { "세계에는 아직 밝혀지지 않은 이야기가 있다.", "그것은 바로 준수에 관한 이야기이다.", "바보다" };
 
 
 
@@ -121,7 +121,7 @@ public class StoryCtrl : MonoBehaviour
 
     }
 
-    IEnumerator cat(string ct)
+    public IEnumerator cat(string ct)
     {     
             int a = 0;
             string wittext = "";

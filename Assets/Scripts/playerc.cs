@@ -26,6 +26,7 @@ public class playerc : MonoBehaviour
     // Start is called before the first frame update
     private bool leftBtn = false;
     private bool rightBtn = false;
+    public float aaaa;
     //public bool Damage;
 
     /*GameObject scanObject;
@@ -40,14 +41,16 @@ public class playerc : MonoBehaviour
     }
     void Start()
     {
-        sfx.volume = PlayerPrefs.GetFloat("sfx");
+        sfx.volume = PlayerPrefs.GetFloat("sfx",1.0f);
+
     }
     // Update is called once per frame
     void Update()
     {
+      
         /*if (manager.isAction == false)
         {*/
-            isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
+        isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
 
             //input.GetKeyDown == 키를 한번 눌렸을때
             //input.GetKeyUp == 누른 키를 땟을때
