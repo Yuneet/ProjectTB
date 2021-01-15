@@ -18,6 +18,7 @@ public class cameracc : MonoBehaviour
     public float downy;
     public float topy;
     playerc playerc;
+    AudioCtrl audioCtrl;
 
     public cameracc()
     {
@@ -31,6 +32,7 @@ public class cameracc : MonoBehaviour
     void Awake()
     {
         playerc = GameObject.Find("Player").GetComponent<playerc>();
+
     }
 
     public void Start()

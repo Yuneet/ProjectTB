@@ -41,7 +41,8 @@ public class playerc : MonoBehaviour
     }
     void Start()
     {
-        sfx.volume = PlayerPrefs.GetFloat("sfx",1.0f);
+        sfx.volume = PlayerPrefs.GetFloat("sfx");
+        
 
     }
     // Update is called once per frame
