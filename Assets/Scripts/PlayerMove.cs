@@ -13,23 +13,17 @@ public class PlayerMove : MonoBehaviour
     public float checkfeet;
     public LayerMask layer;
 
-    GameObject scanObject;
-    GameManager gameManager;
-
     Rigidbody2D rg;
     SpriteRenderer PlayerFilp;
     void Start()
     {
         rg = GetComponent<Rigidbody2D>();
         PlayerFilp = GetComponent<SpriteRenderer>();
-        gameManager = GetComponent<GameManager>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);

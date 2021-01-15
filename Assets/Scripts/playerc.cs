@@ -26,10 +26,17 @@ public class playerc : MonoBehaviour
     // Start is called before the first frame update
     private bool leftBtn = false;
     private bool rightBtn = false;
+<<<<<<< HEAD
     public bool Damage;
 
     GameObject scanObject;
     public GameManager manager;
+=======
+    //public bool Damage;
+
+    /*GameObject scanObject;
+    public GameManager manager;*/
+>>>>>>> parent of 18b99c4... 14432
 
     void Awake()
     {
@@ -42,6 +49,11 @@ public class playerc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
+=======
+        /*if (manager.isAction == false)
+        {*/
+>>>>>>> parent of 18b99c4... 14432
             isJump = Physics2D.OverlapCircle(feetPos.position, checkRadius, layer);
 
             //input.GetKeyDown == 키를 한번 눌렸을때
@@ -90,7 +102,11 @@ public class playerc : MonoBehaviour
                 at.SetBool("isRun", true);
                 RunSound();
             }
+<<<<<<< HEAD
             if (Input.GetKeyDown(KeyCode.Space) && isJump == true && transform.position.x != -6.88 && transform.position.y != -22.07)
+=======
+            if (Input.GetKeyDown(KeyCode.Space) && isJump == true)
+>>>>>>> parent of 18b99c4... 14432
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
@@ -130,8 +146,14 @@ public class playerc : MonoBehaviour
                     at.SetBool("isRun", true);
                     RunSound();
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                 }
 =======
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                 /*}
 >>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                 else
@@ -229,8 +251,14 @@ public class playerc : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                 manager.Action(scanObject);
 =======
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
+=======
+>>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
                // manager.Action(scanObject);
 >>>>>>> parent of 76953a3... Merge branch 'main' of https://github.com/Yuneet/ProjectTB into main
             }
