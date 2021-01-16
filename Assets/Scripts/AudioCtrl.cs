@@ -42,10 +42,7 @@ public class AudioCtrl : MonoBehaviour
     public void onbtn()
     {
         PlayerPrefs.SetFloat("bgm", musicsource.volume);
-        PlayerPrefs.SetFloat("slider", slider.value);
-
         PlayerPrefs.SetFloat("sfx", btnsouce.volume);
-        PlayerPrefs.SetFloat("slider2", slider2.value);
     }
     public void StartBtn()
     {
