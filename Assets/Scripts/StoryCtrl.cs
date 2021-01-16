@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StoryCtrl : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class StoryCtrl : MonoBehaviour
     private bool iscaech;
     private bool isbutten;
     private string[] talk = { "세계에는 아직 밝혀지지 않은 이야기가 있다.", "그것은 바로 준수에 관한 이야기이다.", "바보다" };
+    public int Scenesnumber;
 
 
 
@@ -45,7 +47,8 @@ public class StoryCtrl : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                Application.Quit();
+                StopCoroutine(LodeScenes());
+                StartCoroutine(LodeScenes());
             }
         }
 
@@ -146,5 +149,12 @@ public class StoryCtrl : MonoBehaviour
             iscaech = false;
         }
         
+    }
+
+    IEnumerator LodeScenes()
+    {
+        Debug.Log("로딩화면 보여주기");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(Scenesnumber);
     }
 }

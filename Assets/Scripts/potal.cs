@@ -28,6 +28,12 @@ public class potal : MonoBehaviour
         StartCoroutine(LodeScenes());
     }
 
+    public void Click2()
+    {
+        StopCoroutine(LodeScenes());
+        StartCoroutine(LodeScenes());
+    }
+
     // Update is called once per frame
     void Update()
     {

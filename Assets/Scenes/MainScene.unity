@@ -1203,6 +1203,7 @@ GameObject:
   - component: {fileID: 709129244}
   - component: {fileID: 709129243}
   - component: {fileID: 709129242}
+  - component: {fileID: 709129241}
   m_Layer: 5
   m_Name: GameStart
   m_TagString: Untagged
@@ -1230,6 +1231,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -5.1600037}
   m_SizeDelta: {x: 220, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &709129241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709129239}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f22ac34b2c2829469a8337800f5b4f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feetPos: {fileID: 709129240}
+  checkRadius: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 16384
+  isPortal: 0
+  rigid: {fileID: 0}
+  potalnumber: 1
+  maincamera: {fileID: 0}
 --- !u!114 &709129242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,7 +1295,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2119278911}
+      - m_Target: {fileID: 709129241}
         m_MethodName: Click
         m_Mode: 1
         m_Arguments:
@@ -1518,8 +1540,9 @@ GameObject:
   - component: {fileID: 840398117}
   - component: {fileID: 840398116}
   - component: {fileID: 840398115}
+  - component: {fileID: 840398118}
   m_Layer: 5
-  m_Name: GameQult
+  m_Name: GameStory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1588,8 +1611,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2119278911}
-        m_MethodName: Click
+      - m_Target: {fileID: 840398118}
+        m_MethodName: Click2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1636,6 +1659,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 840398113}
   m_CullTransparentMesh: 0
+--- !u!114 &840398118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840398113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f22ac34b2c2829469a8337800f5b4f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feetPos: {fileID: 0}
+  checkRadius: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 16384
+  isPortal: 0
+  rigid: {fileID: 0}
+  potalnumber: 4
+  maincamera: {fileID: 0}
 --- !u!1 &880145929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,7 +3157,6 @@ GameObject:
   - component: {fileID: 2119278908}
   - component: {fileID: 2119278907}
   - component: {fileID: 2119278906}
-  - component: {fileID: 2119278911}
   - component: {fileID: 2119278910}
   m_Layer: 5
   m_Name: Canvas
@@ -3223,27 +3266,6 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 32768
---- !u!114 &2119278911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119278905}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f22ac34b2c2829469a8337800f5b4f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  feetPos: {fileID: 709129240}
-  checkRadius: 0
-  layer:
-    serializedVersion: 2
-    m_Bits: 16384
-  isPortal: 0
-  rigid: {fileID: 0}
-  potalnumber: 1
-  maincamera: {fileID: 0}
 --- !u!1 &2137029932
 GameObject:
   m_ObjectHideFlags: 0
@@ -3313,7 +3335,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "{ \uAC8C\uC784\uC885\uB8CC }"
+  m_Text: "{ \uC2A4\uD1A0\uB9AC }"
 --- !u!222 &2137029935
 CanvasRenderer:
   m_ObjectHideFlags: 0
