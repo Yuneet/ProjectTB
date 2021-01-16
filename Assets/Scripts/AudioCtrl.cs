@@ -15,11 +15,16 @@ public class AudioCtrl : MonoBehaviour
 
     void Start()
     {
-
-        PlayerPrefs.GetFloat("bgm", musicsource.volume);
+       /* PlayerPrefs.GetFloat("bgm", musicsource.volume);
         PlayerPrefs.GetFloat("sfx", btnsouce.volume);
         PlayerPrefs.GetFloat("slider", slider.value);
-        PlayerPrefs.GetFloat("slider2", slider2.value);
+        PlayerPrefs.GetFloat("slider2", slider2.value);*/
+
+
+        musicsource.volume = PlayerPrefs.GetFloat("bgm", musicsource.volume);
+        btnsouce.volume = PlayerPrefs.GetFloat("sfx", btnsouce.volume);
+        slider.value = PlayerPrefs.GetFloat("bgm", musicsource.volume);
+        slider2.value = PlayerPrefs.GetFloat("sfx", btnsouce.volume);
     }
 
     public void SetMusicVolume(float volume)
