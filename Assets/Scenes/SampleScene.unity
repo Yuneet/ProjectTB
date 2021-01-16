@@ -2306,7 +2306,7 @@ PrefabInstance:
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.07
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
@@ -2746,7 +2746,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365750774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.4, y: -16.3, z: -1}
+  m_LocalPosition: {x: -28, y: -16.3, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1657373901}
@@ -4088,7 +4088,7 @@ PrefabInstance:
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.07
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
@@ -7727,7 +7727,7 @@ PrefabInstance:
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.07
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
@@ -9538,7 +9538,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12.8, y: 15}
+  m_Size: {x: 11.93, y: 27.452404}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -9553,7 +9553,7 @@ Transform:
   m_GameObject: {fileID: 1541473880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -28.148052, y: 9.08, z: 1}
-  m_LocalScale: {x: 8.3, y: 8.3, z: 1}
+  m_LocalScale: {x: 2.8, y: 2.34, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -10756,7 +10756,7 @@ PrefabInstance:
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.87
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
@@ -11699,6 +11699,7 @@ MonoBehaviour:
   audioRun: {fileID: 8300000, guid: 14ca3ceeb7ed5c64cada69b0d3fb820a, type: 3}
   audioDamaged: {fileID: 8300000, guid: f1437075aeeaecd4f8de89f824facbc9, type: 3}
   sfx: {fileID: 1843893483}
+  aaaa: 0
 --- !u!95 &1843893482
 Animator:
   serializedVersion: 3
@@ -13200,7 +13201,7 @@ PrefabInstance:
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.07
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7803103775373319667, guid: b2c1ecaacdf2691438cbbce154aae833,
         type: 3}
