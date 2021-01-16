@@ -42,7 +42,7 @@ public class cameracc : MonoBehaviour
             OnShakeCamera(1.0f,1.0f);
         }
 
-        audioSource.volume = PlayerPrefs.GetFloat("bgm",0.5f);
+        audioSource.volume = PlayerPrefs.GetFloat("bgm",1f);
     }
     
 
