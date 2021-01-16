@@ -7,12 +7,15 @@ public class AudioCtrl : MonoBehaviour
 {
     public AudioSource musicsource;
     public AudioSource btnsouce;
+    public AudioSource MainBgm;
+    public AudioSource Startsfx;
     public Slider slider;
     public Slider slider2;
     // Start is called before the first frame update
 
     void Start()
     {
+
         PlayerPrefs.GetFloat("bgm", musicsource.volume);
         PlayerPrefs.GetFloat("sfx", btnsouce.volume);
         PlayerPrefs.GetFloat("slider", slider.value);
@@ -39,19 +42,16 @@ public class AudioCtrl : MonoBehaviour
         PlayerPrefs.SetFloat("sfx", btnsouce.volume);
         PlayerPrefs.SetFloat("slider2", slider2.value);
     }
-    public void Load()
+    public void StartBtn()
     {
-        PlayerPrefs.GetFloat("bgm");
-        PlayerPrefs.GetFloat("slider");
-        PlayerPrefs.GetFloat("sfx");
-        PlayerPrefs.GetFloat("slider2");
+        Startsfx.Play();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(PlayerPrefs.GetFloat("sfx", 1.0f));
+        //Debug.Log(PlayerPrefs.GetFloat("sfx", 1.0f));
         //0.764848
     }
 }
