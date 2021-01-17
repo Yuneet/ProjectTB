@@ -789,9 +789,9 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 19)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(true);
+                Btn2.SetActive(true);
+                Btn3.SetActive(true);
                 can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(3.89f,33.67f,0);
