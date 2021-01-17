@@ -14,6 +14,11 @@ public class potal : MonoBehaviour
     public Rigidbody2D rigid;
     public int potalnumber;
     public cameracc maincamera;
+    public Image loadbar;
+    public GameObject buttonobj;
+    //public GameObject npcobj;
+    public GameObject loadobj;
+    //public float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +29,9 @@ public class potal : MonoBehaviour
     public void Click()
     {
         //SceneManager.LoadScene(1);
+        buttonobj.SetActive(false);
+        //npcobj.SetActive(false);
+        loadobj.SetActive(true);
         StopCoroutine(LodeScenes());
         StartCoroutine(LodeScenes());
     }
@@ -51,17 +59,43 @@ public class potal : MonoBehaviour
         
         if (coll.gameObject.tag == "Player")
         {
+            buttonobj.SetActive(false);
+            //npcobj.SetActive(false);
+            loadobj.SetActive(true);
+
             StopCoroutine(LodeScenes());
-            StartCoroutine(LodeScenes());
-                        
+            StartCoroutine(LodeScenes());                     
         }
     }
 
-    IEnumerator LodeScenes()
-    {
+    IEnumerator LodeScenes() { 
+    
+
+        AsyncOperation op = SceneManager.LoadSceneAsync(potalnumber); // 비 정기적으로 로딩씬
+        op.allowSceneActivation = false;
+        float timer = 0.0f;
+        
+        while (!op.isDone)
+        {
+            timer += 0.01f;
+            if (timer < 10)
+            {
+                Debug.Log(timer);
+                loadbar.fillAmount = timer / 10f;
+            }
+
+            if (timer > 10)
+            {
+                op.allowSceneActivation = true;
+            }
+
+            yield return null;
+        }
+
+
         Debug.Log("로딩화면 보여주기");
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene(potalnumber);
+        /*yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(potalnumber);*/
     }
 
 
