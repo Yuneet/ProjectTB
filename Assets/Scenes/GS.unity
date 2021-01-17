@@ -18075,7 +18075,6 @@ Transform:
   m_Children:
   - {fileID: 1105602310}
   - {fileID: 145682865}
-  - {fileID: 1535884972}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20924,11 +20923,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535884971}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.1166663, y: 0.029411312, z: -8}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalPosition: {x: 4.94, y: -17.1, z: -10}
+  m_LocalScale: {x: 2.4, y: 2.4, z: 1}
   m_Children: []
-  m_Father: {fileID: 1267007791}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1535884973
 AudioSource:
@@ -21054,13 +21053,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Player: {fileID: 1267007784}
   mainCamera: {fileID: 1535884977}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1535884973}
   shakeTime: 0
   shakeIntensity: 0
-  leftx: 0
-  rightx: 0
-  downy: 0
-  topy: 0
+  leftx: 4.94
+  rightx: -4.94
+  downy: -17.29
+  topy: 28.9
 --- !u!81 &1535884976
 AudioListener:
   m_ObjectHideFlags: 0
