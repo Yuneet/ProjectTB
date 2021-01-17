@@ -8,6 +8,8 @@ public class NPCChat : MonoBehaviour
     // Start is called before the first frame update
     public int Swichs = 0;
     public bool Check;
+    private bool iscaech;
+    private bool isbutten;
     public GameObject gameObject1;
     public GameObject gameObject11;
     public GameObject gameObject2;
@@ -77,8 +79,12 @@ public class NPCChat : MonoBehaviour
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
                 can.SetActive(true);
-                text.text = "일단 이곳을 탈출 하는게 우선이겠군";
-                Go();
+                //text.text = "일단 이곳을 탈출 하는게 우선이겠군"; 이전꺼
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("{ 고오고 }", "일단 이곳을 탈출 하는게 우선이겠군", textname.color = new Color32(0, 255, 255, 255), text.color = new Color32(255, 255, 255, 255)));                  
+                }
+                //Go(); 이전꺼
             }
             else if (Swichs == 1)
             {
@@ -755,7 +761,11 @@ public class NPCChat : MonoBehaviour
     {
         if (can == true)
         {
-            Swichs += 1;
+            if (isbutten == false)
+            {
+                Swichs += 1;
+                iscaech = false;
+            }
         }
     }
 
@@ -841,6 +851,24 @@ public class NPCChat : MonoBehaviour
         textname.text = "고오고";
         textname.color = new Color32(0, 255, 255, 255);
         text.color = new Color32(255, 255, 255, 255);
+    }
+
+    public IEnumerator massage(string named, string T, Color32 namecolor, Color32 textcolor)
+    {
+        int a = 0;
+        string wittext = "";
+        isbutten = true;
+        iscaech = true;
+        textname.text = named;
+        for (a = 0; a < T.Length; a++)
+        {
+
+            wittext += T[a];
+            text.text = wittext;
+            yield return new WaitForSeconds(0.1f);
+
+        }
+        isbutten = false;
     }
 
 }
