@@ -8165,7 +8165,7 @@ MonoBehaviour:
   block: {fileID: 0}
   text: {fileID: 437902776}
   textname: {fileID: 2085853692}
-  K: 18
+  K: 20
   P: {fileID: 1267007784}
   box: {fileID: 599654946}
   Npc: {fileID: 599654943}
