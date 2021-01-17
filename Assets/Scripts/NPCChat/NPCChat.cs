@@ -60,10 +60,19 @@ public class NPCChat : MonoBehaviour
             OnCricks();
         }
 
+        if (K == 3)
+        {
+            if (Swichs == 0)
+            {
+                can.SetActive(true);
+                gameObject11.SetActive(true);
+                text.text = "벌써 빛이 보이는구나 그런데 유물은 어디있지 ?";
+                Go();
+            }
+        }
 
             if (K == 1)
         {
-            Debug.Log("작동");
             if (Swichs == 0)
             {
                 can.SetActive(true);
