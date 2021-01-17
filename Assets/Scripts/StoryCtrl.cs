@@ -24,6 +24,8 @@ public class StoryCtrl : MonoBehaviour
     private bool isbutten;
     private string[] talk = { "세계에는 아직 밝혀지지 않은 이야기가 있다.", "그것은 바로 준수에 관한 이야기이다.", "바보다" };
     public int Scenesnumber;
+    public AudioSource audioSource;
+    AudioCtrl audioCtrl;
 
 
 
@@ -38,6 +40,7 @@ public class StoryCtrl : MonoBehaviour
     void Start()
     {
         //gameObject1.GetComponent<SpriteRenderer>().sprite = sprite;
+        audioSource.volume = PlayerPrefs.GetFloat("bgm", 1f);
     }
 
     // Update is called once per frame
