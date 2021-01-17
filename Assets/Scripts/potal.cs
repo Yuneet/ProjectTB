@@ -18,12 +18,14 @@ public class potal : MonoBehaviour
     public GameObject buttonobj;
     //public GameObject npcobj;
     public GameObject loadobj;
+    public GameObject player;
+    //public Button button;
     //public float timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     public void Click()
@@ -59,6 +61,7 @@ public class potal : MonoBehaviour
         
         if (coll.gameObject.tag == "Player")
         {
+            player.SetActive(false);
             buttonobj.SetActive(false);
             //npcobj.SetActive(false);
             loadobj.SetActive(true);
@@ -73,11 +76,12 @@ public class potal : MonoBehaviour
 
         AsyncOperation op = SceneManager.LoadSceneAsync(potalnumber); // 비 정기적으로 로딩씬
         op.allowSceneActivation = false;
+        
         float timer = 0.0f;
         
         while (!op.isDone)
         {
-            timer += 0.01f;
+            timer += 0.02f;
             if (timer < 10)
             {
                 Debug.Log(timer);
