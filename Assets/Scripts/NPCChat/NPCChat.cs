@@ -24,7 +24,7 @@ public class NPCChat : MonoBehaviour
     public GameObject block;
     public Text text;
     public Text textname;
-    public int K = 0;
+    public int K;
     public GameObject P;
     public BoxCollider2D box;
     public GameObject Npc;
@@ -214,7 +214,7 @@ public class NPCChat : MonoBehaviour
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-11f, 51.47f, 0);
                 box.enabled = true;
-                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
                 K = 10;
             }
         }
