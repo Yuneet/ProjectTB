@@ -82,9 +82,9 @@ public class NPCChat : MonoBehaviour
                 //text.text = "일단 이곳을 탈출 하는게 우선이겠군"; 이전꺼
                 if (iscaech == false)
                 {
-                    StartCoroutine(massage("{ 고오고 }", "일단 이곳을 탈출 하는게 우선이겠군", textname.color = new Color32(0, 255, 255, 255), text.color = new Color32(255, 255, 255, 255)));                  
+                    StartCoroutine(massage("일단 이곳을 탈출 하는게 우선이겠군"));                  
                 }
-                //Go(); 이전꺼
+                Go();
             }
             else if (Swichs == 1)
             {
@@ -898,13 +898,12 @@ public class NPCChat : MonoBehaviour
         text.color = new Color32(255, 255, 255, 255);
     }
 
-    public IEnumerator massage(string named, string T, Color32 namecolor, Color32 textcolor)
+    public IEnumerator massage(string T)
     {
         int a = 0;
         string wittext = "";
         isbutten = true;
         iscaech = true;
-        textname.text = named;
         for (a = 0; a < T.Length; a++)
         {
 
