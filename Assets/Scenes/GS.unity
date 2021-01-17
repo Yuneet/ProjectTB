@@ -7845,12 +7845,16 @@ MonoBehaviour:
   gameObject77: {fileID: 96624808}
   gameObject777: {fileID: 948962013}
   can: {fileID: 1914762288}
+  block: {fileID: 0}
   text: {fileID: 437902776}
   textname: {fileID: 2085853692}
   K: 0
   P: {fileID: 1267007784}
   box: {fileID: 599654946}
   Npc: {fileID: 599654943}
+  Btn: {fileID: 0}
+  Btn2: {fileID: 0}
+  Btn3: {fileID: 0}
 --- !u!61 &599654946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17368,7 +17372,7 @@ Transform:
   m_GameObject: {fileID: 1249980988}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.7999996, y: -9.242354, z: -9}
-  m_LocalScale: {x: 2.25, y: 2.5, z: 0}
+  m_LocalScale: {x: 5, y: 2.5, z: 0}
   m_Children: []
   m_Father: {fileID: 1914762289}
   m_RootOrder: 3

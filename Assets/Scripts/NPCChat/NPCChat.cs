@@ -21,6 +21,7 @@ public class NPCChat : MonoBehaviour
     public GameObject gameObject777;
     //public Canvas Can;
     public GameObject can;
+    public GameObject block;
     public Text text;
     public Text textname;
     public int K = 0;
@@ -64,19 +65,275 @@ public class NPCChat : MonoBehaviour
             OnCricks();
         }
 
+        
+
+        // 첫 스테이지 시작
+        if (K == 1)
+        {
+            if (Swichs == 0)
+            {
+                gameObject3.SetActive(false);
+                Btn.SetActive(false);
+                Btn2.SetActive(false);
+                Btn3.SetActive(false);
+                can.SetActive(true);
+                text.text = "일단 이곳을 탈출 하는게 우선이겠군";
+                Go();
+            }
+            else if (Swichs == 1)
+            {
+                K = 2;
+                can.SetActive(false);
+                Swichs = 0;
+                Npc.transform.position = new Vector3(0.08f, 4.53f, 0);
+                box.enabled = true;
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+            }
+        }
+
+        // 첫 스테이지 발판 앞에 두고
         if (K == 3)
         {
             if (Swichs == 0)
             {
                 can.SetActive(true);
-                gameObject11.SetActive(true);
-                text.text = "벌써 빛이 보이는구나 그런데 유물은 어디있지 ?";
+                text.text = "왠지 느낌이 좋지 않아, 조심해야겠군";
                 Go();
+            }
+            else if (Swichs == 1)
+            {
+                K = 4;
+                can.SetActive(false);
+                Swichs = 0;
+                Npc.transform.position = new Vector3(9.5f, 8.5f, 0);
+                box.enabled = true;
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+            }
+        }
+
+        // 첫 스테이지 포탈을 앞두고
+        if (K == 5)
+        {
+            if (Swichs == 0)
+            {
+                can.SetActive(true);
+                text.text = "이곳을 통하면 다음 층으로 향할 수 있는건가";
+                Go();
+            }
+            else if (Swichs == 1)
+            {
+                K = 6;
+                can.SetActive(false);
+                Swichs = 0;
+                Npc.transform.position = new Vector3(10.51f, 13.67f, 0);
+                box.enabled = true;
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+            }
+        }
+
+        // 첫 스테이지 포탈을 탄 후
+        if (K == 7)
+        {
+            if (Swichs == 0)
+            {
+                gameObject3.SetActive(true);
+                can.SetActive(true);
+                text.text = "인간이 여기까지 들어오다니 제법이구나 ?";
+                Sp();
+            }
+            else if (Swichs == 1)
+            {
+                gameObject3.SetActive(false);
+                gameObject11.SetActive(true);
+                text.text = "...";
+                Go();
+            }
+            else if (Swichs == 2)
+            {
+                gameObject11.SetActive(false);
+                gameObject5.SetActive(true);
+                text.text = "들었으면 대답이라도 하지 그래 ?";
+                Sp();
+            }
+            else if (Swichs == 3)
+            {
+                text.text = "넌 누구고 여기는 어디지 ?";
+                Go();
+            }
+            else if (Swichs == 4)
+            {
+                gameObject4.SetActive(true);
+                gameObject5.SetActive(false);
+                text.text = "그건 알 것 없고, 너도 유물이 탐나나봐 ?";
+                Sp();
+            }
+            else if (Swichs == 5)
+            {
+                text.text = "그 유물에 대해서 아는것이 있는건가 ?";
+                Go();
+            }
+            else if (Swichs == 6)
+            {
+                text.text = "지금은 알려줄 수 없고 ~, 다음 곳 까지 오면 알려주지~";
+                Sp();
+            }
+            else if (Swichs == 7)
+            {
+                gameObject4.SetActive(false);
+                text.text = "' 스핑크스는 메롱 표정을 지으며 사라졌다 '";
+                Go();
+            }
+            else if (Swichs == 8)
+            {
+                text.text = "뭐하는 녀석인지..";
+                Go();
+            }
+            else if (Swichs == 9)
+            {
+                can.SetActive(false);
+                Swichs = 0;
+                Npc.transform.position = new Vector3(-1.73f, 34.53f, 0);
+                box.enabled = true;
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+                K = 8;
+            }
+        }
+
+        // 첫 갈림길에 서서
+        if (K == 9)
+        {
+            if (Swichs == 0)
+            {
+                can.SetActive(true);
+                text.text = "옛날 기분이 나는군... 그때가 말이야";
+                Go();
+            }
+            else if (Swichs == 1)
+            {
+                can.SetActive(false);
+                Swichs = 0;
+                Npc.transform.position = new Vector3(-11f, 51.47f, 0);
+                box.enabled = true;
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+                K = 10;
+            }
+        }
+
+        // 첫 스테이지 두번째 포탈을 탄 후
+        if (K == 11)
+        {
+            if (Swichs == 0)
+            {
+                can.SetActive(true);
+                gameObject3.SetActive(true);
+                text.text = "인간 주제에 여기까지 오다니 !, 이몸이 칭찬해주지 !";
+                Sp();
+            }
+            else if (Swichs == 1)
+            {
+                text.text = "그러니까 너가 누구냔 말이다";
+                Go();
+            }
+            else if (Swichs == 2)
+            {
+                gameObject3.SetActive(false);
+                gameObject6.SetActive(true);
+                text.text = "아 거참, 말이 많네?, 내가 누군지 모른단 말이야 ?";
+                Sp();
+            }
+            else if (Swichs == 3)
+            {
+                text.text = "너는 자기소개도 안하는데, 누군지 알아야해 ?";
+                Go();
+            }
+            else if (Swichs == 4)
+            {
+                text.text = "그럼 난 누군데, 알아맞춰봐";
+                Go();
+            }
+            else if (Swichs == 5)
+            {
+                gameObject11.SetActive(true);
+                gameObject6.SetActive(false);
+                text.text = "...";
+                Sp();
+            }
+            else if (Swichs == 6)
+            {
+                text.text = "바보";
+                Go();
+            }
+            else if (Swichs == 7)
+            {
+                gameObject2.SetActive(true);
+                gameObject11.SetActive(false);
+                text.text = "ㅁ..뭐? 바보? 죽고싶어 ?";
+                Sp();
+            }
+            else if (Swichs == 8)
+            {
+                text.text = "그래서 유물의 능력이 뭔지 알고 있는건가 ?";
+                Go();
+            }
+            else if (Swichs == 9)
+            {
+                gameObject3.SetActive(true);
+                gameObject2.SetActive(false);
+                text.text = "너 같은 하등한 존재가 느낄 수 없는 어마무시한 유물이지~";
+                Sp();
+            }
+            else if (Swichs == 10)
+            {
+                text.text = "...";
+                Go();
+            }
+            else if (Swichs == 11)
+            {
+                gameObject1.SetActive(true);
+                gameObject3.SetActive(false);
+                text.text = "어이.. 들었으면 대답을 하라니까?";
+                Sp();
+            }
+            else if (Swichs == 12)
+            {
+                gameObject5.SetActive(true);
+                gameObject1.SetActive(false);
+                text.text = "안되겠다, 넌 다시 처음부터 시작하자";
+                Sp();
+            }
+            else if (Swichs == 13)
+            {
+                can.SetActive(false);
+                block.SetActive(false);
+            }
+            else if (Swichs == 15)
+            {
+                can.SetActive(true);
+                block.SetActive(true);
+                gameObject1.SetActive(true);
+                gameObject5.SetActive(false);
+                text.text = "다시 올라와~ 그러면 내가 친히 설명해주지 !";
+                Sp();
+            }
+            else if (Swichs == 15)
+            {
+                gameObject1.SetActive(false);
+                text.text = "너 딱 거기서 기다려라..";
+                Go();
+            }
+            else if (Swichs == 16)
+            {
+                K = 12;
+                can.SetActive(false);
+                Swichs = 0;
+                Npc.transform.position = new Vector3(200f, 500f, 0);
+                box.enabled = true;
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
             }
         }
 
         // 두번째 스테이지 도착
-        if (K == 12)
+        if (K == 13)
         {
             if (Swichs == 0)
             {
@@ -145,6 +402,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 10)
             {
+                K = 14;
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -153,12 +411,12 @@ public class NPCChat : MonoBehaviour
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-20.18f, -3.96f, 0);
                 box.enabled = true;
-                K = 13;
+
             }
         }
 
         // 두번째 스테이지 첫번째 포탈 도착
-        if (K == 14)
+        if (K == 15)
         {
             if (Swichs == 0)
             {
@@ -226,17 +484,17 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 9)
             {
+                K = 16;
                 can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-29.35f, 1.24f, 0);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
-                K = 15;
             }
         }
 
         // 두번째 스테이지 포탈 이동 후
-        if (K == 16)
+        if (K == 17)
         {
             if (Swichs == 0)
             {
@@ -250,17 +508,17 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
+                K = 18;
                 can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-17.59f, 35.82f, 0);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
-                K = 17;
             }
         }
 
         // 두번째 스테이지 두번째 포탈 도착
-        if (K == 18)
+        if (K == 19)
         {
             if (Swichs == 0)
             {
@@ -349,16 +607,16 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 13)
             {
+                K = 20;
                 can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-100f, 100f, 0);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
-                K = 19;
             }
         }
 
-            if (K == 9)
+            if (K == 21)
         {
             if (Swichs == 0)
             {
@@ -495,7 +753,10 @@ public class NPCChat : MonoBehaviour
 
     public void OnCricks()
     {
-        Swichs += 1;
+        if (can == true)
+        {
+            Swichs += 1;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D coll)
@@ -503,31 +764,67 @@ public class NPCChat : MonoBehaviour
         //Debug.Log(0);
         if (coll.gameObject.tag == "Player" && K == 0)
         {
-            K = 12;
+            GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+            K = 1;
             Swichs = 0;
             box.enabled = false;
         }
-        if (coll.gameObject.tag == "Player" && K == 11)
+        if (coll.gameObject.tag == "Player" && K == 2)
         {
-            K = 12;
+            GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+            K = 3;
             Swichs = 0;
             box.enabled = false;
         }
-        if (coll.gameObject.tag == "Player" && K == 13)
+        if (coll.gameObject.tag == "Player" && K == 4)
         {
-            K = 14;
+            GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+            K = 5;
             Swichs = 0;
             box.enabled = false;
         }
-        if (coll.gameObject.tag == "Player" && K == 15)
+        if (coll.gameObject.tag == "Player" && K == 6)
         {
-            K = 16;
+            GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+            K = 7;
             Swichs = 0;
             box.enabled = false;
         }
-            if (coll.gameObject.tag == "Player" && K == 17)
+        if (coll.gameObject.tag == "Player" && K == 8)
+        {
+            GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+            K = 9;
+            Swichs = 0;
+            box.enabled = false;
+        }
+        if (coll.gameObject.tag == "Player" && K == 10)
+        {
+            GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+            K = 11;
+            Swichs = 0;
+            box.enabled = false;
+        }
+        if (coll.gameObject.tag == "Player" && K == 12)
+        {
+            K = 13;
+            Swichs = 0;
+            box.enabled = false;
+        }
+        if (coll.gameObject.tag == "Player" && K == 14)
+        {
+            K = 15;
+            Swichs = 0;
+            box.enabled = false;
+        }
+        if (coll.gameObject.tag == "Player" && K == 16)
+        {
+            K = 17;
+            Swichs = 0;
+            box.enabled = false;
+        }
+            if (coll.gameObject.tag == "Player" && K == 18)
             {
-                K = 18;
+                K = 19;
             Swichs = 0;
             box.enabled = false;
             }
