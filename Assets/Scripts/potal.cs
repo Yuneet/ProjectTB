@@ -71,12 +71,15 @@ public class potal : MonoBehaviour
         }
     }
 
-    IEnumerator LodeScenes() { 
+    public IEnumerator LodeScenes() { 
     
 
         AsyncOperation op = SceneManager.LoadSceneAsync(potalnumber); // 비 정기적으로 로딩씬
         op.allowSceneActivation = false;
-        
+        player.SetActive(false);
+        buttonobj.SetActive(false);
+        loadobj.SetActive(true);
+
         float timer = 0.0f;
         
         while (!op.isDone)
