@@ -5839,7 +5839,7 @@ MonoBehaviour:
   text: {fileID: 1002766171}
   textname: {fileID: 187591987}
   K: 13
-  P: {fileID: 0}
+  P: {fileID: 1843893476}
   box: {fileID: 722588184}
   Npc: {fileID: 722588182}
   Btn: {fileID: 642383053}

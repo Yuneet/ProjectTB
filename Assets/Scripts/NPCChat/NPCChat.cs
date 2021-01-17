@@ -45,7 +45,6 @@ public class NPCChat : MonoBehaviour
 
     void Start()
     {
-        P = GetComponent<GameObject>();
         can.SetActive(false);
         gameObject1.SetActive(false);
         gameObject11.SetActive(false);
@@ -74,6 +73,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 gameObject3.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
@@ -89,6 +89,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
+                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -106,6 +107,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -118,6 +120,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
+                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -135,6 +138,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -144,6 +148,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
+                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -161,6 +166,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -245,6 +251,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 9)
             {
+                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -262,6 +269,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -275,6 +283,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
+                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -292,6 +301,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -437,6 +447,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 16)
             {
+                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -454,6 +465,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -546,6 +558,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 10)
             {
+                P.SetActive(true);
                 K = 14;
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
@@ -564,6 +577,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -658,6 +672,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 9)
             {
+                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -675,6 +690,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 gameObject3.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
@@ -688,6 +704,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
+                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -705,6 +722,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -829,6 +847,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 13)
             {
+                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -845,6 +864,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -1023,6 +1043,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 19)
             {
+                P.SetActive(true);
                 K = 22;
                 Btn.SetActive(true);
                 Btn2.SetActive(true);

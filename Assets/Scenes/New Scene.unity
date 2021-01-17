@@ -170,7 +170,7 @@ MonoBehaviour:
   text: {fileID: 1566205284}
   textname: {fileID: 1086541756}
   K: 0
-  P: {fileID: 0}
+  P: {fileID: 1717792543}
   box: {fileID: 6504441}
   Npc: {fileID: 6504439}
   Btn: {fileID: 139057331}
