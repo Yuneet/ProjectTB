@@ -32,7 +32,7 @@ public class StoryCtrl : MonoBehaviour
 
     void Awaek()
     {
-        SeenNumners = 0;
+        //SeenNumners = 0;
         //Image = gameObject1.GetComponent<Image>();
         //Image.GetComponent<Image>().sprite = sprite;
         
@@ -41,6 +41,7 @@ public class StoryCtrl : MonoBehaviour
     void Start()
     {
         //gameObject1.GetComponent<SpriteRenderer>().sprite = sprite;
+        SeenNumners = 0;
         audioSource.volume = PlayerPrefs.GetFloat("bgm", 1f);
     }
 
