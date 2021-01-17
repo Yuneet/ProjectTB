@@ -79,6 +79,7 @@ public class NPCChat : MonoBehaviour
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
                 can.SetActive(true);
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
                 //text.text = "일단 이곳을 탈출 하는게 우선이겠군"; 이전꺼
                 if (iscaech == false)
                 {
@@ -265,6 +266,7 @@ public class NPCChat : MonoBehaviour
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
                 can.SetActive(true);
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
                 if (iscaech == false)
                 {
                     StartCoroutine(massage("옛날 기분이 나는군... 그때가 말이야"));
@@ -411,12 +413,10 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 13)
             {
-                can.SetActive(false);
                 block.SetActive(false);
             }
             else if (Swichs == 15)
             {
-                can.SetActive(true);
                 block.SetActive(true);
                 gameObject1.SetActive(true);
                 gameObject5.SetActive(false);
