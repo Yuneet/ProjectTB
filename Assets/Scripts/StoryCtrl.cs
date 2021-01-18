@@ -49,14 +49,14 @@ public class StoryCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Application.platform == RuntimePlatform.Android)
-        {
+        //if(Application.platform == RuntimePlatform.Android)
+        //{
             if (Input.GetKey(KeyCode.Escape))
             {
-                StopCoroutine(potal.LodeScenes(potal.potalnumber2));
+                //StopCoroutine(potal.LodeScenes(potal.potalnumber2));
                 StartCoroutine(potal.LodeScenes(potal.potalnumber2));
             }
-        }
+        //}
 
         if (SeenNumners == 0)
         {
