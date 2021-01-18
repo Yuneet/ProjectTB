@@ -22,6 +22,7 @@ public class NPCChat : MonoBehaviour
     public GameObject gameObject7;
     public GameObject gameObject77;
     public GameObject gameObject777;
+    public GameObject gameObject8;
     //public Canvas Can;
     public GameObject can;
     public GameObject block;
@@ -37,7 +38,7 @@ public class NPCChat : MonoBehaviour
     public GameObject Btn3;
     public playerc playerc;
 
-    public GameObject Skip;
+
 
     void Awaek()
     {
@@ -58,6 +59,10 @@ public class NPCChat : MonoBehaviour
         gameObject4.SetActive(false);
         gameObject5.SetActive(false);
         gameObject6.SetActive(false);
+        gameObject7.SetActive(false);
+        gameObject77.SetActive(false);
+        gameObject777.SetActive(false);
+        gameObject8.SetActive(false);
     }
 
     // Update is called once per frame
@@ -70,21 +75,74 @@ public class NPCChat : MonoBehaviour
             OnCricks();
         }
 
-        if (Swichs <= 0)
-        {
-            Skip.SetActive(false);
-        }
+
         
         if (K == 0 || K == 2 || K == 4 || K == 6 || K == 8 || K == 10 || K == 12 || K == 14 || K == 16 || K == 18 || K == 20)
         {
             Swichs = 0;
         }
-        // 첫 스테이지 시작
-        if (K == 1)
+        // 떨어지는 장면
+        if (K == -1)
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
+                gameObject3.SetActive(false);
+                Btn.SetActive(false);
+                Btn2.SetActive(false);
+                Btn3.SetActive(false);
+                can.SetActive(true);
+                playerc.rightBtn = false;
+                playerc.leftBtn = false;
+                gameObject8.SetActive(true);
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("기다리고 있었습니다, 고오고님 되십니까?"));
+                }
+                SC();
+            }
+            else if (Swichs == 1)
+            {
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("' 끄덕거린다 '"));
+                }
+                Go();
+            }
+            else if (Swichs == 2)
+            {
+                if (iscaech == false)
+                {
+                    gameObject8.SetActive(false);
+                    StartCoroutine(massage("이쪽으로 오시지요, 안내해드리겠습니다"));
+                }
+                SC();
+            }
+            else if (Swichs == 3)
+            {
+                Btn.SetActive(true);
+                Btn2.SetActive(true);
+                Btn3.SetActive(true);
+                K = 0;
+                can.SetActive(false);
+                playerc.rightBtn = true;
+                playerc.leftBtn = true;
+                Swichs = 0;
+                Npc.transform.position = new Vector3(0.08f, 4.53f, 0);
+                box.enabled = true;
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+            }
+        }
+
+        if (P.transform.position.x >= 1.25f)
+        {
+            block.SetActive(false);
+        }
+            // 첫 스테이지 시작
+            if (K == 1)
+        {
+            if (Swichs == 0)
+            {
                 gameObject3.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
@@ -96,13 +154,21 @@ public class NPCChat : MonoBehaviour
                 //text.text = "일단 이곳을 탈출 하는게 우선이겠군"; 이전꺼
                 if (iscaech == false)
                 {
-                    StartCoroutine(massage("일단 이곳을 탈출 하는게 우선이겠군"));                  
+                    StartCoroutine(massage("여기가 어디지.. ? 그녀를 따라가긴 했는데"));                  
                 }
                 Go();
             }
             else if (Swichs == 1)
             {
-                P.SetActive(true);
+                //text.text = "일단 이곳을 탈출 하는게 우선이겠군"; 이전꺼
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("진정하자, 일단 이곳을 탈출 하는게 우선이겠군"));
+                }
+                Go();
+            }
+            else if (Swichs == 2)
+            {
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -122,7 +188,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -137,7 +202,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -157,7 +221,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -169,7 +232,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -189,7 +251,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -276,7 +337,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 9)
             {
-                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -296,7 +356,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -312,7 +371,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -332,7 +390,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                //P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -480,7 +537,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 16)
             {
-                //P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -500,7 +556,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -595,7 +650,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 10)
             {
-                P.SetActive(true);
                 K = 14;
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
@@ -616,7 +670,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -713,7 +766,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 9)
             {
-                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -733,7 +785,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
                 gameObject3.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
@@ -749,7 +800,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -769,7 +819,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -896,7 +945,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 13)
             {
-                P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);
@@ -915,7 +963,6 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -1096,7 +1143,6 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 19)
             {
-                P.SetActive(true);
                 K = 22;
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
@@ -1128,6 +1174,13 @@ public class NPCChat : MonoBehaviour
     void OnCollisionEnter2D(Collision2D coll)
     {
         //Debug.Log(0);
+        if (coll.gameObject.tag == "Player" && K == -2)
+        {
+            GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
+            K = -1;
+            Swichs = 0;
+            box.enabled = false;
+        }
         if (coll.gameObject.tag == "Player" && K == 0)
         {
             GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
@@ -1208,7 +1261,13 @@ public class NPCChat : MonoBehaviour
         textname.color = new Color32(255, 64, 75, 255);
         text.color = new Color32(255, 255, 255, 255);
     }
-    public void Go()
+        public void SC()
+        {
+            textname.text = "의문의 여인";
+            textname.color = new Color32(255, 64, 75, 255);
+            text.color = new Color32(255, 255, 255, 255);
+        }
+        public void Go()
     {
         textname.text = "고오고";
         textname.color = new Color32(0, 255, 255, 255);
