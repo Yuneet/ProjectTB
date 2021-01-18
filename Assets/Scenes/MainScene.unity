@@ -1328,6 +1328,7 @@ MonoBehaviour:
   buttonobj: {fileID: 742566911}
   loadobj: {fileID: 1156774432}
   player: {fileID: 742566911}
+  potalnumber2: 4
 --- !u!4 &484191225
 Transform:
   m_ObjectHideFlags: 0
@@ -1819,6 +1820,7 @@ MonoBehaviour:
   buttonobj: {fileID: 742566911}
   loadobj: {fileID: 1156774432}
   player: {fileID: 742566911}
+  potalnumber2: 4
 --- !u!4 &688863991
 Transform:
   m_ObjectHideFlags: 0
@@ -1898,6 +1900,7 @@ MonoBehaviour:
   buttonobj: {fileID: 742566911}
   loadobj: {fileID: 1156774432}
   player: {fileID: 0}
+  potalnumber2: 0
 --- !u!114 &709129242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2341,6 +2344,7 @@ MonoBehaviour:
   buttonobj: {fileID: 0}
   loadobj: {fileID: 0}
   player: {fileID: 0}
+  potalnumber2: 0
 --- !u!1 &854619547
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,10 +19,16 @@ public class potal : MonoBehaviour
     //public GameObject npcobj;
     public GameObject loadobj;
     public GameObject player;
+    private float SetStart;
+    public int potalnumber2;
     //public Button button;
     //public float timer;
 
     // Start is called before the first frame update
+    public void Awaek()
+    {
+
+    }
     void Start()
     {
       
@@ -30,18 +36,29 @@ public class potal : MonoBehaviour
 
     public void Click()
     {
+        SetStart = PlayerPrefs.GetFloat("setstart", 0);
         //SceneManager.LoadScene(1);
         buttonobj.SetActive(false);
         //npcobj.SetActive(false);
         loadobj.SetActive(true);
-        StopCoroutine(LodeScenes());
-        StartCoroutine(LodeScenes());
+        if (SetStart == 0)
+        {
+            StopCoroutine(LodeScenes(potalnumber2));
+            StartCoroutine(LodeScenes(potalnumber2));
+        }
+        else if (SetStart == 1)
+        {
+            StopCoroutine(LodeScenes(potalnumber));
+            StartCoroutine(LodeScenes(potalnumber));
+        }
+        /*StopCoroutine(LodeScenes());
+        StartCoroutine(LodeScenes());*/
     }
 
     public void Click2()
     {
-        StopCoroutine(LodeScenes());
-        StartCoroutine(LodeScenes());
+        StopCoroutine(LodeScenes(potalnumber2));
+        StartCoroutine(LodeScenes(potalnumber2));
     }
 
     // Update is called once per frame
@@ -66,15 +83,15 @@ public class potal : MonoBehaviour
             //npcobj.SetActive(false);
             loadobj.SetActive(true);
 
-            StopCoroutine(LodeScenes());
-            StartCoroutine(LodeScenes());                     
+            StopCoroutine(LodeScenes(potalnumber));
+            StartCoroutine(LodeScenes(potalnumber));                     
         }
     }
 
-    public IEnumerator LodeScenes() { 
+    public IEnumerator LodeScenes(int namber) { 
     
 
-        AsyncOperation op = SceneManager.LoadSceneAsync(potalnumber); // 비 정기적으로 로딩씬
+        AsyncOperation op = SceneManager.LoadSceneAsync(namber); // 비 정기적으로 로딩씬
         op.allowSceneActivation = false;
         player.SetActive(false);
         buttonobj.SetActive(false);
