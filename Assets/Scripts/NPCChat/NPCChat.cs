@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class NPCChat : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class NPCChat : MonoBehaviour
     public GameObject Btn;
     public GameObject Btn2;
     public GameObject Btn3;
+    public playerc playerc;
 
     void Awaek()
     {
@@ -79,6 +81,8 @@ public class NPCChat : MonoBehaviour
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
                 can.SetActive(true);
+                playerc.rightBtn = false;
+                playerc.leftBtn = false;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
                 //text.text = "일단 이곳을 탈출 하는게 우선이겠군"; 이전꺼
                 if (iscaech == false)
