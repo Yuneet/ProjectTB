@@ -27,7 +27,7 @@ public class potal : MonoBehaviour
     // Start is called before the first frame update
     public void Awaek()
     {
-
+        SetStart = PlayerPrefs.GetFloat("setstart", 0);
     }
     void Start()
     {
@@ -36,7 +36,7 @@ public class potal : MonoBehaviour
 
     public void Click()
     {
-        SetStart = PlayerPrefs.GetFloat("setstart", 0);
+        //SetStart = PlayerPrefs.GetFloat("setstart", 0);
         //SceneManager.LoadScene(1);
         buttonobj.SetActive(false);
         //npcobj.SetActive(false);
@@ -104,7 +104,7 @@ public class potal : MonoBehaviour
             timer += 0.02f;
             if (timer < 10)
             {
-                Debug.Log(timer);
+                //Debug.Log(timer);
                 loadbar.fillAmount = timer / 10f;
             }
 
@@ -116,7 +116,7 @@ public class potal : MonoBehaviour
         }
 
 
-        Debug.Log("로딩화면 보여주기");
+        //Debug.Log("로딩화면 보여주기");
         /*yield return new WaitForSeconds(5);
         SceneManager.LoadScene(potalnumber);*/
     }
