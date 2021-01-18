@@ -24,8 +24,8 @@ public class playerc : MonoBehaviour
     public AudioClip audioDamaged;
     public AudioSource sfx;
     // Start is called before the first frame update
-    private bool leftBtn = false;
-    private bool rightBtn = false;
+    public bool leftBtn = false;
+    public bool rightBtn = false;
     public float aaaa;
     //public bool Damage;
 
@@ -146,7 +146,6 @@ public class playerc : MonoBehaviour
             }
         //}
     }
-
         public void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.tag == "Saw")
