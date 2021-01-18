@@ -53,8 +53,8 @@ public class StoryCtrl : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                StopCoroutine(potal.LodeScenes(potal.potalnumber));
-                StartCoroutine(potal.LodeScenes(potal.potalnumber));
+                StopCoroutine(potal.LodeScenes(potal.potalnumber2));
+                StartCoroutine(potal.LodeScenes(potal.potalnumber2));
             }
         }
 
