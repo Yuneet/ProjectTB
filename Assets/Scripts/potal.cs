@@ -88,10 +88,24 @@ public class potal : MonoBehaviour
         }
     }
 
-    public IEnumerator LodeScenes(int namber) { 
-    
+    public IEnumerator LodeScenes(int namber) {
 
-        AsyncOperation op = SceneManager.LoadSceneAsync(namber); // 비 정기적으로 로딩씬
+        player.SetActive(false);
+        buttonobj.SetActive(false);
+        loadobj.SetActive(true);
+
+        float timer = 0f;
+        while (timer < 1)
+        {
+            timer += 0.01f;
+            loadbar.fillAmount = timer;
+            yield return new WaitForSeconds(0.05f);
+            Debug.Log(timer);
+        }
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene(namber);
+
+        /*AsyncOperation op = SceneManager.LoadSceneAsync(namber); // 비 정기적으로 로딩씬
         op.allowSceneActivation = false;
         player.SetActive(false);
         buttonobj.SetActive(false);
@@ -111,9 +125,10 @@ public class potal : MonoBehaviour
             if (timer > 10)
             {
                 op.allowSceneActivation = true;
+                break;
             }
             yield return null;
-        }
+        }*/
 
 
         Debug.Log("로딩화면 보여주기");
