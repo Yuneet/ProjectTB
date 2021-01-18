@@ -27,7 +27,7 @@ public class NPCChat : MonoBehaviour
     public GameObject block;
     public Text text;
     public Text textname;
-    public int K;
+    public float K;
     public GameObject P;
     public BoxCollider2D box;
     public GameObject Npc;
@@ -37,10 +37,12 @@ public class NPCChat : MonoBehaviour
     public GameObject Btn3;
     public playerc playerc;
 
+    public GameObject Skip;
+
     void Awaek()
     {
         Swichs = 0;
-        
+
 
 
     }
@@ -68,8 +70,15 @@ public class NPCChat : MonoBehaviour
             OnCricks();
         }
 
+        if (Swichs <= 0)
+        {
+            Skip.SetActive(false);
+        }
         
-
+        if (K == 0 || K == 2 || K == 4 || K == 6 || K == 8 || K == 10 || K == 12 || K == 14 || K == 16 || K == 18 || K == 20)
+        {
+            Swichs = 0;
+        }
         // 첫 스테이지 시작
         if (K == 1)
         {
