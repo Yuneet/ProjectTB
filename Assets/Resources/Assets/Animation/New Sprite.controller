@@ -217,7 +217,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: GO_R
-  m_Speed: 0.125
+  m_Speed: 0.115
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4775932502115414258}

@@ -28,6 +28,7 @@ public class StoryCtrl : MonoBehaviour
     public AudioSource audioSource;
     AudioCtrl audioCtrl;
     public potal potal;
+    private float setstrat;
 
 
     void Awaek()
@@ -52,8 +53,8 @@ public class StoryCtrl : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                StopCoroutine(potal.LodeScenes());
-                StartCoroutine(potal.LodeScenes());
+                StopCoroutine(potal.LodeScenes(potal.potalnumber));
+                StartCoroutine(potal.LodeScenes(potal.potalnumber));
             }
         }
 
@@ -211,8 +212,17 @@ public class StoryCtrl : MonoBehaviour
 
         if(SeenNumners == 17)
         {
-            StopCoroutine(potal.LodeScenes());
-            StartCoroutine(potal.LodeScenes());
+            setstrat = PlayerPrefs.GetFloat("setstart", 0);
+            if (setstrat == 0) {
+                PlayerPrefs.SetFloat("setstart", 1);
+                StopCoroutine(potal.LodeScenes(potal.potalnumber));
+                StartCoroutine(potal.LodeScenes(potal.potalnumber));
+            }else if (setstrat == 1)
+            {
+                StopCoroutine(potal.LodeScenes(potal.potalnumber2));
+                StartCoroutine(potal.LodeScenes(potal.potalnumber2));
+            }
+
         }
         
     }

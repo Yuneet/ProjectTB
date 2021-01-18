@@ -8115,6 +8115,7 @@ GameObject:
   - component: {fileID: 599654947}
   - component: {fileID: 599654946}
   - component: {fileID: 599654945}
+  - component: {fileID: 599654948}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -8172,6 +8173,7 @@ MonoBehaviour:
   Btn: {fileID: 1546823472}
   Btn2: {fileID: 1207075516}
   Btn3: {fileID: 307164947}
+  playerc: {fileID: 1267007788}
 --- !u!61 &599654946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8248,6 +8250,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &599654948
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599654943}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2afd72ea10b52584e9c33bfad7fb77e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &614278069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18533,6 +18554,8 @@ MonoBehaviour:
   audioRun: {fileID: 8300000, guid: 14ca3ceeb7ed5c64cada69b0d3fb820a, type: 3}
   audioDamaged: {fileID: 8300000, guid: f1437075aeeaecd4f8de89f824facbc9, type: 3}
   sfx: {fileID: 1267007786}
+  leftBtn: 0
+  rightBtn: 0
   aaaa: 0
 --- !u!50 &1267007789
 Rigidbody2D:
