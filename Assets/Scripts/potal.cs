@@ -100,7 +100,6 @@ public class potal : MonoBehaviour
             timer += 0.01f;
             loadbar.fillAmount = timer;
             yield return new WaitForSeconds(0.05f);
-            Debug.Log(timer);
         }
         yield return new WaitForSeconds(0.3f);
         SceneManager.LoadScene(namber);
@@ -131,7 +130,7 @@ public class potal : MonoBehaviour
         }*/
 
 
-        Debug.Log("로딩화면 보여주기");
+        //Debug.Log("로딩화면 보여주기");
         /*yield return new WaitForSeconds(5);
         SceneManager.LoadScene(potalnumber);*/
     }
