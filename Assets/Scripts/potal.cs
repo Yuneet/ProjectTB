@@ -27,11 +27,11 @@ public class potal : MonoBehaviour
     // Start is called before the first frame update
     public void Awaek()
     {
-        SetStart = PlayerPrefs.GetFloat("setstart", 0);
+        
     }
     void Start()
     {
-      
+        SetStart = PlayerPrefs.GetFloat("setstart", 0);
     }
 
     public void Click()
