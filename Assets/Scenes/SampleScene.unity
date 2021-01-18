@@ -5845,6 +5845,7 @@ MonoBehaviour:
   Btn: {fileID: 642383053}
   Btn2: {fileID: 355280080}
   Btn3: {fileID: 867283144}
+  playerc: {fileID: 1843893481}
 --- !u!61 &722588184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14241,6 +14242,8 @@ MonoBehaviour:
   audioRun: {fileID: 8300000, guid: 14ca3ceeb7ed5c64cada69b0d3fb820a, type: 3}
   audioDamaged: {fileID: 8300000, guid: f1437075aeeaecd4f8de89f824facbc9, type: 3}
   sfx: {fileID: 1843893483}
+  leftBtn: 0
+  rightBtn: 0
   aaaa: 0
 --- !u!95 &1843893482
 Animator:

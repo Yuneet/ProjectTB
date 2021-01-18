@@ -49,14 +49,14 @@ public class StoryCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Application.platform == RuntimePlatform.Android)
-        {
+        //if(Application.platform == RuntimePlatform.Android)
+        //{
             if (Input.GetKey(KeyCode.Escape))
             {
-                StopCoroutine(potal.LodeScenes(potal.potalnumber));
-                StartCoroutine(potal.LodeScenes(potal.potalnumber));
+                //StopCoroutine(potal.LodeScenes(potal.potalnumber2));
+                StartCoroutine(potal.LodeScenes(potal.potalnumber2));
             }
-        }
+        //}
 
         if (SeenNumners == 0)
         {
@@ -214,12 +214,10 @@ public class StoryCtrl : MonoBehaviour
         {
             setstrat = PlayerPrefs.GetFloat("setstart", 0);
             if (setstrat == 0) {
-                PlayerPrefs.SetFloat("setstart", 1);
-                StopCoroutine(potal.LodeScenes(potal.potalnumber));
+                PlayerPrefs.SetFloat("setstart", 1);                
                 StartCoroutine(potal.LodeScenes(potal.potalnumber));
             }else if (setstrat == 1)
-            {
-                StopCoroutine(potal.LodeScenes(potal.potalnumber2));
+            {               
                 StartCoroutine(potal.LodeScenes(potal.potalnumber2));
             }
 

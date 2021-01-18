@@ -2340,9 +2340,9 @@ MonoBehaviour:
   rigid: {fileID: 0}
   potalnumber: 4
   maincamera: {fileID: 0}
-  loadbar: {fileID: 0}
-  buttonobj: {fileID: 0}
-  loadobj: {fileID: 0}
+  loadbar: {fileID: 1094227244}
+  buttonobj: {fileID: 742566911}
+  loadobj: {fileID: 1156774432}
   player: {fileID: 0}
   potalnumber2: 0
 --- !u!1 &854619547
@@ -4027,8 +4027,8 @@ GameObject:
   - component: {fileID: 2119278908}
   - component: {fileID: 2119278907}
   - component: {fileID: 2119278906}
-  - component: {fileID: 2119278911}
   - component: {fileID: 2119278910}
+  - component: {fileID: 2119278911}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged

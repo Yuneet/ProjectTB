@@ -27,28 +27,28 @@ public class potal : MonoBehaviour
     // Start is called before the first frame update
     public void Awaek()
     {
-
+        //SetStart = PlayerPrefs.GetFloat("setstart", 0);
+        //Debug.Log(SetStart);
     }
     void Start()
     {
-      
+        SetStart = PlayerPrefs.GetFloat("setstart", 0);
+        Debug.Log(SetStart);
     }
 
     public void Click()
     {
-        SetStart = PlayerPrefs.GetFloat("setstart", 0);
+        //SetStart = PlayerPrefs.GetFloat("setstart", 0);
         //SceneManager.LoadScene(1);
         buttonobj.SetActive(false);
         //npcobj.SetActive(false);
         loadobj.SetActive(true);
         if (SetStart == 0)
-        {
-            StopCoroutine(LodeScenes(potalnumber2));
+        {          
             StartCoroutine(LodeScenes(potalnumber2));
         }
         else if (SetStart == 1)
-        {
-            StopCoroutine(LodeScenes(potalnumber));
+        {        
             StartCoroutine(LodeScenes(potalnumber));
         }
         /*StopCoroutine(LodeScenes());
@@ -57,7 +57,6 @@ public class potal : MonoBehaviour
 
     public void Click2()
     {
-        StopCoroutine(LodeScenes(potalnumber2));
         StartCoroutine(LodeScenes(potalnumber2));
     }
 
@@ -83,15 +82,28 @@ public class potal : MonoBehaviour
             //npcobj.SetActive(false);
             loadobj.SetActive(true);
 
-            StopCoroutine(LodeScenes(potalnumber));
+            
             StartCoroutine(LodeScenes(potalnumber));                     
         }
     }
 
-    public IEnumerator LodeScenes(int namber) { 
-    
+    public IEnumerator LodeScenes(int namber) {
 
-        AsyncOperation op = SceneManager.LoadSceneAsync(namber); // 비 정기적으로 로딩씬
+        player.SetActive(false);
+        buttonobj.SetActive(false);
+        loadobj.SetActive(true);
+
+        float timer = 0f;
+        while (timer < 1)
+        {
+            timer += 0.01f;
+            loadbar.fillAmount = timer;
+            yield return new WaitForSeconds(0.05f);
+        }
+        yield return new WaitForSeconds(0.3f);
+        SceneManager.LoadScene(namber);
+
+        /*AsyncOperation op = SceneManager.LoadSceneAsync(namber); // 비 정기적으로 로딩씬
         op.allowSceneActivation = false;
         player.SetActive(false);
         buttonobj.SetActive(false);
@@ -104,19 +116,20 @@ public class potal : MonoBehaviour
             timer += 0.02f;
             if (timer < 10)
             {
-                Debug.Log(timer);
+                //Debug.Log(timer);
                 loadbar.fillAmount = timer / 10f;
             }
 
             if (timer > 10)
             {
                 op.allowSceneActivation = true;
+                break;
             }
             yield return null;
-        }
+        }*/
 
 
-        Debug.Log("로딩화면 보여주기");
+        //Debug.Log("로딩화면 보여주기");
         /*yield return new WaitForSeconds(5);
         SceneManager.LoadScene(potalnumber);*/
     }
