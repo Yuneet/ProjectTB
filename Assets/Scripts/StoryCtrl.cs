@@ -214,12 +214,10 @@ public class StoryCtrl : MonoBehaviour
         {
             setstrat = PlayerPrefs.GetFloat("setstart", 0);
             if (setstrat == 0) {
-                PlayerPrefs.SetFloat("setstart", 1);
-                StopCoroutine(potal.LodeScenes(potal.potalnumber));
+                PlayerPrefs.SetFloat("setstart", 1);                
                 StartCoroutine(potal.LodeScenes(potal.potalnumber));
             }else if (setstrat == 1)
-            {
-                StopCoroutine(potal.LodeScenes(potal.potalnumber2));
+            {               
                 StartCoroutine(potal.LodeScenes(potal.potalnumber2));
             }
 

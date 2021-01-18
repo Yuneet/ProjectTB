@@ -323,7 +323,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                P.SetActive(false);
+                //P.SetActive(false);
                 Btn.SetActive(false);
                 Btn2.SetActive(false);
                 Btn3.SetActive(false);
@@ -471,7 +471,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 16)
             {
-                P.SetActive(true);
+                //P.SetActive(true);
                 Btn.SetActive(true);
                 Btn2.SetActive(true);
                 Btn3.SetActive(true);

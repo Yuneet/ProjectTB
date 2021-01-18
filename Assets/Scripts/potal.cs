@@ -27,11 +27,13 @@ public class potal : MonoBehaviour
     // Start is called before the first frame update
     public void Awaek()
     {
-        SetStart = PlayerPrefs.GetFloat("setstart", 0);
+        //SetStart = PlayerPrefs.GetFloat("setstart", 0);
+        //Debug.Log(SetStart);
     }
     void Start()
     {
-      
+        SetStart = PlayerPrefs.GetFloat("setstart", 0);
+        Debug.Log(SetStart);
     }
 
     public void Click()
@@ -42,13 +44,11 @@ public class potal : MonoBehaviour
         //npcobj.SetActive(false);
         loadobj.SetActive(true);
         if (SetStart == 0)
-        {
-            StopCoroutine(LodeScenes(potalnumber2));
+        {          
             StartCoroutine(LodeScenes(potalnumber2));
         }
         else if (SetStart == 1)
-        {
-            StopCoroutine(LodeScenes(potalnumber));
+        {        
             StartCoroutine(LodeScenes(potalnumber));
         }
         /*StopCoroutine(LodeScenes());
@@ -57,7 +57,6 @@ public class potal : MonoBehaviour
 
     public void Click2()
     {
-        StopCoroutine(LodeScenes(potalnumber2));
         StartCoroutine(LodeScenes(potalnumber2));
     }
 
@@ -83,7 +82,7 @@ public class potal : MonoBehaviour
             //npcobj.SetActive(false);
             loadobj.SetActive(true);
 
-            StopCoroutine(LodeScenes(potalnumber));
+            
             StartCoroutine(LodeScenes(potalnumber));                     
         }
     }
