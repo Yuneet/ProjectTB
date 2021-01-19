@@ -14,10 +14,12 @@ public class endingcreditsCtrl : MonoBehaviour
     public float timer;
     private bool isca;
     public potal potal;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource.volume = PlayerPrefs.GetFloat("bgm", 1f);
         number = 0;
         timer = 0f;
         //Debug.Log(massage[1]);
