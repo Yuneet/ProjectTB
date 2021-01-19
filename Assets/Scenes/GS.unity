@@ -10750,6 +10750,7 @@ MonoBehaviour:
   text1: {fileID: 437902775}
   textname1: {fileID: 2085853690}
   playerc: {fileID: 1267007788}
+  potal: {fileID: 1261522685}
 --- !u!61 &599654946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23499,6 +23500,63 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1258700058}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1261522684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1261522686}
+  - component: {fileID: 1261522685}
+  m_Layer: 0
+  m_Name: potal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1261522685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261522684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f22ac34b2c2829469a8337800f5b4f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  feetPos: {fileID: 1387627314}
+  checkRadius: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 16384
+  isPortal: 0
+  rigid: {fileID: 0}
+  potalnumber: 5
+  maincamera: {fileID: 0}
+  loadbar: {fileID: 1087181025}
+  buttonobj: {fileID: 347962271}
+  loadobj: {fileID: 1530461347}
+  player: {fileID: 1914762288}
+  potalnumber2: 0
+--- !u!4 &1261522686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261522684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.34726, y: -46.203087, z: -40.179688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1263582154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28393,8 +28451,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530461347}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -348.1252, y: 871.2, z: 306}
-  m_LocalScale: {x: 45, y: 45, z: 45}
+  m_LocalPosition: {x: 8, y: -20, z: 306}
+  m_LocalScale: {x: 50, y: 50, z: 45}
   m_Children:
   - {fileID: 1846486694}
   - {fileID: 1354286562}
@@ -28617,7 +28675,7 @@ MonoBehaviour:
   leftx: 3.71
   rightx: -3.71
   downy: -61.88
-  topy: 28.9
+  topy: 45.2
 --- !u!81 &1535884976
 AudioListener:
   m_ObjectHideFlags: 0

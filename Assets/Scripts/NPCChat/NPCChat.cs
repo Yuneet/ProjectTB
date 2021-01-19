@@ -41,6 +41,7 @@ public class NPCChat : MonoBehaviour
     public GameObject textname1;
 
     public playerc playerc;
+    public potal potal;
 
 
 
@@ -1095,7 +1096,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Debug.Log("작동중");
+                //Debug.Log("작동중");
 
                 //if (Swichs == 0)
                 //{
@@ -1105,7 +1106,7 @@ public class NPCChat : MonoBehaviour
                 text1.SetActive(false);
                 textname1.SetActive(false);
                 
-                Debug.Log("켜졌다" + can.activeInHierarchy);
+                //Debug.Log("켜졌다" + can.activeInHierarchy);
                 Endimage1.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -1162,6 +1163,7 @@ public class NPCChat : MonoBehaviour
                 if (iscaech == false)
                 {
                     StartCoroutine(massage("The End"));
+                    StartCoroutine(potal.LodeScenes(potal.potalnumber));
                 }
             }
         }
