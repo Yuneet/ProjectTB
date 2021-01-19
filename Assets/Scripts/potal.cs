@@ -100,7 +100,7 @@ public class potal : MonoBehaviour
             timer += 0.01f;
             loadbar.fillAmount = timer;
             yield return new WaitForSeconds(0.05f);
-            Debug.Log(timer);
+            //Debug.Log(timer);
         }
         yield return new WaitForSeconds(0.3f);
         SceneManager.LoadScene(namber);
