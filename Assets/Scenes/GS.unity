@@ -3939,7 +3939,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1267007788}
           m_MethodName: rightOnPointerUp
           m_Mode: 1
           m_Arguments:
@@ -3954,7 +3954,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1267007788}
           m_MethodName: rightOnPointerDown
           m_Mode: 1
           m_Arguments:
@@ -8162,6 +8162,7 @@ MonoBehaviour:
   gameObject7: {fileID: 1578174368}
   gameObject77: {fileID: 96624808}
   gameObject777: {fileID: 948962013}
+  gameObject8: {fileID: 0}
   can: {fileID: 1914762288}
   block: {fileID: 0}
   text: {fileID: 437902776}
@@ -17767,7 +17768,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1267007788}
           m_MethodName: jumps
           m_Mode: 1
           m_Arguments:
@@ -21970,7 +21971,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1267007788}
           m_MethodName: leftOnPointerUp
           m_Mode: 1
           m_Arguments:
@@ -21985,7 +21986,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1267007788}
           m_MethodName: leftOnPointerDown
           m_Mode: 1
           m_Arguments:
@@ -23679,7 +23680,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

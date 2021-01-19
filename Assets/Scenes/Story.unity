@@ -431,13 +431,13 @@ MonoBehaviour:
     m_Bits: 16384
   isPortal: 0
   rigid: {fileID: 0}
-  potalnumber: 0
+  potalnumber: 1
   maincamera: {fileID: 0}
   loadbar: {fileID: 611500941}
   buttonobj: {fileID: 957950529}
   loadobj: {fileID: 1316880685}
   player: {fileID: 1924425697}
-  potalnumber2: 1
+  potalnumber2: 0
 --- !u!4 &465114333
 Transform:
   m_ObjectHideFlags: 0
