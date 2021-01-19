@@ -13,73 +13,67 @@ public class endingcreditsCtrl : MonoBehaviour
     public int number;
     public float timer;
     private bool isca;
+    public potal potal;
 
     // Start is called before the first frame update
     void Start()
     {
         number = 0;
         timer = 0f;
+
+        StartCoroutine(Changes(spriteRenderer, sprite, text));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (number == 0)
-        {
-            StartCoroutine(Changes(spriteRenderer, sprite, text));
-        }else if(number == 1)
-        {
-            StartCoroutine(Changes(spriteRenderer, sprite, text));
-        }
-
-        /*if (isca == true)
-        {
-            timer += 0.001f;
-            text.color = new Color(1, 1, 1, 0 + timer);
-            spriteRenderer.color = new Color(1, 1, 1, 0 + timer);
-        }
-        else if(isca == false)
-        {
-            timer2 += 0.001f;
-            text.color = new Color(1, 1, 1, 1 - timer2);
-            spriteRenderer.color = new Color(1, 1, 1, 1 - timer2);
-        }*/
+        
     }
 
-    /*public IEnumerator Changes(SpriteRenderer spriteRenderers, Sprite[] sprites, Text texts)
+    public void OnClick()
     {
-        isca = true;
-        timer2 = 0;
-        yield return new WaitForSeconds(4f);
-        timer = 0;
-        isca = false;     
-        yield return new WaitForSeconds(4f);
-        number += 1;
-    }*/
+        StopCoroutine(Changes(spriteRenderer, sprite, text));
+        //setting.SetActive(false);
+        //load.SetActive(true);
+        StartCoroutine(potal.LodeScenes(potal.potalnumber));
+    }
 
     public IEnumerator Changes(SpriteRenderer spriteRenderers, Sprite[] sprites, Text texts)
     {
 
-
-        timer += 0.001f;
-        Debug.Log(timer);
-        while (timer < 1f)
+        bool isShow = false;
+        while (!isShow && text.color.a >= 0)
         {
-                text.color = new Color(1, 1, 1, 0 + timer);
-                spriteRenderer.sprite = sprites[number];
-                text.text = massage[number];
-                spriteRenderer.color = new Color(1, 1, 1, 0 + timer);
-                yield return new WaitForSeconds(0.1f);           
+            Debug.Log(1);
+            if (text.color.a >= 1)
+            {
+                isShow = true;
+            }
+            if (!isShow)
+            {
+                text.color = new Color(0, 0, 0, text.color.a + 0.05f);
+                //spriteRenderer.color = text.color;
+                spriteRenderer.color = new Color(1, 1, 1, spriteRenderer.color.a + 0.05f);
+            }
+            yield return new WaitForSeconds(0.1f);
         }
-
-        //yield return new WaitForSeconds(0.1f);
-
-        if (timer >= 2f)
+        while (isShow && text.color.a >= 0)
         {
-             timer = 0;
-             number += 1;
-             Debug.Log("끝났다");
+            Debug.Log(2);
+            text.color = new Color(0, 0, 0, text.color.a - 0.05f);
+            //spriteRenderer.color = text.color;
+            spriteRenderer.color = new Color(1, 1, 1, spriteRenderer.color.a - 0.05f);
+            yield return new WaitForSeconds(0.1f);
         }
-        yield return null;
+        number++;
+        switch (number)
+        {
+            case 1: StartCoroutine(Changes(spriteRenderer, sprite, text));
+                break;
+            case 2:                 
+                break;
+            default :
+                ; break;
+        }
     }
 }
