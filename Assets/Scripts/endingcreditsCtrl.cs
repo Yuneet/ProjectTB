@@ -56,16 +56,16 @@ public class endingcreditsCtrl : MonoBehaviour
             {
                 text.text = massage[number];
                 spriteRenderer.sprite = sprite[number];
-                text.color = new Color(0, 0, 0, text.color.a + 0.05f);              
-                spriteRenderer.color = new Color(1, 1, 1, spriteRenderer.color.a + 0.05f);
+                text.color = new Color(0, 0, 0, text.color.a + 0.02f);              
+                spriteRenderer.color = new Color(1, 1, 1, spriteRenderer.color.a + 0.02f);
             }
             yield return new WaitForSeconds(0.1f);
         }
         while (isShow && text.color.a >= 0)
         {
             //Debug.Log(2);
-            text.color = new Color(0, 0, 0, text.color.a - 0.05f);
-            spriteRenderer.color = new Color(1, 1, 1, spriteRenderer.color.a - 0.05f);
+            text.color = new Color(0, 0, 0, text.color.a - 0.02f);
+            spriteRenderer.color = new Color(1, 1, 1, spriteRenderer.color.a - 0.02f);
             yield return new WaitForSeconds(0.1f);
         }
         text.color = new Color(0, 0, 0, 0);

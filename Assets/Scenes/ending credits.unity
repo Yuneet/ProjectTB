@@ -740,8 +740,8 @@ MonoBehaviour:
   text: {fileID: 501830513}
   sprite:
   - {fileID: 21300000, guid: 6f18e3aeb6314d241954a55be4c53cca, type: 3}
-  - {fileID: 21300000, guid: dbceed96f6055d64e880f86b7cea7d75, type: 3}
   - {fileID: 21300000, guid: 22168955ba77456498f601492cf5960d, type: 3}
+  - {fileID: 21300000, guid: 923b6d9e5bb36794dbce572fab2c4a4a, type: 3}
   - {fileID: 21300000, guid: b81ec4b8c2a0fa2459fe096f3f830683, type: 3}
   - {fileID: 21300000, guid: 34a1f9d8c38c80c4da9e7ed591495fb4, type: 3}
   - {fileID: 21300000, guid: b3d7be69138e319409d4562f644b2f84, type: 3}
