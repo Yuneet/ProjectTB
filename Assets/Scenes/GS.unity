@@ -10751,6 +10751,7 @@ MonoBehaviour:
   textname1: {fileID: 2085853690}
   playerc: {fileID: 1267007788}
   potal: {fileID: 1261522685}
+  door: {fileID: 0}
 --- !u!61 &599654946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24549,7 +24550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1313524801
 RectTransform:
   m_ObjectHideFlags: 0
