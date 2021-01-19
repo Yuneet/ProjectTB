@@ -23,6 +23,7 @@ public class NPCChat : MonoBehaviour
     public GameObject gameObject77;
     public GameObject gameObject777;
     public GameObject gameObject8;
+    public GameObject Endimage1;
     //public Canvas Can;
     public GameObject can;
     public GameObject block;
@@ -32,8 +33,12 @@ public class NPCChat : MonoBehaviour
     public GameObject P;
     public BoxCollider2D box;
     public GameObject Npc;
+    public GameObject can2;
 
     public GameObject Btn;
+    public Text text2;
+    public GameObject text1;
+    public GameObject textname1;
 
     public playerc playerc;
 
@@ -62,6 +67,7 @@ public class NPCChat : MonoBehaviour
         gameObject77.SetActive(false);
         gameObject777.SetActive(false);
         gameObject8.SetActive(false);
+        Endimage1.SetActive(false);
     }
 
     // Update is called once per frame
@@ -75,8 +81,8 @@ public class NPCChat : MonoBehaviour
         }
 
 
-        
-        if (K == 0 || K == 2 || K == 4 || K == 6 || K == 8 || K == 10 || K == 12 || K == 14 || K == 16 || K == 18 || K == 20)
+
+        if (K == 0 || K == 2 || K == 4 || K == 6 || K == 8 || K == 10 || K == 12 || K == 14 || K == 16 || K == 18 || K == 20 || K == 22)
         {
             Swichs = 0;
         }
@@ -129,13 +135,13 @@ public class NPCChat : MonoBehaviour
         {
             block.SetActive(false);
         }
-            // 첫 스테이지 시작
-            if (K == 1)
+        // 첫 스테이지 시작
+        if (K == 1)
         {
             if (Swichs == 0)
             {
                 gameObject3.SetActive(false);
-                Btn.SetActive(false);                             
+                Btn.SetActive(false);
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -143,7 +149,7 @@ public class NPCChat : MonoBehaviour
                 //text.text = "일단 이곳을 탈출 하는게 우선이겠군"; 이전꺼
                 if (iscaech == false)
                 {
-                    StartCoroutine(massage("여기가 어디지.. ? 그녀를 따라가긴 했는데"));                  
+                    StartCoroutine(massage("여기가 어디지.. ? 그녀를 따라가긴 했는데"));
                 }
                 Go();
             }
@@ -158,11 +164,11 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 2)
             {
-                Btn.SetActive(true);                               
+                Btn.SetActive(true);
                 K = 2;
                 can.SetActive(false);
-                 
-                 
+
+
                 Swichs = 0;
                 Npc.transform.position = new Vector3(0.08f, 4.53f, 0);
                 box.enabled = true;
@@ -175,7 +181,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);                                
+                Btn.SetActive(false);
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -187,7 +193,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                Btn.SetActive(true);                                                               
+                Btn.SetActive(true);
                 K = 4;
                 can.SetActive(false);
                 Swichs = 0;
@@ -202,7 +208,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);                                 
+                Btn.SetActive(false);
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -211,9 +217,9 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                Btn.SetActive(true);                                
+                Btn.SetActive(true);
                 K = 6;
-                can.SetActive(false);                             
+                can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(10.51f, 13.67f, 0);
                 box.enabled = true;
@@ -226,7 +232,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);                                
+                Btn.SetActive(false);
                 gameObject3.SetActive(true);
                 can.SetActive(true);
                 playerc.rightBtn = false;
@@ -310,7 +316,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 9)
             {
-                Btn.SetActive(true);                                                             
+                Btn.SetActive(true);
                 can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-1.73f, 34.53f, 0);
@@ -325,7 +331,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);                               
+                Btn.SetActive(false);
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -338,8 +344,8 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                Btn.SetActive(true);                               
-                can.SetActive(false);                               
+                Btn.SetActive(true);
+                can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-11f, 51.47f, 0);
                 box.enabled = true;
@@ -353,7 +359,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);                               
+                Btn.SetActive(false);
                 can.SetActive(true);
                 gameObject3.SetActive(true);
                 playerc.rightBtn = false;
@@ -498,9 +504,9 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 16)
             {
-                Btn.SetActive(true);                               
+                Btn.SetActive(true);
                 K = 12;
-                can.SetActive(false);                             
+                can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(200f, 500f, 0);
                 box.enabled = true;
@@ -513,7 +519,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);                                
+                Btn.SetActive(false);
                 can.SetActive(true);
                 gameObject1.SetActive(true);
                 playerc.rightBtn = false;
@@ -606,9 +612,9 @@ public class NPCChat : MonoBehaviour
             else if (Swichs == 10)
             {
                 K = 14;
-                Btn.SetActive(true);                                
+                Btn.SetActive(true);
                 can.SetActive(false);
-                gameObject2.SetActive(false);                                
+                gameObject2.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-20.18f, -3.96f, 0);
                 box.enabled = true;
@@ -621,7 +627,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);                                
+                Btn.SetActive(false);
                 can.SetActive(true);
                 gameObject1.SetActive(true);
                 playerc.rightBtn = false;
@@ -715,9 +721,9 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 9)
             {
-                Btn.SetActive(true);                                
+                Btn.SetActive(true);
                 K = 16;
-                can.SetActive(false);                               
+                can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-29.35f, 1.24f, 0);
                 box.enabled = true;
@@ -731,7 +737,7 @@ public class NPCChat : MonoBehaviour
             if (Swichs == 0)
             {
                 gameObject3.SetActive(false);
-                Btn.SetActive(false);                                
+                Btn.SetActive(false);
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -743,9 +749,9 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                Btn.SetActive(true);                                
+                Btn.SetActive(true);
                 K = 18;
-                can.SetActive(false);                               
+                can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-17.59f, 35.82f, 0);
                 box.enabled = true;
@@ -758,7 +764,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);                                
+                Btn.SetActive(false);
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -882,7 +888,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 13)
             {
-                Btn.SetActive(true);                                                              
+                Btn.SetActive(true);
                 K = 20;
                 can.SetActive(false);
                 Swichs = 0;
@@ -892,11 +898,11 @@ public class NPCChat : MonoBehaviour
             }
         }
 
-            if (K == 21)
+        if (K == 21)
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);                                 
+                Btn.SetActive(false);
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -904,7 +910,7 @@ public class NPCChat : MonoBehaviour
                 if (iscaech == false)
                 {
                     StartCoroutine(massage("벌써 빛이 보이는구나 그런데 유물은 어디있지 ? "));
-                        }
+                }
                 Go();
             }
             else if (Swichs == 1)
@@ -1075,16 +1081,92 @@ public class NPCChat : MonoBehaviour
             else if (Swichs == 19)
             {
                 K = 22;
-                Btn.SetActive(true);                                
-                can.SetActive(false);                                
+                Btn.SetActive(true);
+                can.SetActive(false);
                 Swichs = 0;
-                Npc.transform.position = new Vector3(3.89f,33.67f,0);
+                Npc.transform.position = new Vector3(3.89f, 33.67f, 0);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
             }
-        }
 
+
+        }
+        if (K == 23)
+        {
+            if (Swichs == 0)
+            {
+                Debug.Log("작동중");
+
+                //if (Swichs == 0)
+                //{
+                Btn.SetActive(false);
+                can.SetActive(true);
+                can2.SetActive(false);
+                text1.SetActive(false);
+                textname1.SetActive(false);
+                
+                Debug.Log("켜졌다" + can.activeInHierarchy);
+                Endimage1.SetActive(true);
+                playerc.rightBtn = false;
+                playerc.leftBtn = false;
+
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("' 나는 신전의 입구를 통해 원래 들어갔던 곳으로 다시 나왔다 '"));
+                }
+                Go();
+                //}
+            }
+            else if (Swichs == 1)
+            {
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("' 한참을 걷다 문뜩 뒤를 돌아보니 신전은 사라져 있었다 '"));
+                }
+                Go();
+            }
+            else if (Swichs == 2)
+            {
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("'그렇게 나는 다시 집으로 돌아왔다 '"));
+                }
+                Go();
+            }
+            else if (Swichs == 3)
+            {
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("' 이 유물이 나에게 무엇을 줄 지 그 누구도 모른다 '"));
+                }
+                Go();
+            }
+            else if (Swichs == 4)
+            {
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("' 하지만 이미 얻었을 지도 모른다 '"));
+                }
+                Go();
+            }
+            else if (Swichs == 5)
+            {
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("' 나는 오늘도 탐험을 하기위해 떠날 것이다 '"));
+                }
+                Go();
+            }
+            else if (Swichs == 6)
+            {
+                if (iscaech == false)
+                {
+                    StartCoroutine(massage("The End"));
+                }
+            }
+        }
     }
+
 
     public void OnCricks()
     {
@@ -1180,6 +1262,12 @@ public class NPCChat : MonoBehaviour
             Swichs = 0;
             box.enabled = false;
         }
+       if(coll.gameObject.tag == "Player" && K == 22)
+        {
+            K = 23;
+            Swichs = 0;
+            box.enabled = false;
+        }
     }
 
     public void Sp()
@@ -1213,6 +1301,7 @@ public class NPCChat : MonoBehaviour
         {
             wittext += T[a];
             text.text = wittext;
+            text2.text = wittext;
             yield return new WaitForSeconds(0.05f);
         }
         isbutten = false;
