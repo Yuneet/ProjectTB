@@ -34,8 +34,7 @@ public class NPCChat : MonoBehaviour
     public GameObject Npc;
 
     public GameObject Btn;
-    public GameObject Btn2;
-    public GameObject Btn3;
+
     public playerc playerc;
 
 
@@ -88,11 +87,7 @@ public class NPCChat : MonoBehaviour
             {
                 gameObject3.SetActive(false);
                 Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
                 can.SetActive(true);
-                playerc.rightBtn = false;
-                playerc.leftBtn = false;
                 gameObject8.SetActive(true);
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
                 if (iscaech == false)
@@ -121,12 +116,8 @@ public class NPCChat : MonoBehaviour
             else if (Swichs == 3)
             {
                 Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
                 K = 0;
                 can.SetActive(false);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
                 Swichs = 0;
                 Npc.transform.position = new Vector3(0.08f, 4.53f, 0);
                 box.enabled = true;
@@ -144,9 +135,7 @@ public class NPCChat : MonoBehaviour
             if (Swichs == 0)
             {
                 gameObject3.SetActive(false);
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                             
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -169,13 +158,11 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 2)
             {
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
+                Btn.SetActive(true);                               
                 K = 2;
                 can.SetActive(false);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                 
+                 
                 Swichs = 0;
                 Npc.transform.position = new Vector3(0.08f, 4.53f, 0);
                 box.enabled = true;
@@ -188,9 +175,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                                
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -202,11 +187,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                Btn.SetActive(true);                                                               
                 K = 4;
                 can.SetActive(false);
                 Swichs = 0;
@@ -221,9 +202,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                                 
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -232,13 +211,9 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
+                Btn.SetActive(true);                                
                 K = 6;
-                can.SetActive(false);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                can.SetActive(false);                             
                 Swichs = 0;
                 Npc.transform.position = new Vector3(10.51f, 13.67f, 0);
                 box.enabled = true;
@@ -251,9 +226,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                                
                 gameObject3.SetActive(true);
                 can.SetActive(true);
                 playerc.rightBtn = false;
@@ -337,11 +310,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 9)
             {
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                Btn.SetActive(true);                                                             
                 can.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-1.73f, 34.53f, 0);
@@ -356,9 +325,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                               
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -371,12 +338,8 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
-                can.SetActive(false);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                Btn.SetActive(true);                               
+                can.SetActive(false);                               
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-11f, 51.47f, 0);
                 box.enabled = true;
@@ -390,9 +353,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                               
                 can.SetActive(true);
                 gameObject3.SetActive(true);
                 playerc.rightBtn = false;
@@ -537,13 +498,9 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 16)
             {
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
+                Btn.SetActive(true);                               
                 K = 12;
-                can.SetActive(false);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                can.SetActive(false);                             
                 Swichs = 0;
                 Npc.transform.position = new Vector3(200f, 500f, 0);
                 box.enabled = true;
@@ -556,9 +513,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                                
                 can.SetActive(true);
                 gameObject1.SetActive(true);
                 playerc.rightBtn = false;
@@ -651,13 +606,9 @@ public class NPCChat : MonoBehaviour
             else if (Swichs == 10)
             {
                 K = 14;
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
+                Btn.SetActive(true);                                
                 can.SetActive(false);
-                gameObject2.SetActive(false);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                gameObject2.SetActive(false);                                
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-20.18f, -3.96f, 0);
                 box.enabled = true;
@@ -670,9 +621,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                                
                 can.SetActive(true);
                 gameObject1.SetActive(true);
                 playerc.rightBtn = false;
@@ -766,13 +715,9 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 9)
             {
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
+                Btn.SetActive(true);                                
                 K = 16;
-                can.SetActive(false);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                can.SetActive(false);                               
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-29.35f, 1.24f, 0);
                 box.enabled = true;
@@ -786,9 +731,7 @@ public class NPCChat : MonoBehaviour
             if (Swichs == 0)
             {
                 gameObject3.SetActive(false);
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                                
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -800,13 +743,9 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 1)
             {
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
+                Btn.SetActive(true);                                
                 K = 18;
-                can.SetActive(false);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                can.SetActive(false);                               
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-17.59f, 35.82f, 0);
                 box.enabled = true;
@@ -819,9 +758,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                                
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -945,11 +882,7 @@ public class NPCChat : MonoBehaviour
             }
             else if (Swichs == 13)
             {
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                Btn.SetActive(true);                                                              
                 K = 20;
                 can.SetActive(false);
                 Swichs = 0;
@@ -963,9 +896,7 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
-                Btn.SetActive(false);
-                Btn2.SetActive(false);
-                Btn3.SetActive(false);
+                Btn.SetActive(false);                                 
                 can.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -1144,12 +1075,8 @@ public class NPCChat : MonoBehaviour
             else if (Swichs == 19)
             {
                 K = 22;
-                Btn.SetActive(true);
-                Btn2.SetActive(true);
-                Btn3.SetActive(true);
-                can.SetActive(false);
-                playerc.rightBtn = true;
-                playerc.leftBtn = true;
+                Btn.SetActive(true);                                
+                can.SetActive(false);                                
                 Swichs = 0;
                 Npc.transform.position = new Vector3(3.89f,33.67f,0);
                 box.enabled = true;
@@ -1280,13 +1207,13 @@ public class NPCChat : MonoBehaviour
         string wittext = "";
         isbutten = true;
         iscaech = true;
+        playerc.rightBtn = false;
+        playerc.leftBtn = false;
         for (a = 0; a < T.Length; a++)
         {
-
             wittext += T[a];
             text.text = wittext;
             yield return new WaitForSeconds(0.05f);
-
         }
         isbutten = false;
     }
