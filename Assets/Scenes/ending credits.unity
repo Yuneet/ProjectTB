@@ -739,11 +739,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 501830513}
   sprite:
-  - {fileID: 21300000, guid: 5dcfede8dbff9c94398becd3b45cf4eb, type: 3}
-  - {fileID: 21300000, guid: 8772aedc26090444fa75c668b6347f29, type: 3}
-  massage:
-  - "\uD504\uB85C\uADF8\uB798\uBC0D \uD300\uC7A5 \uAE40\uADDC\uBE48"
-  - "\uD504\uB85C\uADF8\uB798\uBC0D \uBD80\uC6D0 \uC548\uC900\uC218"
+  - {fileID: 21300000, guid: 6f18e3aeb6314d241954a55be4c53cca, type: 3}
+  - {fileID: 21300000, guid: dbceed96f6055d64e880f86b7cea7d75, type: 3}
+  - {fileID: 21300000, guid: 22168955ba77456498f601492cf5960d, type: 3}
+  - {fileID: 21300000, guid: b81ec4b8c2a0fa2459fe096f3f830683, type: 3}
+  - {fileID: 21300000, guid: 34a1f9d8c38c80c4da9e7ed591495fb4, type: 3}
+  - {fileID: 21300000, guid: b3d7be69138e319409d4562f644b2f84, type: 3}
+  - {fileID: 21300000, guid: 9fb59ba0a385ed04aa7fbde4ceb967af, type: 3}
+  - {fileID: 21300000, guid: 0d08d15c833eb7e4eb82288ed5b20962, type: 3}
+  - {fileID: 21300000, guid: 6f18e3aeb6314d241954a55be4c53cca, type: 3}
   spriteRenderer: {fileID: 32671030}
   number: 0
   timer: 0

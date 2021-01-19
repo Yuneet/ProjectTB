@@ -55,6 +55,7 @@ public class endingcreditsCtrl : MonoBehaviour
             if (!isShow)
             {
                 text.text = massage[number];
+                spriteRenderer.sprite = sprite[number];
                 text.color = new Color(0, 0, 0, text.color.a + 0.05f);              
                 spriteRenderer.color = new Color(1, 1, 1, spriteRenderer.color.a + 0.05f);
             }
