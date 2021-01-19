@@ -5834,7 +5834,8 @@ MonoBehaviour:
   gameObject7: {fileID: 670690766}
   gameObject77: {fileID: 1358905832}
   gameObject777: {fileID: 109638065}
-  gameObject8: {fileID: 0}
+  gameObject8: {fileID: 1407519835}
+  Endimage1: {fileID: 0}
   can: {fileID: 1641256166}
   block: {fileID: 0}
   text: {fileID: 1002766171}
@@ -5843,8 +5844,13 @@ MonoBehaviour:
   P: {fileID: 1843893476}
   box: {fileID: 722588184}
   Npc: {fileID: 722588182}
+  can2: {fileID: 0}
   Btn: {fileID: 1336054608}
+  text2: {fileID: 1002766171}
+  text1: {fileID: 0}
+  textname1: {fileID: 0}
   playerc: {fileID: 1843893481}
+  potal: {fileID: 0}
 --- !u!61 &722588184
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10298,26 +10304,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1407519837}
-  - component: {fileID: 1407519836}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1407519836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407519835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fcbbe121ef1e348bbb64aeede471f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_IsActive: 1
 --- !u!4 &1407519837
 Transform:
   m_ObjectHideFlags: 0

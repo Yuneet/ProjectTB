@@ -42,6 +42,7 @@ public class NPCChat : MonoBehaviour
 
     public playerc playerc;
     public potal potal;
+    public GameObject door;
 
 
 
@@ -68,7 +69,7 @@ public class NPCChat : MonoBehaviour
         gameObject77.SetActive(false);
         gameObject777.SetActive(false);
         gameObject8.SetActive(false);
-        Endimage1.SetActive(false);
+        //Endimage1.SetActive(false);
     }
 
     // Update is called once per frame
@@ -134,7 +135,7 @@ public class NPCChat : MonoBehaviour
 
         if (P.transform.position.x >= 1.25f)
         {
-            block.SetActive(false);
+            block.SetActive(true);
         }
         // 첫 스테이지 시작
         if (K == 1)
@@ -144,6 +145,7 @@ public class NPCChat : MonoBehaviour
                 gameObject3.SetActive(false);
                 Btn.SetActive(false);
                 can.SetActive(true);
+                door.SetActive(false);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
@@ -483,7 +485,7 @@ public class NPCChat : MonoBehaviour
             {
                 block.SetActive(false);
             }
-            else if (Swichs == 15)
+            else if (Swichs == 14)
             {
                 block.SetActive(true);
                 gameObject1.SetActive(true);
@@ -508,6 +510,7 @@ public class NPCChat : MonoBehaviour
                 Btn.SetActive(true);
                 K = 12;
                 can.SetActive(false);
+                door.SetActive(true);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(200f, 500f, 0);
                 box.enabled = true;
