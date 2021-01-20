@@ -43,14 +43,13 @@ public class NPCChat : MonoBehaviour
     public playerc playerc;
     public potal potal;
     public GameObject door;
+    public GameObject Em;
 
 
 
     void Awaek()
     {
         Swichs = 0;
-
-
 
     }
 
@@ -133,10 +132,11 @@ public class NPCChat : MonoBehaviour
             }
         }
 
-        if (P.transform.position.x >= 1.25f)
+        /*if (P.transform.position.x >= 1.25f)
         {
             block.SetActive(true);
-        }
+        }*/
+
         // 첫 스테이지 시작
         if (K == 1)
         {
@@ -146,6 +146,7 @@ public class NPCChat : MonoBehaviour
                 Btn.SetActive(false);
                 can.SetActive(true);
                 door.SetActive(false);
+                Em.SetActive(false);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
@@ -223,6 +224,7 @@ public class NPCChat : MonoBehaviour
                 Btn.SetActive(true);
                 K = 6;
                 can.SetActive(false);
+                Em.SetActive(true);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(10.51f, 13.67f, 0);
                 box.enabled = true;
@@ -336,6 +338,7 @@ public class NPCChat : MonoBehaviour
             {
                 Btn.SetActive(false);
                 can.SetActive(true);
+                Em.SetActive(false);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
@@ -349,6 +352,7 @@ public class NPCChat : MonoBehaviour
             {
                 Btn.SetActive(true);
                 can.SetActive(false);
+                Em.SetActive(true);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-11f, 51.47f, 0);
                 box.enabled = true;
@@ -481,11 +485,11 @@ public class NPCChat : MonoBehaviour
                 }
                 Sp();
             }
-            else if (Swichs == 13)
+            /*else if (Swichs == 13)
             {
                 block.SetActive(false);
-            }
-            else if (Swichs == 14)
+            }*/
+            else if (Swichs == 13)
             {
                 block.SetActive(true);
                 gameObject1.SetActive(true);
@@ -495,8 +499,12 @@ public class NPCChat : MonoBehaviour
                     StartCoroutine(massage("다시 올라와~ 그러면 내가 친히 설명해주지 !"));
                 }
                 Sp();
+                can.SetActive(false);
+
+                StartCoroutine(Down());
+                Swichs = 14;
             }
-            else if (Swichs == 15)
+            else if (Swichs == 14)
             {
                 gameObject1.SetActive(false);
                 if (iscaech == false)
@@ -504,12 +512,13 @@ public class NPCChat : MonoBehaviour
                     StartCoroutine(massage("너 딱 거기서 기다려라.."));
                 }
                 Go();
+
             }
-            else if (Swichs == 16)
+            else if (Swichs == 15)
             {
                 Btn.SetActive(true);
                 K = 12;
-                can.SetActive(false);
+                //can.SetActive(false);
                 door.SetActive(true);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(200f, 500f, 0);
@@ -525,6 +534,7 @@ public class NPCChat : MonoBehaviour
             {
                 Btn.SetActive(false);
                 can.SetActive(true);
+                Em.SetActive(false);
                 gameObject1.SetActive(true);
                 playerc.rightBtn = false;
                 playerc.leftBtn = false;
@@ -618,6 +628,7 @@ public class NPCChat : MonoBehaviour
                 K = 14;
                 Btn.SetActive(true);
                 can.SetActive(false);
+                Em.SetActive(true);
                 gameObject2.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-20.18f, -3.96f, 0);
@@ -728,6 +739,7 @@ public class NPCChat : MonoBehaviour
                 Btn.SetActive(true);
                 K = 16;
                 can.SetActive(false);
+                Em.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-29.35f, 1.24f, 0);
                 box.enabled = true;
@@ -756,6 +768,7 @@ public class NPCChat : MonoBehaviour
                 Btn.SetActive(true);
                 K = 18;
                 can.SetActive(false);
+                Em.SetActive(true);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-17.59f, 35.82f, 0);
                 box.enabled = true;
@@ -895,6 +908,7 @@ public class NPCChat : MonoBehaviour
                 Btn.SetActive(true);
                 K = 20;
                 can.SetActive(false);
+                Em.SetActive(false);
                 Swichs = 0;
                 Npc.transform.position = new Vector3(-100f, 100f, 0);
                 box.enabled = true;
@@ -1302,6 +1316,7 @@ public class NPCChat : MonoBehaviour
         iscaech = true;
         playerc.rightBtn = false;
         playerc.leftBtn = false;
+        playerc.at.SetBool("isRun", false);
         for (a = 0; a < T.Length; a++)
         {
             wittext += T[a];
@@ -1310,6 +1325,14 @@ public class NPCChat : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         isbutten = false;
+    }
+
+    IEnumerator Down()
+    {
+        block.SetActive(false);
+        yield return new WaitForSeconds(2);
+        block.SetActive(true);
+        yield return null;
     }
 
 }
