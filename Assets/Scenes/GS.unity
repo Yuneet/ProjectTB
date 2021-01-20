@@ -223,7 +223,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &2519021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -248,7 +248,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8142483, y: 0.25179544}
+  m_Size: {x: 2.8142483, y: 0.2083969}
   m_EdgeRadius: 0
 --- !u!1001 &23564519
 PrefabInstance:
@@ -438,7 +438,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &35318016 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -460,7 +460,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &35318019
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &78755136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2064,7 +2064,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &108459455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2378,7 +2378,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &127140444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3831,7 +3831,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &230159320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3973,7 +3973,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &234350553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4047,7 +4047,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &235227535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -4091,7 +4091,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &248656934
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4717,7 +4717,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &264038834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4881,7 +4881,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!4 &277647083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8707428011311504151, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -5338,7 +5338,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &288983746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5476,7 +5476,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &296982897 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -5524,7 +5524,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &298479288 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3218797950876333244, guid: a04db00b2e9a7be40b673462c306262f,
@@ -5779,7 +5779,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &319745077
 GameObject:
   m_ObjectHideFlags: 0
@@ -6322,7 +6322,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &340128116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6787,7 +6787,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &350795128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6812,7 +6812,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8142483, y: 0.25179544}
+  m_Size: {x: 2.8142483, y: 0.2083969}
   m_EdgeRadius: 0
 --- !u!1001 &353384911
 PrefabInstance:
@@ -7319,7 +7319,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &376065087 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -7533,7 +7533,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &380126590 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -7615,7 +7615,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &384967258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7790,7 +7790,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &393999702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8107,7 +8107,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &415313568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -8129,7 +8129,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &415313571
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8787,7 +8787,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &453739033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8929,7 +8929,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &458913998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9396,7 +9396,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &484823034
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9444,7 +9444,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &501810906
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9582,7 +9582,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &506566887
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10223,7 +10223,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &530523370
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10416,7 +10416,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &541343312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11428,7 +11428,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &585879002
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11633,7 +11633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599654943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.08, y: -67.22, z: -3.8}
+  m_LocalPosition: {x: -2.57, y: -64.74, z: -3.8}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 182552572}
@@ -11800,7 +11800,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &607045229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12152,7 +12152,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &622066562
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12856,7 +12856,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &649761761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13000,7 +13000,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &660384807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13818,7 +13818,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &700009367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13898,7 +13898,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &707066316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15170,7 +15170,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &750211063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15195,7 +15195,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8142483, y: 0.25179544}
+  m_Size: {x: 2.8142483, y: 0.2083969}
   m_EdgeRadius: 0
 --- !u!1001 &752750222
 PrefabInstance:
@@ -15385,7 +15385,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &769734075 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -15407,7 +15407,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &769734078
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15601,7 +15601,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &776924558 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -15671,7 +15671,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &782740198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15834,7 +15834,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &790722515
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16004,7 +16004,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &799903737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16655,8 +16655,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
-  isUnder: 1
-  isNormal: 0
+  isUnder: 0
+  isNormal: 1
 --- !u!61 &811676431
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16704,7 +16704,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &814154849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17230,7 +17230,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &833022063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17304,7 +17304,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &842609011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17504,7 +17504,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &851682688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17733,7 +17733,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &858466268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18221,7 +18221,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &889704590
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18359,7 +18359,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &893987910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19687,7 +19687,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &969931581 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -19769,7 +19769,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &977314792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -19887,7 +19887,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &984543022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20079,7 +20079,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &995199052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20328,7 +20328,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1010970508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20542,7 +20542,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1020314206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20830,7 +20830,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1028234348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22365,7 +22365,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &1104733359 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3218797950876333244, guid: a04db00b2e9a7be40b673462c306262f,
@@ -22444,7 +22444,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1105120514
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22458,7 +22458,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.006329417, y: 0.038656726}
+  m_Offset: {x: 0.55442405, y: 0.038656726}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -22469,7 +22469,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8142483, y: 0.25179544}
+  m_Size: {x: 1.7180591, y: 0.20839688}
   m_EdgeRadius: 0
 --- !u!1 &1105602309
 GameObject:
@@ -22480,7 +22480,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1105602310}
-  - component: {fileID: 1105602311}
   m_Layer: 10
   m_Name: GameObject
   m_TagString: Player
@@ -22502,32 +22501,6 @@ Transform:
   m_Father: {fileID: 1267007791}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1105602311
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105602309}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.01830101, y: -0.06772597}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6321445, y: 0.22519746}
-  m_EdgeRadius: 0
 --- !u!1 &1109766387
 GameObject:
   m_ObjectHideFlags: 0
@@ -22615,7 +22588,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1113932761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22663,7 +22636,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1117531870
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22887,7 +22860,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1127178400
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23455,7 +23428,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &1168715762 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8707428011311504149, guid: 42107169466844d4ca2c5d0b02c165d4,
@@ -23477,7 +23450,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1168715765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24397,7 +24370,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &1249980988
 GameObject:
   m_ObjectHideFlags: 0
@@ -24522,7 +24495,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1252668946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24958,7 +24931,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &1267007784
 GameObject:
   m_ObjectHideFlags: 0
@@ -24994,7 +24967,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021323383, y: -1.8531685}
+  m_Offset: {x: -0.021323383, y: -0.031663716}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -25005,7 +24978,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6033021, y: 0.16144764}
+  m_Size: {x: 1.6033021, y: 3.8044572}
   m_EdgeRadius: 0
 --- !u!82 &1267007786
 AudioSource:
@@ -25233,7 +25206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267007784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.33, y: -67.4, z: -2}
+  m_LocalPosition: {x: -0.8199997, y: -64.92, z: -2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 1105602310}
@@ -25740,7 +25713,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1313498308
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26625,7 +26598,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1337821814
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27113,7 +27086,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1358018071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27225,7 +27198,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1361300855
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27533,7 +27506,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &1382086762
 GameObject:
   m_ObjectHideFlags: 0
@@ -27636,7 +27609,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1382541128
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28268,7 +28241,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1425676421
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29653,7 +29626,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &1517138771 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3006402274511871352, guid: 69acf7771c9f58949be847fac497c9c9,
@@ -29829,7 +29802,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1529176670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30052,7 +30025,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1534302061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30810,7 +30783,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1569368075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31532,7 +31505,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1606543819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31690,7 +31663,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1623966801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31802,7 +31775,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1624548405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -31962,7 +31935,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1630157885
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32122,7 +32095,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1637551298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32170,7 +32143,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1641128156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32244,7 +32217,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1650189001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32954,7 +32927,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1686112985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33998,7 +33971,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1741424124
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34136,7 +34109,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1744679963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34206,7 +34179,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1748818438
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34699,7 +34672,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1780713357
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34918,7 +34891,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1790040597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35030,7 +35003,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1791436593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35228,7 +35201,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1806532444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35396,7 +35369,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &1816068509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36984,7 +36957,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1911306350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37058,7 +37031,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1 &1914762288
 GameObject:
   m_ObjectHideFlags: 0
@@ -37490,7 +37463,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1928923107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37628,7 +37601,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1935786971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38795,7 +38768,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &1992799355
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -40218,7 +40191,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &2064797652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40470,7 +40443,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!1001 &2072871828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41202,7 +41175,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &2107625240
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41645,7 +41618,7 @@ MonoBehaviour:
   Feet: {fileID: 1105602309}
   box: {fileID: 0}
   isUnder: 1
-  isNormal: 0
+  isNormal: 1
 --- !u!61 &2134330754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -41659,7 +41632,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017425537, y: 0.27734247}
+  m_Offset: {x: -0.022710294, y: 0.028963506}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -41670,7 +41643,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9705205, y: 0.1966756}
+  m_Size: {x: 1.8542593, y: 0.65115094}
   m_EdgeRadius: 0
 --- !u!1001 &2141327661
 PrefabInstance:
@@ -42103,7 +42076,7 @@ PrefabInstance:
     - target: {fileID: 7411182342795351310, guid: da3cbf68ec542864295602435a124c9c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.4726562
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7411182342795351310, guid: da3cbf68ec542864295602435a124c9c,
         type: 3}
