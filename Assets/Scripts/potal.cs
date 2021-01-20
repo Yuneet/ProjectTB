@@ -21,6 +21,8 @@ public class potal : MonoBehaviour
     public GameObject player;
     private float SetStart;
     public int potalnumber2;
+    public Sprite[] sprites;
+    public Image image;
     //public Button button;
     //public float timer;
 
@@ -82,6 +84,9 @@ public class potal : MonoBehaviour
             buttonobj.SetActive(false);
             //npcobj.SetActive(false);
             loadobj.SetActive(true);
+            int index = Random.Range(0, sprites.Length);
+            Sprite select = sprites[index];
+            image.sprite = select;
 
             StopCoroutine(LodeScenes(potalnumber));
             StartCoroutine(LodeScenes(potalnumber));                     
@@ -93,6 +98,11 @@ public class potal : MonoBehaviour
         player.SetActive(false);
         buttonobj.SetActive(false);
         loadobj.SetActive(true);
+                   int index = Random.Range(0, sprites.Length);
+            Sprite select = sprites[index];
+            image.sprite = select;
+        
+
 
         float timer = 0f;
         while (timer < 1)
