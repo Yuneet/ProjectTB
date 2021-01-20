@@ -33,7 +33,7 @@ public class wrapTileCtrl : MonoBehaviour
     {
         if (isflip == true)
         {
-            playerctrl.GetComponent<SpriteRenderer>().flipX = false;
+            playerctrl.GetComponent<SpriteRenderer>().flipX = true;
             Debug.Log(4);
         }
         Debug.Log(0);
