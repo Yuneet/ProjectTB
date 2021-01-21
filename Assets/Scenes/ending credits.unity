@@ -926,6 +926,11 @@ MonoBehaviour:
   loadobj: {fileID: 114031028}
   player: {fileID: 365087591}
   potalnumber2: 0
+  spriteRenderer: {fileID: 1114362314}
+  sprites:
+  - {fileID: 21300000, guid: 0f9a9741de95c2a4badb108c47f8ba74, type: 3}
+  - {fileID: 21300000, guid: b227aebfec9749a4c9a44fe3589f9651, type: 3}
+  - {fileID: 21300000, guid: 091eb27ba2a650f4d93602658b278aab, type: 3}
 --- !u!4 &879331011
 Transform:
   m_ObjectHideFlags: 0
