@@ -8,7 +8,7 @@ public class endingcreditsCtrl : MonoBehaviour
 {
     public Text text;
     public Sprite[] sprite;
-    private string[] massage = {"팀명 : MA - T","그래픽 팀장 이준","그래픽 부원 김도영","프로그래밍 팀장 김규빈","프로그래밍 팀원 안준수","프로그래밍 팀원 신건수","도움을 준 사람 김종상","총괄 대표 신건수","To be Continued"};
+    private string[] massage = {"팀명 : MA - T","그래픽 팀장 이준","그래픽 팀원 김도영","프로그래밍 팀장 김규빈","프로그래밍 팀원 안준수","프로그래밍 팀원 신건수","도움을 준 사람 김종상","총괄 대표 김규빈","To be Continued"};
     public SpriteRenderer spriteRenderer;
     public int number;
     public float timer;
