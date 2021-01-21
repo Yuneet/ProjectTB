@@ -316,7 +316,7 @@ public class NPCChat : MonoBehaviour
                 {
                     textname1.SetActive(false);
                     Vector3 position = text.transform.localPosition;
-                    position.y = -18f;
+                    position.y = -19.36f;
                     text.transform.localPosition = position;
                     StartCoroutine(massage("' 스핑크스는 메롱 표정을 지으며 사라졌다 '"));
                 }
@@ -327,7 +327,7 @@ public class NPCChat : MonoBehaviour
                 {
                     textname1.SetActive(true);
                     Vector3 position = text.transform.localPosition;
-                    position.y = -18.68f;
+                    position.y = -20f;
                     text.transform.localPosition = position;
                     //text.rectTransform.position = new Vector3(1.32f, -18.68f, -300);
                     StartCoroutine(massage("뭐하는 녀석인지.."));
