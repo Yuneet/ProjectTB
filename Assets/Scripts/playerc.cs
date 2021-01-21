@@ -210,7 +210,7 @@ public class playerc : MonoBehaviour
         {
             leftBtn = false;
         at.SetBool("isRun", false);
-         /* if (!at.GetBool("isJump"))
+         /*if (!at.GetBool("isJump"))
             at.SetBool("isRun", true);*/
         StopSound();
         }
@@ -218,14 +218,14 @@ public class playerc : MonoBehaviour
         public void rightOnPointerDown()
         {
             rightBtn = true;
-        if (!at.GetBool("isJump"))
+             if (!at.GetBool("isJump"))
             at.SetBool("isRun", true);
     }
 
         public void rightOnPointerUp()
         {
             rightBtn = false;
-        at.SetBool("isRun", false);
+            at.SetBool("isRun", false);
              /*if (!at.GetBool("isJump"))
             at.SetBool("isRun", true);*/
         StopSound();
