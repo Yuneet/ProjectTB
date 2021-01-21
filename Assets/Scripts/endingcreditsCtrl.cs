@@ -15,6 +15,8 @@ public class endingcreditsCtrl : MonoBehaviour
     private bool isca;
     public potal potal;
     public AudioSource audioSource;
+   
+    
 
     // Start is called before the first frame update
     void Start()
