@@ -58,7 +58,7 @@ public class Chang : MonoBehaviour
             check2 = true;
             timer += 0.07f;
         }
-        if (transform.position.y > end && timer < 0 && check2 == true)
+        if (transform.position.y >= end && timer < 0 && check2 == true)
         {
             check2 = false;
             check3 = true;
