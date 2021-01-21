@@ -65,6 +65,18 @@ public class Chang : MonoBehaviour
             gameObject.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
             timer += 0.001f;
         }
+        if (transform.position.y == end)
+        {
+            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y - 0.003f, 1);
+        }
+        if (transform.position.y == middle)
+        {
+            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y - 0.003f, 1);
+        }
+        if (transform.position.y == start)
+        {
+            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y - 0.003f, 1);
+        }
         if (transform.position.y > end)
         {
             gameObject.transform.position = new Vector3(transform.position.x, transform.position.y - 0.003f, 1);
