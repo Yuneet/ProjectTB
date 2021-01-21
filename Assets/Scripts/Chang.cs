@@ -62,7 +62,7 @@ public class Chang : MonoBehaviour
         {
             check2 = false;
             check3 = true;
-            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
+            gameObject.transform.position = new Vector3(transform.position.x, transform.position.y - 0.2f, 1);
             timer += 0.001f;
         }
         if (transform.position.y > end)
