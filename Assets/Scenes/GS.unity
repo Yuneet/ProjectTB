@@ -6392,7 +6392,7 @@ PrefabInstance:
     - target: {fileID: 3006402274511871353, guid: 69acf7771c9f58949be847fac497c9c9,
         type: 3}
       propertyPath: end
-      value: -63.15
+      value: -63.3
       objectReference: {fileID: 0}
     - target: {fileID: 3006402274511871353, guid: 69acf7771c9f58949be847fac497c9c9,
         type: 3}
@@ -6754,7 +6754,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.3084309}
+  m_Offset: {x: 0, y: -1.160347}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6765,7 +6765,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.27, y: 2.9976096}
+  m_Size: {x: 2.27, y: 4.3330383}
   m_EdgeRadius: 0
 --- !u!1 &347962271
 GameObject:
@@ -11783,7 +11783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599654943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.57, y: -64.74, z: -3.8}
+  m_LocalPosition: {x: -7.45, y: -67.22, z: -3.8}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 182552572}
@@ -11834,6 +11834,7 @@ MonoBehaviour:
   potal: {fileID: 1261522685}
   door: {fileID: 0}
   Em: {fileID: 182552570}
+  cameracc: {fileID: 0}
 --- !u!61 &599654946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18685,7 +18686,7 @@ PrefabInstance:
     - target: {fileID: 8707428011311504151, guid: 42107169466844d4ca2c5d0b02c165d4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -60.94
+      value: -61.11
       objectReference: {fileID: 0}
     - target: {fileID: 8707428011311504151, guid: 42107169466844d4ca2c5d0b02c165d4,
         type: 3}
@@ -25156,7 +25157,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021323383, y: -0.031663716}
+  m_Offset: {x: -0.021323383, y: -1.8000047}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -25167,7 +25168,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6033021, y: 3.8044572}
+  m_Size: {x: 1.6033021, y: 0.26777506}
   m_EdgeRadius: 0
 --- !u!82 &1267007786
 AudioSource:
@@ -25395,7 +25396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267007784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8199997, y: -64.92, z: -2}
+  m_LocalPosition: {x: -5.56, y: -67.27, z: -2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 1105602310}

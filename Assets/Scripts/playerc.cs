@@ -202,23 +202,26 @@ public class playerc : MonoBehaviour
         public void leftOnPointerDown()
         {
             leftBtn = true;
+        at.SetBool("isIdle", false);
         if (!at.GetBool("isJump"))
             at.SetBool("isRun", true);
+        
     }
 
         public void leftOnPointerUp()
         {
             leftBtn = false;
         at.SetBool("isRun", false);
-         /*if (!at.GetBool("isJump"))
-            at.SetBool("isRun", true);*/
+        /*if (!at.GetBool("isJump"))
+           at.SetBool("isRun", true);*/
         StopSound();
         }
 
         public void rightOnPointerDown()
         {
             rightBtn = true;
-             if (!at.GetBool("isJump"))
+        at.SetBool("isIdle", false);
+        if (!at.GetBool("isJump"))
             at.SetBool("isRun", true);
     }
 
@@ -226,8 +229,8 @@ public class playerc : MonoBehaviour
         {
             rightBtn = false;
             at.SetBool("isRun", false);
-             /*if (!at.GetBool("isJump"))
-            at.SetBool("isRun", true);*/
+        /*if (!at.GetBool("isJump"))
+       at.SetBool("isRun", true);*/
         StopSound();
         }
 
@@ -238,8 +241,9 @@ public class playerc : MonoBehaviour
                 GetComponent<Rigidbody2D>().velocity = Vector2.up * jump;
                 JumpSound();
                 at.SetBool("isRun", false);
-               // manager.Action(scanObject);
-            }
+            at.SetBool("isIdle", false);
+            // manager.Action(scanObject);
+        }
             else if (isJump == false /*&& Damage == true*/)
             {
                //GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * 0;
