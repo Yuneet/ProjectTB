@@ -19,6 +19,7 @@ public class cameracc : MonoBehaviour
     public float topy;
     playerc playerc;
     AudioCtrl audioCtrl;
+    public AudioClip[] audioClips;
 
     public cameracc()
     {
