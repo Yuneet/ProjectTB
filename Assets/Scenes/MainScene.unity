@@ -1819,7 +1819,7 @@ MonoBehaviour:
     m_Bits: 16384
   isPortal: 0
   rigid: {fileID: 0}
-  potalnumber: 1
+  potalnumber: 6
   maincamera: {fileID: 0}
   loadbar: {fileID: 1094227244}
   buttonobj: {fileID: 742566911}
