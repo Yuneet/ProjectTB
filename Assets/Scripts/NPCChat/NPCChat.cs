@@ -1115,6 +1115,7 @@ public class NPCChat : MonoBehaviour
             else if (Swichs == 17)
             {
                 gameObject77.SetActive(false);
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
                 if (iscaech == false)
                 {
                     StartCoroutine(massage("' 그 말을 뒤로 그녀는 모습을 감췃다 '"));
@@ -1197,7 +1198,7 @@ public class NPCChat : MonoBehaviour
             {
                 if (iscaech == false)
                 {
-                    StartCoroutine(massage("' 하지만 이미 얻었을 지도 모른다 '"));
+                    StartCoroutine(massage("' 하지만 이미 얻었을지도 모른다 '"));
                 }
                 Go();
             }
@@ -1205,7 +1206,7 @@ public class NPCChat : MonoBehaviour
             {
                 if (iscaech == false)
                 {
-                    StartCoroutine(massage("' 나는 오늘도 탐험을 하기위해 떠날 것이다 '"));
+                    StartCoroutine(massage("' 나는 오늘도 탐험을 하기위해 떠날 것 이다 '"));
                 }
                 Go();
             }
