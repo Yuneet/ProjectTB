@@ -11837,7 +11837,7 @@ MonoBehaviour:
   Em: {fileID: 182552570}
   cameracc: {fileID: 0}
   audioSource: {fileID: 1535884973}
-  audioClips: {fileID: 8300000, guid: d2094bfdea4fea44f85347a07b95cd09, type: 3}
+  audioClips: {fileID: 8300000, guid: 2ea8cee4cbd488f44926634dec5ee95a, type: 3}
 --- !u!61 &599654946
 BoxCollider2D:
   m_ObjectHideFlags: 0
