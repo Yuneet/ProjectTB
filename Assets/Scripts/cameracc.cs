@@ -6,7 +6,6 @@ public class cameracc : MonoBehaviour
 {
     public GameObject m_Player;
     public Camera mainCamera;
-    Transform AT;
     public AudioSource audioSource;
 
     public static cameracc instance;
@@ -44,7 +43,6 @@ public class cameracc : MonoBehaviour
         }
 
         audioSource.volume = PlayerPrefs.GetFloat("bgm",1f);
-        AT = m_Player.transform;
     }
     
 
