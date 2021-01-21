@@ -6,6 +6,7 @@ public class cameracc : MonoBehaviour
 {
     public GameObject m_Player;
     public Camera mainCamera;
+    Transform AT;
     public AudioSource audioSource;
 
     public static cameracc instance;
@@ -43,6 +44,7 @@ public class cameracc : MonoBehaviour
         }
 
         audioSource.volume = PlayerPrefs.GetFloat("bgm",1f);
+        AT = m_Player.transform;
     }
     
 
@@ -50,7 +52,9 @@ public class cameracc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //transform.position = Vector3.Lerp(transform.position, AT.position, 0);
+        //transform.Translate(0, 0, -11);
+
         if (playerc.transform.position.x < leftx) 
         {
             if (playerc.transform.position.y < downy) //1.44f

@@ -44,6 +44,7 @@ public class NPCChat : MonoBehaviour
     public potal potal;
     public GameObject door;
     public GameObject Em;
+    public cameracc cameracc;
     //public bool isFlip;
 
 
@@ -1358,6 +1359,7 @@ public class NPCChat : MonoBehaviour
         block.SetActive(false);
         yield return new WaitForSeconds(2);
         block.SetActive(true);
+        cameracc.transform.position = new Vector3(-4.198f, 1.4915f, -10);
         Swichs = 15;
         yield return null;
     }
