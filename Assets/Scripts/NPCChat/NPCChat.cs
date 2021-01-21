@@ -45,6 +45,8 @@ public class NPCChat : MonoBehaviour
     public GameObject door;
     public GameObject Em;
     public cameracc cameracc;
+    public AudioSource audioSource;
+    public AudioClip audioClips;
     //public bool isFlip;
 
 
@@ -945,6 +947,8 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                audioSource.clip = audioClips;
+                audioSource.Play();
                 Btn.SetActive(false);
                 can.SetActive(true);
                 Em.SetActive(false);
