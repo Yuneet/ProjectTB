@@ -6,6 +6,9 @@ public class Down : MonoBehaviour
 {
     public GameObject P;
     public GameObject block;
+    public potal potal;
+    private bool isstrat;
+
     void Start()
     {
         
@@ -17,6 +20,15 @@ public class Down : MonoBehaviour
         if (P.transform.position.x >= 1.25f)
         {
             block.SetActive(false);
+        }
+
+        if(P.transform.position.y <= -17.7f)
+        {
+            if (isstrat == false) 
+            {
+                StartCoroutine(potal.LodeScenes(potal.potalnumber));
+                isstrat = true;
+            }
         }
     }
 }
