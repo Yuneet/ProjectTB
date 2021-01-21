@@ -68,6 +68,7 @@ public class NPCChat : MonoBehaviour
         gameObject77.SetActive(false);
         gameObject777.SetActive(false);
         gameObject8.SetActive(false);
+   
         //Endimage1.SetActive(false);
     }
 
