@@ -21,6 +21,9 @@ public class potal : MonoBehaviour
     public GameObject player;
     private float SetStart;
     public int potalnumber2;
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] sprites;
+    private int Ran;
     //public Button button;
     //public float timer;
 
@@ -32,6 +35,8 @@ public class potal : MonoBehaviour
     void Start()
     {
         SetStart = PlayerPrefs.GetFloat("setstart", 0);
+        Ran = Random.Range(0, sprites.Length);
+        spriteRenderer.sprite = sprites[Ran];
     }
 
     public void Click()
