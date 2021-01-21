@@ -11783,7 +11783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599654943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.95, y: 34.48, z: -3.8}
+  m_LocalPosition: {x: 2.95, y: 34.303, z: -3.8}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children:
   - {fileID: 182552572}
@@ -11817,6 +11817,7 @@ MonoBehaviour:
   gameObject777: {fileID: 948962013}
   gameObject8: {fileID: 948962013}
   Endimage1: {fileID: 1313524800}
+  Sign: {fileID: 0}
   can: {fileID: 1914762288}
   block: {fileID: 432004017}
   text: {fileID: 437902776}

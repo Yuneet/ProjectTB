@@ -24,6 +24,7 @@ public class NPCChat : MonoBehaviour
     public GameObject gameObject777;
     public GameObject gameObject8;
     public GameObject Endimage1;
+    public GameObject Sign;
     //public Canvas Can;
     public GameObject can;
     public GameObject block;
@@ -234,7 +235,7 @@ public class NPCChat : MonoBehaviour
                 can.SetActive(false);
                 Em.SetActive(true);
                 Swichs = 0;
-                Npc.transform.position = new Vector3(12.82f, 13.53f, 0);
+                Npc.transform.position = new Vector3(12.82f, 13.39f, -1f);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
             }
@@ -370,7 +371,7 @@ public class NPCChat : MonoBehaviour
                 can.SetActive(false);
                 Em.SetActive(true);
                 Swichs = 0;
-                Npc.transform.position = new Vector3(-5.11f, 51.36f, 0);
+                Npc.transform.position = new Vector3(-5.11f, 51.21f, -1f);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
                 K = 10;
@@ -523,12 +524,14 @@ public class NPCChat : MonoBehaviour
             else if (Swichs == 14)
             {
                 can.SetActive(false);
+                Sign.SetActive(false);
                 StartCoroutine(Down());
                 //
             }
             else if (Swichs == 15)
             {
                 can.SetActive(true);
+                Sign.SetActive(true);
                 gameObject1.SetActive(false);
                 if (iscaech == false)
                 {
@@ -797,7 +800,7 @@ public class NPCChat : MonoBehaviour
                 can.SetActive(false);
                 Em.SetActive(true);
                 Swichs = 0;
-                Npc.transform.position = new Vector3(-17.59f, 35.82f, 0);
+                Npc.transform.position = new Vector3(-17.59f, 35.87f, -1f);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
             }
