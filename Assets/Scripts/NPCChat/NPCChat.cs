@@ -24,6 +24,7 @@ public class NPCChat : MonoBehaviour
     public GameObject gameObject777;
     public GameObject gameObject8;
     public GameObject Endimage1;
+    public GameObject Sign;
     //public Canvas Can;
     public GameObject can;
     public GameObject block;
@@ -45,6 +46,8 @@ public class NPCChat : MonoBehaviour
     public GameObject door;
     public GameObject Em;
     public cameracc cameracc;
+    public AudioSource audioSource;
+    public AudioClip audioClips;
     //public bool isFlip;
 
 
@@ -232,7 +235,7 @@ public class NPCChat : MonoBehaviour
                 can.SetActive(false);
                 Em.SetActive(true);
                 Swichs = 0;
-                Npc.transform.position = new Vector3(12.82f, 13.53f, 0);
+                Npc.transform.position = new Vector3(12.82f, 13.39f, -1f);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
             }
@@ -368,7 +371,7 @@ public class NPCChat : MonoBehaviour
                 can.SetActive(false);
                 Em.SetActive(true);
                 Swichs = 0;
-                Npc.transform.position = new Vector3(-5.11f, 51.36f, 0);
+                Npc.transform.position = new Vector3(-5.11f, 51.21f, -1f);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
                 K = 10;
@@ -521,12 +524,14 @@ public class NPCChat : MonoBehaviour
             else if (Swichs == 14)
             {
                 can.SetActive(false);
+                Sign.SetActive(false);
                 StartCoroutine(Down());
                 //
             }
             else if (Swichs == 15)
             {
                 can.SetActive(true);
+                Sign.SetActive(true);
                 gameObject1.SetActive(false);
                 if (iscaech == false)
                 {
@@ -795,7 +800,7 @@ public class NPCChat : MonoBehaviour
                 can.SetActive(false);
                 Em.SetActive(true);
                 Swichs = 0;
-                Npc.transform.position = new Vector3(-17.59f, 35.82f, 0);
+                Npc.transform.position = new Vector3(-17.59f, 35.87f, -1f);
                 box.enabled = true;
                 GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 255);
             }
@@ -945,6 +950,8 @@ public class NPCChat : MonoBehaviour
         {
             if (Swichs == 0)
             {
+                audioSource.clip = audioClips;
+                audioSource.Play();
                 Btn.SetActive(false);
                 can.SetActive(true);
                 Em.SetActive(false);
@@ -1108,6 +1115,7 @@ public class NPCChat : MonoBehaviour
             else if (Swichs == 17)
             {
                 gameObject77.SetActive(false);
+                GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
                 if (iscaech == false)
                 {
                     StartCoroutine(massage("' 그 말을 뒤로 그녀는 모습을 감췃다 '"));
@@ -1190,7 +1198,7 @@ public class NPCChat : MonoBehaviour
             {
                 if (iscaech == false)
                 {
-                    StartCoroutine(massage("' 하지만 이미 얻었을 지도 모른다 '"));
+                    StartCoroutine(massage("' 하지만 이미 얻었을지도 모른다 '"));
                 }
                 Go();
             }
@@ -1198,7 +1206,7 @@ public class NPCChat : MonoBehaviour
             {
                 if (iscaech == false)
                 {
-                    StartCoroutine(massage("' 나는 오늘도 탐험을 하기위해 떠날 것이다 '"));
+                    StartCoroutine(massage("' 나는 오늘도 탐험을 하기위해 떠날 것 이다 '"));
                 }
                 Go();
             }
