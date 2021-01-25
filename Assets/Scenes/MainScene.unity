@@ -1825,7 +1825,7 @@ MonoBehaviour:
   buttonobj: {fileID: 742566911}
   loadobj: {fileID: 1156774432}
   player: {fileID: 742566911}
-  potalnumber2: 4
+  potalnumber2: 7
   spriteRenderer: {fileID: 228304798}
   sprites:
   - {fileID: 21300000, guid: 0f9a9741de95c2a4badb108c47f8ba74, type: 3}
